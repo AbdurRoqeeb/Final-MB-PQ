@@ -27,11 +27,35 @@ export default function ChronologicalBrowse({
   revisedTopics,
   handleStudyTopic,
 }: ChronologicalBrowseProps) {
+
   return (
     <div className="flex-1 flex overflow-hidden flex-col lg:flex-row bg-slate-100">
       
-      {/* Left Sidebar: Years / Papers List */}
-      <aside className="w-full lg:w-64 bg-slate-50 border-b lg:border-b-0 lg:border-r border-slate-200 p-4 shrink-0 overflow-y-auto max-h-[200px] sm:max-h-[240px] lg:max-h-none flex flex-col shadow-sm">
+      {/* Horizontally Scrollable Years List on Mobile (<lg) */}
+      <div className="lg:hidden bg-slate-50 border-b border-slate-200/60 px-3 py-1.5 flex items-center gap-2 overflow-x-auto no-scrollbar shrink-0">
+        <span className="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest shrink-0 mr-1">
+          Exam Session:
+        </span>
+        {sortedYearsList.map((year) => {
+          const totalInYear = Object.values(chronologicalIndex[year] || {}).reduce((sum, list) => sum + list.length, 0);
+          return (
+            <button
+              key={year}
+              onClick={() => setSelectedYear(year)}
+              className={`px-2.5 py-1 rounded-full text-[10px] font-bold transition-all shrink-0 cursor-pointer focus:outline-none ${
+                selectedYear === year
+                  ? "bg-teal-700 text-white shadow-xs"
+                  : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"
+              }`}
+            >
+              {year} ({totalInYear})
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Left Sidebar: Years / Papers List (Visible on lg+ screens only) */}
+      <aside className="hidden lg:flex w-64 bg-slate-50 border-r border-slate-200 p-4 shrink-0 overflow-y-auto flex-col shadow-sm">
         <div className="mb-3">
           <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Select Exam Year / Paper</p>
         </div>
@@ -44,7 +68,7 @@ export default function ChronologicalBrowse({
               <button
                 key={year}
                 onClick={() => setSelectedYear(year)}
-                className={`flex items-center justify-between px-3 py-2 rounded-md transition-colors text-left w-full text-xs font-medium ${
+                className={`flex items-center justify-between px-3 py-2 rounded-md transition-colors text-left w-full text-xs font-medium cursor-pointer ${
                   selectedYear === year
                     ? "bg-teal-50 text-teal-900 font-extrabold border-l-4 border-l-teal-600 shadow-3xs"
                     : "text-slate-600 hover:bg-slate-100"
@@ -63,13 +87,13 @@ export default function ChronologicalBrowse({
       </aside>
 
       {/* Main Area: List of Questions categorized by specialty/course block */}
-      <main className="flex-1 p-4 md:p-6 flex flex-col gap-4 overflow-y-auto min-w-0">
-        <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs shrink-0">
-          <h2 className="text-lg md:text-xl font-bold text-slate-800 tracking-tight flex items-center gap-2">
-            <Award className="w-5.5 h-5.5 text-teal-700" />
+      <main className="flex-1 p-2 md:p-6 flex flex-col gap-2 md:gap-4 overflow-y-auto min-w-0">
+        <div className="bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-xs shrink-0">
+          <h2 className="text-sm md:text-xl font-extrabold text-slate-800 tracking-tight flex items-center gap-1.5">
+            <Award className="w-4.5 h-4.5 text-teal-700" />
             {selectedYear} Past Paper Examination
           </h2>
-          <p className="text-xs text-slate-500 mt-1">
+          <p className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">
             Chronological index of essay questions asked in the {selectedYear} examination, categorized by clinical block. Click <strong>"Study Topic"</strong> to view clinical analysis and revision guidelines.
           </p>
         </div>
@@ -149,12 +173,12 @@ export default function ChronologicalBrowse({
         </div>
 
         {/* Footer status bar specific to chronological browse */}
-        <footer className="flex flex-col sm:flex-row items-center justify-between py-3 px-4 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-400 font-medium shrink-0 gap-2 shadow-3xs">
+        <footer className="flex items-center justify-between py-1.5 px-2 text-[10px] text-slate-400 font-medium shrink-0 gap-2">
           <div>
-            <span>&copy; Clinical Curriculum Analyst v2.5</span>
+            <span>&copy; Clinical Curriculum Analyst</span>
           </div>
-          <div className="font-bold uppercase tracking-wider text-teal-700">
-            Chronological Browse Mode &bull; {selectedYear} Session
+          <div className="font-bold uppercase tracking-wider text-teal-700 hidden xs:block">
+            Chronological Browse &bull; {selectedYear} Session
           </div>
         </footer>
       </main>

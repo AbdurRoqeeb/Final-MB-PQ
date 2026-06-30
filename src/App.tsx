@@ -41,6 +41,11 @@ export default function App() {
   // Accordion Expandable state (Expanded topic name)
   const [expandedTopic, setExpandedTopic] = useState<string | null>(null);
 
+  // Mobile layout and custom modal states
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+  const [showMethodology, setShowMethodology] = useState<boolean>(false);
+  const [showResetConfirm, setShowResetConfirm] = useState<boolean>(false);
+
   // Load persistence states
   useEffect(() => {
     try {
@@ -80,12 +85,15 @@ export default function App() {
 
   // Clear tracking progress helper
   const resetProgress = () => {
-    if (confirm("Are you sure you want to clear your study progress and bookmarks?")) {
-      setBookmarkedTopics([]);
-      setRevisedTopics([]);
-      localStorage.removeItem("final_mb_bookmarks");
-      localStorage.removeItem("final_mb_revised");
-    }
+    setShowResetConfirm(true);
+  };
+
+  const confirmResetProgress = () => {
+    setBookmarkedTopics([]);
+    setRevisedTopics([]);
+    localStorage.removeItem("final_mb_bookmarks");
+    localStorage.removeItem("final_mb_revised");
+    setShowResetConfirm(false);
   };
 
   // Switch specialty tab and reset subspecialty filter
@@ -93,12 +101,14 @@ export default function App() {
     setSelectedSpecialty(specialty);
     setSelectedSubspecialty("All");
     setExpandedTopic(null);
+    setIsSidebarOpen(false); // Close sidebar on mobile
   };
 
   // Switch subspecialty filter
   const handleSubspecialtyChange = (sub: string) => {
     setSelectedSubspecialty(sub);
     setExpandedTopic(null);
+    setIsSidebarOpen(false); // Close sidebar on mobile
   };
 
   // Switch to frequency tracker and open specific topic
@@ -459,99 +469,141 @@ export default function App() {
   return (
     <div className="flex flex-col h-screen w-full bg-slate-50 text-slate-900 overflow-hidden font-sans">
       
-      {/* Top Navigation Bar */}
-      <nav className="h-16 flex items-center justify-between px-4 md:px-8 bg-teal-800 text-white shadow-sm shrink-0">
-        <div className="flex items-center gap-3">
-          <div className="p-1.5 bg-teal-100 rounded-md shrink-0">
-            <Award className="w-6 h-6 text-teal-800" />
+      {/* Top Navigation Bar with Integrated Tabs */}
+      <nav className="h-14 md:h-16 flex items-center justify-between px-3 md:px-8 bg-teal-800 text-white shadow-sm shrink-0">
+        <div className="flex items-center gap-1.5 md:gap-3">
+          <div className="p-1 md:p-1.5 bg-teal-100 rounded-md shrink-0">
+            <Award className="w-5 h-5 md:w-6 md:h-6 text-teal-800" />
           </div>
           <div>
-            <h1 className="text-sm md:text-lg font-bold leading-tight uppercase tracking-wide">Final MB Analytics</h1>
-            <p className="text-[10px] opacity-80 uppercase tracking-widest font-medium hidden sm:block">Past Question Frequency Tracker</p>
+            <h1 className="text-xs md:text-base lg:text-lg font-bold leading-tight uppercase tracking-wide">Final MB</h1>
+            <p className="text-[9px] opacity-80 uppercase tracking-widest font-medium hidden sm:block">Syllabus Frequency Tracker</p>
           </div>
         </div>
+
+        {/* Integrated Segmented View Switcher */}
+        <div className="flex bg-teal-900/80 p-0.5 md:p-1 rounded-lg border border-teal-700/50">
+          <button
+            onClick={() => setActiveTab("frequency")}
+            className={`px-2.5 md:px-4 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1 md:gap-1.5 rounded-md cursor-pointer focus:outline-none ${
+              activeTab === "frequency"
+                ? "bg-white text-teal-900 shadow-xs font-extrabold"
+                : "text-teal-100 hover:bg-teal-850"
+            }`}
+          >
+            <TrendingUp className="w-3 md:w-3.5 h-3 md:h-3.5 text-teal-600" />
+            <span className="hidden xs:inline">Frequency</span>
+            <span className="xs:hidden">Freq</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("chronological")}
+            className={`px-2.5 md:px-4 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1 md:gap-1.5 rounded-md cursor-pointer focus:outline-none ${
+              activeTab === "chronological"
+                ? "bg-white text-teal-900 shadow-xs font-extrabold"
+                : "text-teal-100 hover:bg-teal-850"
+            }`}
+          >
+            <BookOpen className="w-3 md:w-3.5 h-3 md:h-3.5 text-teal-600" />
+            <span className="hidden xs:inline">By Year</span>
+            <span className="xs:hidden">Year</span>
+          </button>
+        </div>
         
-        <div className="flex items-center gap-2 md:gap-6">
-          <div className="flex items-center gap-2 px-2.5 py-1 bg-teal-900 rounded-full border border-teal-700/50">
+        {/* Stats badges visible on larger screens only */}
+        <div className="hidden lg:flex items-center gap-4">
+          <div className="flex items-center gap-2 px-2.5 py-1 bg-teal-900/60 rounded-full border border-teal-700/50">
             <span className="block w-2 h-2 bg-orange-400 rounded-full animate-pulse shrink-0"></span>
-            <span className="text-[10px] md:text-xs font-semibold whitespace-nowrap">Updated: Jan 2025</span>
+            <span className="text-xs font-semibold whitespace-nowrap text-teal-100">Updated: Jan 2025</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-[10px] text-teal-100 font-medium hidden md:inline">Total Exam Index:</span>
-            <span className="text-xs md:text-sm font-bold bg-teal-900/60 px-2.5 py-1 rounded-md border border-teal-700/30">
-              {totalOccurrencesInDatabase} Questions Indexed
-            </span>
-          </div>
+          <span className="text-xs font-bold bg-teal-900/60 px-2.5 py-1 rounded-md border border-teal-700/30 text-teal-50">
+            {totalOccurrencesInDatabase} Questions Indexed
+          </span>
         </div>
       </nav>
 
-      {/* Main View Mode Selector Tabs */}
-      <div className="bg-teal-900 text-white px-4 md:px-8 py-2 flex items-center gap-4 shrink-0 border-b border-teal-950">
-        <button
-          onClick={() => setActiveTab("frequency")}
-          className={`px-3 py-1 text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 rounded-md ${
-            activeTab === "frequency"
-              ? "bg-white text-teal-900 shadow-sm"
-              : "text-teal-100 hover:bg-teal-800/60"
-          }`}
-        >
-          <TrendingUp className="w-3.5 h-3.5" />
-          Frequency Tracker
-        </button>
-        <button
-          onClick={() => setActiveTab("chronological")}
-          className={`px-3 py-1 text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 rounded-md ${
-            activeTab === "chronological"
-              ? "bg-white text-teal-900 shadow-sm"
-              : "text-teal-100 hover:bg-teal-800/60"
-          }`}
-        >
-          <BookOpen className="w-3.5 h-3.5" />
-          Browse By Year
-        </button>
-      </div>
-
       {activeTab === "frequency" ? (
         <>
-          {/* Specialty Navigation and Search Bar */}
-      <div className="bg-white border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between px-4 md:px-8 py-3 gap-3 shrink-0">
-        
-        {/* Specialty Tabs */}
-        <div className="flex p-1 bg-slate-100 rounded-lg self-start w-full md:w-auto">
-          {["Internal Medicine", "Surgery", "Community Medicine"].map((spec) => (
-            <button
-              key={spec}
-              id={`tab-${spec.toLowerCase().split(' ')[0]}`}
-              onClick={() => handleSpecialtyChange(spec)}
-              className={`flex-1 md:flex-initial px-3 md:px-4 py-1.5 text-xs font-semibold rounded-md transition-all duration-150 ${
-                selectedSpecialty === spec
-                  ? "bg-white text-teal-800 shadow-sm font-bold border border-slate-200/50"
-                  : "text-slate-500 hover:text-slate-800 hover:bg-slate-50"
-              }`}
-            >
-              {spec.replace("Internal ", "")}
-            </button>
-          ))}
-        </div>
+          {/* Specialty Navigation and Search Bar (Optimized for Mobile) */}
+          <div className="bg-white border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between px-3 md:px-8 py-2 md:py-3 gap-2 shrink-0">
+            
+            {/* Specialty Selector Tabs */}
+            <div className="flex p-0.5 bg-slate-100 rounded-lg w-full sm:w-auto">
+              {["Internal Medicine", "Surgery", "Community Medicine"].map((spec) => (
+                <button
+                  key={spec}
+                  id={`tab-${spec.toLowerCase().split(' ')[0]}`}
+                  onClick={() => handleSpecialtyChange(spec)}
+                  className={`flex-1 sm:flex-initial px-2.5 md:px-4 py-1 text-[10px] md:text-xs font-bold rounded-md transition-all duration-150 cursor-pointer text-center whitespace-nowrap ${
+                    selectedSpecialty === spec
+                      ? "bg-white text-teal-800 shadow-xs border border-slate-200/50"
+                      : "text-slate-500 hover:text-slate-800 hover:bg-slate-50"
+                  }`}
+                >
+                  {spec.replace("Internal ", "")}
+                </button>
+              ))}
+            </div>
 
-        {/* Search Field */}
-        <div className="relative w-full md:w-80">
-          <Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400 pointer-events-none" />
-          <input
-            type="text"
-            placeholder="Search topic, subspecialty, or paper..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-md text-xs focus:outline-none focus:ring-1 focus:ring-teal-500 focus:bg-white transition-all"
-          />
-        </div>
-      </div>
+            {/* Search Input */}
+            <div className="relative w-full sm:w-64 md:w-80">
+              <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-slate-400 pointer-events-none" />
+              <input
+                type="text"
+                placeholder="Search topic or keyword..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-8 pr-4 py-1.5 bg-slate-50 border border-slate-200 rounded-md text-[11px] focus:outline-none focus:ring-1 focus:ring-teal-500 focus:bg-white transition-all h-8"
+              />
+            </div>
+          </div>
 
-      {/* Main Responsive Grid Layout */}
-      <div className="flex-1 flex overflow-hidden flex-col lg:flex-row">
-        
-        {/* Left Sidebar: Subspecialties and Yield Analytics */}
-        <aside className="w-full lg:w-64 bg-slate-50 border-b lg:border-b-0 lg:border-r border-slate-200 p-4 shrink-0 overflow-y-auto max-h-[220px] sm:max-h-[260px] lg:max-h-none flex flex-col">
+          {/* Horizontally Scrollable Subspecialties + Heatmap on Mobile (<lg) */}
+          <div className="lg:hidden bg-slate-50 border-b border-slate-200/60 px-3 py-1.5 flex items-center justify-between shrink-0 gap-3">
+            <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 pr-2 flex-1">
+              <span className="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest shrink-0">
+                Subspecialty:
+              </span>
+              {/* All Option */}
+              <button
+                onClick={() => handleSubspecialtyChange("All")}
+                className={`px-2.5 py-1 rounded-full text-[10px] font-semibold transition-all shrink-0 cursor-pointer focus:outline-none ${
+                  selectedSubspecialty === "All"
+                    ? "bg-teal-700 text-white font-bold"
+                    : "bg-white text-slate-600 border border-slate-200"
+                }`}
+              >
+                All ({Object.values(activeSpecialtyData).reduce((sum, item) => sum + item.length, 0)})
+              </button>
+              {/* Subspecialties List */}
+              {subspecialtiesWithStats.map(({ name, topicCount }) => (
+                <button
+                  key={name}
+                  onClick={() => handleSubspecialtyChange(name)}
+                  className={`px-2.5 py-1 rounded-full text-[10px] font-semibold transition-all shrink-0 cursor-pointer focus:outline-none ${
+                    selectedSubspecialty === name
+                      ? "bg-teal-700 text-white font-bold"
+                      : "bg-white text-slate-600 border border-slate-200"
+                  }`}
+                >
+                  {name} ({topicCount})
+                </button>
+              ))}
+            </div>
+            
+            {/* Heatmap Percentage Badge */}
+            <div className="flex items-center gap-1 shrink-0 pl-2 border-l border-slate-200 text-[10px] font-bold text-orange-600 whitespace-nowrap bg-orange-50/60 px-2 py-0.5 rounded-md border border-orange-100">
+              <TrendingUp className="w-3 h-3 text-orange-500 shrink-0" />
+              <span>{activeAnalytics.yieldPercentage}% Yield</span>
+            </div>
+          </div>
+
+          {/* Main Responsive Grid Layout */}
+          <div className="flex-1 flex overflow-hidden flex-col lg:flex-row">
+            
+            {/* Left Sidebar: Subspecialties and Yield Analytics */}
+            <aside className={`w-full lg:w-64 bg-slate-50 border-b lg:border-b-0 lg:border-r border-slate-200 p-4 shrink-0 overflow-y-auto ${
+              isSidebarOpen ? "block animate-fadeIn" : "hidden lg:flex"
+            } max-h-[300px] lg:max-h-none flex flex-col`}>
           <div className="mb-3 flex items-center justify-between">
             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Sub-Specialties</p>
             {selectedSubspecialty !== "All" && (
@@ -640,105 +692,109 @@ export default function App() {
           )}
         </aside>
 
-        {/* Main Content Area */}
-        <main className="flex-1 p-4 md:p-6 flex flex-col gap-4 overflow-y-auto min-w-0">
+        {/* Main Content Area (Optimized Padding and Gaps for Mobile) */}
+        <main className="flex-1 p-2 md:p-6 flex flex-col gap-2 md:gap-4 overflow-y-auto min-w-0">
           
-          {/* Header Description & Yield Legend */}
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm shrink-0">
+          {/* Header Description & Yield Legend (Compact and responsive) */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white p-3 md:p-4 rounded-xl border border-slate-200/80 shadow-xs shrink-0">
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg md:text-xl font-bold text-slate-800 tracking-tight">
+                <h2 className="text-sm md:text-xl font-extrabold text-slate-800 tracking-tight">
                   {selectedSubspecialty === "All" ? `${selectedSpecialty} Overview` : `${selectedSubspecialty} Analysis`}
                 </h2>
-                <span className="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded font-mono font-semibold">
+                <span className="bg-slate-100 text-slate-600 text-[9px] md:text-[10px] px-2 py-0.5 rounded font-mono font-bold">
                   {processedTopicsList.length} Topics
                 </span>
               </div>
-              <p className="text-xs text-slate-500 mt-1">
+              <p className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">
                 Syllabus tracker showing question recurrences from clinical essay exams. Click any topic to study key clinical focus points.
               </p>
             </div>
 
             {/* Legends */}
-            <div className="flex flex-wrap gap-3 sm:self-center shrink-0">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded bg-orange-500 block"></span>
-                <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wide">High Yield (≥3x)</span>
+            <div className="flex flex-wrap gap-2.5 sm:self-center shrink-0">
+              <div className="flex items-center gap-1">
+                <span className="w-2 h-2 rounded-full bg-orange-500 block"></span>
+                <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">High Yield (≥3x)</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded bg-teal-500 block"></span>
-                <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wide">Common (2x)</span>
+              <div className="flex items-center gap-1">
+                <span className="w-2 h-2 rounded-full bg-teal-500 block"></span>
+                <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Common (2x)</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded bg-slate-300 block"></span>
-                <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wide">Single (1x)</span>
+              <div className="flex items-center gap-1">
+                <span className="w-2 h-2 rounded-full bg-slate-300 block"></span>
+                <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Single (1x)</span>
               </div>
             </div>
           </div>
 
-          {/* Quick Filters Panel */}
-          <div className="flex flex-wrap items-center justify-between gap-2.5 bg-slate-100/80 p-2.5 rounded-lg border border-slate-200/50 shrink-0">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-[10px] font-bold uppercase text-slate-400 tracking-wider px-1 flex items-center gap-1">
-                <Filter className="w-3 h-3" />
-                Quick Filters:
-              </span>
-              
-              {/* High Yield toggle */}
-              <button
-                onClick={() => setShowHighYieldOnly(!showHighYieldOnly)}
-                className={`px-2.5 py-1 text-[11px] font-semibold rounded-md border transition-all flex items-center gap-1 ${
-                  showHighYieldOnly
-                    ? "bg-orange-50 border-orange-200 text-orange-700 font-bold"
-                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
-                }`}
-              >
-                <Flame className="w-3.5 h-3.5 text-orange-500" />
-                <span>High Yield Only ({activeAnalytics.highYieldCount})</span>
-              </button>
-
-              {/* Bookmarked toggle */}
-              <button
-                onClick={() => setShowBookmarkedOnly(!showBookmarkedOnly)}
-                className={`px-2.5 py-1 text-[11px] font-semibold rounded-md border transition-all flex items-center gap-1 ${
-                  showBookmarkedOnly
-                    ? "bg-amber-50 border-amber-200 text-amber-700 font-bold"
-                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
-                }`}
-              >
-                <BookMarked className="w-3.5 h-3.5 text-amber-500" />
-                <span>Bookmarked ({bookmarkedTopics.filter(t => processedTopicsList.some(item => item.topic === t)).length})</span>
-              </button>
-
-              {/* Revised toggle */}
-              <button
-                onClick={() => setShowRevisedOnly(!showRevisedOnly)}
-                className={`px-2.5 py-1 text-[11px] font-semibold rounded-md border transition-all flex items-center gap-1 ${
-                  showRevisedOnly
-                    ? "bg-emerald-50 border-emerald-200 text-emerald-700 font-bold"
-                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
-                }`}
-              >
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
-                <span>Revised ({activeAnalytics.revisedCount})</span>
-              </button>
-            </div>
-
-            {/* Progress indicators */}
-            {processedTopicsList.length > 0 && (
-              <div className="text-[10px] font-semibold text-slate-500 flex items-center gap-2">
-                <span>Revised progress:</span>
-                <div className="w-20 bg-slate-200 rounded-full h-1.5 overflow-hidden flex">
-                  <div 
-                    className="bg-emerald-500 h-full transition-all"
-                    style={{ width: `${Math.round((activeAnalytics.revisedCount / processedTopicsList.length) * 100)}%` }}
-                  ></div>
-                </div>
-                <span className="text-slate-700 font-bold">
-                  {activeAnalytics.revisedCount}/{processedTopicsList.length} ({Math.round((activeAnalytics.revisedCount / processedTopicsList.length) * 100)}%)
+          {/* Quick Filters Panel (Extremely Compact) */}
+          <div className="bg-white p-2.5 rounded-xl border border-slate-200/70 shrink-0">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div className="flex flex-wrap items-center gap-1.5">
+                <span className="text-[9px] font-extrabold uppercase text-slate-400 tracking-wider px-1 flex items-center gap-1">
+                  <Filter className="w-3 h-3 text-slate-400" />
+                  Filters:
                 </span>
+                
+                {/* High Yield toggle */}
+                <button
+                  onClick={() => setShowHighYieldOnly(!showHighYieldOnly)}
+                  className={`px-2 py-1 text-[10px] font-bold rounded-lg border transition-all flex items-center gap-1 cursor-pointer focus:outline-none ${
+                    showHighYieldOnly
+                      ? "bg-orange-50 border-orange-200 text-orange-700 font-extrabold shadow-3xs"
+                      : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                  }`}
+                >
+                  <Flame className="w-3 h-3 text-orange-500" />
+                  <span>High Yield ({activeAnalytics.highYieldCount})</span>
+                </button>
+
+                {/* Bookmarked toggle */}
+                <button
+                  onClick={() => setShowBookmarkedOnly(!showBookmarkedOnly)}
+                  className={`px-2 py-1 text-[10px] font-bold rounded-lg border transition-all flex items-center gap-1 cursor-pointer focus:outline-none ${
+                    showBookmarkedOnly
+                      ? "bg-amber-50 border-amber-200 text-amber-700 font-extrabold shadow-3xs"
+                      : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                  }`}
+                >
+                  <BookMarked className="w-3 h-3 text-amber-500" />
+                  <span>Bookmarked ({bookmarkedTopics.filter(t => processedTopicsList.some(item => item.topic === t)).length})</span>
+                </button>
+
+                {/* Revised toggle */}
+                <button
+                  onClick={() => setShowRevisedOnly(!showRevisedOnly)}
+                  className={`px-2 py-1 text-[10px] font-bold rounded-lg border transition-all flex items-center gap-1 cursor-pointer focus:outline-none ${
+                    showRevisedOnly
+                      ? "bg-emerald-50 border-emerald-200 text-emerald-700 font-extrabold shadow-3xs"
+                      : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                  }`}
+                >
+                  <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+                  <span>Revised ({activeAnalytics.revisedCount})</span>
+                </button>
               </div>
-            )}
+
+              {/* Progress indicators (Compact) */}
+              {processedTopicsList.length > 0 && (
+                <div className="text-[10px] font-semibold text-slate-500 flex items-center justify-between sm:justify-end gap-2 border-t sm:border-t-0 border-slate-100 pt-1.5 sm:pt-0">
+                  <span className="text-slate-400">Revised Progress:</span>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-14 bg-slate-200 rounded-full h-1 overflow-hidden flex">
+                      <div 
+                        className="bg-emerald-500 h-full transition-all"
+                        style={{ width: `${Math.round((activeAnalytics.revisedCount / processedTopicsList.length) * 100)}%` }}
+                      ></div>
+                    </div>
+                    <span className="text-slate-700 font-bold text-[10px]">
+                      {activeAnalytics.revisedCount}/{processedTopicsList.length} ({Math.round((activeAnalytics.revisedCount / processedTopicsList.length) * 100)}%)
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Data List Container */}
@@ -961,24 +1017,20 @@ export default function App() {
           </div>
 
           {/* Footer Status Panel */}
-          <footer className="flex flex-col sm:flex-row items-center justify-between py-3 px-4 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-400 font-medium shrink-0 gap-2">
+          <footer className="flex items-center justify-between py-1.5 px-2 text-[10px] text-slate-400 font-medium shrink-0 gap-2">
             <div className="flex items-center gap-2">
-              <span>&copy; Clinical Curriculum Analyst v2.5</span>
+              <span>&copy; Clinical Curriculum Analyst</span>
               <span className="h-3 w-px bg-slate-200"></span>
-              <a 
-                href="#methodology" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert("Methodology:\n\nThis application aggregates and normalizes past essay examination papers for medicine, surgery, and community medicine syllabi.\n\nFrequency weight represents total tested years. High-yield items are tested ≥3 times. Study indicators and checklist states are kept private and saved locally in your browser storage.");
-                }} 
-                className="underline text-slate-400 hover:text-teal-700 transition-colors"
+              <button 
+                onClick={() => setShowMethodology(true)}
+                className="underline text-slate-400 hover:text-teal-700 transition-colors cursor-pointer"
               >
                 Methodology Guide
-              </a>
+              </button>
             </div>
             
-            <div className="font-bold uppercase tracking-wider text-teal-700">
-              Showing {processedTopicsList.length} of {Object.values(activeSpecialtyData).reduce((sum, item) => sum + item.length, 0)} topics in {selectedSpecialty}
+            <div className="font-bold uppercase tracking-wider text-teal-700 hidden xs:block">
+              Showing {processedTopicsList.length} of {Object.values(activeSpecialtyData).reduce((sum, item) => sum + item.length, 0)} modules
             </div>
           </footer>
 
@@ -995,6 +1047,88 @@ export default function App() {
           revisedTopics={revisedTopics}
           handleStudyTopic={handleStudyTopic}
         />
+      )}
+
+      {/* Methodology Guide Modal Overlay */}
+      {showMethodology && (
+        <div 
+          className="fixed inset-0 bg-slate-950/50 backdrop-blur-xs flex items-center justify-center p-4 z-50 transition-all duration-200"
+          onClick={() => setShowMethodology(false)}
+        >
+          <div 
+            className="bg-white rounded-2xl shadow-xl border border-slate-200 max-w-md w-full p-6 animate-scaleIn relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center gap-2.5 mb-3.5">
+              <div className="p-1.5 bg-teal-50 rounded-lg text-teal-700">
+                <Award className="w-5 h-5" />
+              </div>
+              <h3 className="text-base font-bold text-slate-850">
+                Methodology Guide
+              </h3>
+            </div>
+            
+            <div className="text-xs text-slate-600 space-y-3 leading-relaxed">
+              <p>
+                This application aggregates and normalizes past essay examination papers for medicine, surgery, and community medicine syllabi.
+              </p>
+              <p>
+                <strong>Frequency weight</strong> represents total tested years. High-yield items are those tested 3 or more times.
+              </p>
+              <p>
+                <strong>Personal study tools:</strong> Bookmarks and "Revised" checkboxes allow you to track your personalized progress. Your checklist states and progress data are kept private and saved locally in your browser storage.
+              </p>
+            </div>
+            
+            <button 
+              onClick={() => setShowMethodology(false)}
+              className="w-full mt-5 py-2.5 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
+            >
+              Got it, thanks!
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Reset Progress Confirmation Dialog */}
+      {showResetConfirm && (
+        <div 
+          className="fixed inset-0 bg-slate-950/50 backdrop-blur-xs flex items-center justify-center p-4 z-50 transition-all duration-200"
+          onClick={() => setShowResetConfirm(false)}
+        >
+          <div 
+            className="bg-white rounded-2xl shadow-xl border border-slate-200 max-w-sm w-full p-6 animate-scaleIn"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center gap-2.5 mb-3.5">
+              <div className="p-1.5 bg-red-50 rounded-lg text-red-600">
+                <RefreshCw className="w-5 h-5 animate-spin-once" />
+              </div>
+              <h3 className="text-base font-bold text-slate-850">
+                Reset Progress?
+              </h3>
+            </div>
+            
+            <p className="text-xs text-slate-600 leading-relaxed mb-5">
+              Are you sure you want to clear your entire revision checklist progress and study bookmarks? This action is permanent and cannot be undone.
+            </p>
+            
+            <div className="flex items-center gap-2.5">
+              <button 
+                onClick={() => setShowResetConfirm(false)}
+                className="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition-colors cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button 
+                onClick={confirmResetProgress}
+                className="flex-1 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold transition-colors cursor-pointer"
+              >
+                Yes, Clear All
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
     </div>
