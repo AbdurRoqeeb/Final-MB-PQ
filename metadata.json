@@ -1,0 +1,6 @@
+{
+  "name": "Final MB Past Question Frequency Tracker",
+  "description": "A syllabus-focused past question analyzer and high-yield topic tracker for medicine, surgery, and community medicine candidates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
