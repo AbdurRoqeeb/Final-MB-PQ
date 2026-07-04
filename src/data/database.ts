@@ -14,205 +14,435 @@ export interface FullDatabase {
 export const database: FullDatabase = {
   "Internal Medicine": {
     "Endocrinology": [
-      { topic: "Type 2 Diabetes Mellitus Glycemic Control", occurrences: ["Q1a, Sept 2022"] },
-      { topic: "Diabetic Ketoacidosis (DKA) Pathophysiology & Management", occurrences: ["Q1b, Sept 2022"] },
-      { topic: "Diabetes Cutaneous Manifestations & Necrobiosis Lipoidica", occurrences: ["Q2A, Jan 2025"] },
-      { topic: "Addison's Disease / Adrenal Insufficiency & Collapse", occurrences: ["Q6, Surgery Mock Paper"] }
+      { topic: "Type 2 Diabetes Mellitus Comprehensive Cardiovascular & Glycemic Management", occurrences: ["Q1a, September 2022"] },
+      { topic: "Diabetic Ketoacidosis (DKA) Pathophysiology & Management Protocols", occurrences: ["Q1b, September 2022"] },
+      { topic: "Diabetes Cutaneous Manifestations, Ulcers & Necrobiosis Lipoidica", occurrences: ["Q2A, January 2025"] },
+      { topic: "Addison's Disease (Adrenal Insufficiency) & Postural Hypotension", occurrences: ["Q6, September 2022"] }
     ],
     "Nephrology": [
-      { topic: "Acute Kidney Injury (AKI) secondary to dehydration/NSAIDs", occurrences: ["Q1, Feb 2020"] },
+      { topic: "Acute Kidney Injury (AKI) secondary to Herbal Remedies & NSAIDs (ATN)", occurrences: ["Q1, February 2020"] },
       { topic: "Chronic Kidney Disease & Hypertensive Nephrosclerosis", occurrences: ["Q3, April 2016"] }
     ],
     "Neurology": [
       { topic: "Parkinson's Disease Presentation, Risk Factors & Treatment", occurrences: ["Q1, April 2016"] },
-      { topic: "Acute Ischemic Stroke Diagnosis & Thrombolysis", occurrences: ["Q3A, Jan 2025"] }
+      { topic: "Acute Ischemic Stroke Diagnosis & Thrombolysis Guidelines", occurrences: ["Q3A, January 2025"] }
     ],
     "Cardiology": [
-      { topic: "Congestive Heart Failure (CHF) Etiology & Management", occurrences: ["Q2, Sept 2022", "Q2, Feb 2020"] },
-      { topic: "Hypertension-Mediated Organ Damage & Optic Retinopathy", occurrences: ["Q3, Sept 2022"] },
-      { topic: "Ischemic Heart Disease & Diabetic Cardiomyopathy", occurrences: ["Q2, April 2016"] }
+      { topic: "Acute Decompensated Heart Failure & Pulmonary Embolism Co-existence", occurrences: ["Q2, September 2022"] },
+      { topic: "Congestive Heart Failure (CHF) Etiology & Pharmacotherapy", occurrences: ["Q2, February 2020"] },
+      { topic: "Hypertensive Emergency, Malignant Hypertension & Organ Damage", occurrences: ["Q3, September 2022"] },
+      { topic: "Ischemic Heart Disease & Diabetic Cardiomyopathy", occurrences: ["Q2, April 2016"] },
+      { topic: "Deep Vein Thrombosis (DVT) Diagnosis & Therapeutic Management", occurrences: ["Q5, September 2022"] }
     ],
     "Dermatology": [
-      { topic: "Stevens-Johnson Syndrome (SJS) & Toxic Epidermal Necrolysis (TEN)", occurrences: ["Q4, Sept 2022"] },
-      { topic: "Lichen Planus Variants & Oral Manifestations", occurrences: ["Q3, Feb 2020"] },
-      { topic: "HIV Associated Pruritic Papular Eruption & Oral Hairy Leukoplakia", occurrences: ["Q2B, Jan 2025"] }
+      { topic: "Stevens-Johnson Syndrome (SJS) & Toxic Epidermal Necrolysis (TEN)", occurrences: ["Q4, September 2022"] },
+      { topic: "Lichen Planus Variants, Oral Wickham's Striae & Management", occurrences: ["Q3, February 2020"] },
+      { topic: "HIV Associated Pruritic Papular Eruption & Oral Hairy Leukoplakia", occurrences: ["Q2B, January 2025"] }
     ],
     "Gastroenterology": [
-      { topic: "Paracetamol Toxicity & Drug-Induced Acute Liver Failure", occurrences: ["Q6, Sept 2022"] },
+      { topic: "Paracetamol Poisoning, Drug-Induced Acute Liver Failure & NAC Protocol", occurrences: ["Q6, September 2022"] },
       { topic: "Bleeding Peptic Ulcer Disease Pathophysiology & Management", occurrences: ["Q4, April 2016"] },
-      { topic: "Decompensated Liver Cirrhosis & Portal Hypertension / Ascites", occurrences: ["Q1, Jan 2025"] }
+      { topic: "Decompensated Liver Cirrhosis, Portal Hypertension & Ascites", occurrences: ["Q1, January 2025"] }
     ],
     "Pulmonology": [
-      { topic: "Silicosis, Occupational Exposure & Restrictive Spirometry Pattern", occurrences: ["Q4, Feb 2020"] },
+      { topic: "Silicotuberculosis, Occupational Dust Exposure & Restrictive Spirometry", occurrences: ["Q4, February 2020"] },
       { topic: "Asbestosis, Mesothelioma & Pulmonary Fibrosis", occurrences: ["Q5, April 2016"] },
-      { topic: "Lung Abscess vs Pulmonary Tuberculosis presentation", occurrences: ["Q5, Sept 2022"] }
-    ],
-    "Psychiatry": [
-      { topic: "Suicide Risk Assessment, Sociological Types & Intent", occurrences: ["Q3, Feb 2020", "Q1, Sept 2022"] },
-      { topic: "Bipolar Affective Disorder & Mood Stabilization in Co-morbidities", occurrences: ["Q5, Jan 2025"] },
-      { topic: "Neuroleptic Malignant Syndrome (NMS) Diagnosis & Care", occurrences: ["Q1, Jan 2025"] },
-      { topic: "Acute Dystonic Reaction, Extrapyramidal Side Effects & Management", occurrences: ["Q2, Sept 2022"] },
-      { topic: "Alcohol Dependence Syndrome & Rehabilitation Models", occurrences: ["Q3, Sept 2022"] },
-      { topic: "Forensic Psychiatry, Capacity & Competency Assessments", occurrences: ["Q2, Jan 2025"] },
-      { topic: "Psychiatry Theory Essays (Mood disorders, Psychosis, CBT, Lithium, etc.)", occurrences: ["Q1, Feb 2020", "Q2, Feb 2020", "Q4, Feb 2020", "Q5, Feb 2020", "Q3, Jan 2025", "Q4, Jan 2025"] }
+      { topic: "Miliary Tuberculosis vs Metastatic Lung Disease Evaluation", occurrences: ["Q5, September 2022"] }
     ],
     "Medical Ethics": [
-      { topic: "Informed Consent, Medical Negligence & Practice Liability", occurrences: ["Q7, Sept 2022"] }
+      { topic: "Informed Consent, Medical Malpractice & Professional Negligence Elements", occurrences: ["Q7, September 2022"] }
+    ],
+    "Oncology": [
+      { topic: "Primary Prevention of Cancer & Global Cancer Burden", occurrences: ["Q7, September 2022"] }
+    ]
+  },
+  "Psychiatry": {
+    "Clinical Psychiatry": [
+      { topic: "Clinical Syndromes: Depression Variants, Schizophrenia & Affective Disorders", occurrences: ["Q1, February 2020 (Psychiatry)"] },
+      { topic: "Anxiety Disorders, PTSD, Coping Mechanisms & Grief Reactions", occurrences: ["Q2, February 2020 (Psychiatry)"] },
+      { topic: "Suicide Risk Assessment, Sociological Types & CSF Bio-markers", occurrences: ["Q3, February 2020 (Psychiatry)"] },
+      { topic: "Suicide Attempt Evaluation, Associated Disorders & Intent High-Yield Features", occurrences: ["Q1, September 2022 (Psychiatry)"] },
+      { topic: "Personality Disorders: DSM Classification Clusters & Clinical Features", occurrences: ["Q4, September 2022 (Psychiatry)"] },
+      { topic: "Biopsychosocial Formulation of Bipolar/Depressive Illness & Co-morbidities", occurrences: ["Q5, January 2025 (Psychiatry)"] }
+    ],
+    "Psychopharmacology": [
+      { topic: "Neuroleptic Malignant Syndrome (NMS) Diagnosis & Therapeutic Management", occurrences: ["Q1, January 2025 (Psychiatry)"] },
+      { topic: "Acute Dystonic Reaction, Extrapyramidal Side Effects & Antidotes", occurrences: ["Q2, September 2022 (Psychiatry)"] },
+      { topic: "Antidepressant Classification & Serotonin Syndrome Differentials", occurrences: ["Q5, September 2022 (Psychiatry)"] },
+      { topic: "Consultation-Liaison Psychiatry & Lithium Monitoring/Toxicity Guidelines", occurrences: ["Q3, January 2025 (Psychiatry)"] }
+    ],
+    "Forensic Psychiatry": [
+      { topic: "Forensic Psychiatry: Criminal Responsibility, Capacity & Fitness to Plead", occurrences: ["Q5, February 2020 (Psychiatry)"] },
+      { topic: "Forensic Duty to Protect (Tarasoff), Risk of Violence & Competency Assessment", occurrences: ["Q2, January 2025 (Psychiatry)"] }
+    ],
+    "Psychological Interventions": [
+      { topic: "De-escalation Techniques & Physical Restraints in Acute Psychosis", occurrences: ["Q4, February 2020 (Psychiatry)"] },
+      { topic: "Psychotherapy: Operant Conditioning, CBT & Psychological Modalities", occurrences: ["Q4, January 2025 (Psychiatry)"] }
+    ],
+    "Addiction Medicine": [
+      { topic: "Alcohol Dependence: Stages of Change & Neurological Complications", occurrences: ["Q3, September 2022 (Psychiatry)"] }
     ]
   },
   "Surgery": {
     "General Surgery": [
-      { topic: "Breast Cancer & Sonomammography Diagnosis", occurrences: ["LAQ 2, Surgery Paper 5", "Q8, June 2018", "Q2, Sept 2022", "Q6, Sept 2022", "SAQ 4, Feb 2020", "LAQ 2, Jan 2020"] },
-      { topic: "Peritonitis, Appendicitis & Typhoid Perforation Management", occurrences: ["SAQ 10, Surgery Paper 1", "Q1, June 2018", "SAQ 4b, Jan 2020"] },
-      { topic: "Blood Transfusion Indications, Complications & Procedures", occurrences: ["LAQ 1, Surgery Paper 5", "Q5, May 2018", "Q1, Feb 2020"] },
-      { topic: "Gastric Carcinoma & Outflow Obstruction Presentation", occurrences: ["LAQ 1, Surgery Paper 1"] },
-      { topic: "Obstructive Jaundice Assessment & Pre-operative Preparation", occurrences: ["Q1, Sept 2022", "SAQ 10, Jan 2020"] },
-      { topic: "Splenectomy Indications, Techniques & Post-splenectomy Sepsis", occurrences: ["SAQ 3, Jan 2020"] },
-      { topic: "Chronic Leg Ulcers, Venous Insufficiency & Marjolin's Ulcer", occurrences: ["Q2, May 2018", "SAQ 5, Jan 2020"] },
-      { topic: "Bowel Preparation & Abdomino-perineal Resection for Rectal Tumors", occurrences: ["SAQ 3, Feb 2020"] },
-      { topic: "Diabetic Foot Ulcer Grading & Management Principles", occurrences: ["SAQ 5, Surgery Paper 1"] }
+      { topic: "Breast Cancer Evaluation, TNM Staging & Surgical Mastectomy", occurrences: ["LAQ 2, January 2025", "Q8, June 2018", "Q2, September 2022", "SAQ 4, December 2024"] },
+      { topic: "Generalized Peritonitis in Pediatrics & Pre-operative Preparation", occurrences: ["SAQ 10, December 2024", "Q1, June 2018"] },
+      { topic: "Blood Transfusion Indications, Procedures & Complications", occurrences: ["LAQ 1, January 2025", "Q5, May 2018", "Q1, February 2020"] },
+      { topic: "Esophageal Carcinoma, Dysphagia Grading & Palliative Interventions", occurrences: ["SAQ 6, December 2024"] },
+      { topic: "Gastric Outflow Obstruction & Gastric Cancer Management", occurrences: ["LAQ 1, December 2024"] },
+      { topic: "Obstructive Jaundice Assessment & Pre-operative Preparation", occurrences: ["Q1, September 2022"] },
+      { topic: "Splenectomy Indications, Techniques & Post-splenectomy Sepsis", occurrences: ["SAQ 3, January 2020"] },
+      { topic: "Chronic Leg Ulcers, Venous Insufficiency & Marjolin's Ulcer", occurrences: ["Q2, May 2018"] },
+      { topic: "Bowel Preparation & Abdomino-perineal Resection for Rectal Tumors", occurrences: ["SAQ 3, February 2020"] },
+      { topic: "Diabetic Foot Ulcer Grading (Meggit-Wagner) & Management", occurrences: ["SAQ 5, December 2024"] }
     ],
     "Plastics": [
-      { topic: "Burns, Thermal/Chemical Trauma & Inhalational Airway Injury", occurrences: ["Q10, June 2018", "Q5, Sept 2022", "SAQ 5, Feb 2020"] }
+      { topic: "Burns, Thermal/Chemical Trauma & Inhalational Airway Injury", occurrences: ["Q10, June 2018", "Q5, September 2022"] }
     ],
     "Orthopaedics": [
-      { topic: "Talipes Equinovarus (Clubfoot) Deformities & Correction", occurrences: ["SAQ 7, Surgery Paper 1"] },
-      { topic: "Septic Arthritis vs Osteomyelitis in Pediatric Hip & Limb", occurrences: ["Q1, May 2018", "Q11, Jan 2020"] },
-      { topic: "Open Tibial Fractures and Gustilo-Anderson Classification", occurrences: ["Q3, Sept 2022"] },
+      { topic: "Talipes Equinovarus (Clubfoot) Deformities & Correction Order", occurrences: ["SAQ 7, December 2024"] },
+      { topic: "Septic Arthritis vs Osteomyelitis in Pediatric Hip & Limb", occurrences: ["Q1, May 2018"] },
+      { topic: "Open Tibial Fractures and Gustilo-Anderson Classification", occurrences: ["Q3, September 2022"] },
       { topic: "Angular Knee Deformities & Pediatric Genu Valgum", occurrences: ["Q7, June 2018"] }
     ],
     "Urology": [
-      { topic: "Prostate Cancer Management, Complications & Clot Retention", occurrences: ["SAQ 8, Surgery Paper 1", "Q3, May 2018", "Q11, June 2018"] },
-      { topic: "Hematuria Causes in Elderly Males", occurrences: ["Q4, Sept 2022"] },
-      { topic: "Testicular Torsion Presentation & Emergency Detorsion", occurrences: ["SAQ 6, Jan 2020"] }
+      { topic: "Metastatic Prostate Cancer & Emergency Clot/Urinary Retention", occurrences: ["SAQ 8, December 2024", "Q3, May 2018"] },
+      { topic: "Hematuria Causes in Elderly Males", occurrences: ["Q4, September 2022"] },
+      { topic: "Testicular Torsion Presentation & Emergency Detorsion", occurrences: ["SAQ 6, January 2020"] }
     ],
     "Cardiothoracic Surgery": [
-      { topic: "Empyema Thoracis Classification, Causes & Surgical Interventions", occurrences: ["Q12, Sept 2022"] }
+      { topic: "Empyema Thoracis Classification, Causes & Surgical Interventions", occurrences: ["Q12, September 2022"] }
     ],
     "Neurosurgery": [
-      { topic: "Spinal Cord Injury Emergency Stabilization & Long-term Care", occurrences: ["SAQ 1, Surgery Paper 1", "SAQ 1, Surgery Paper 5", "Q3, Sept 2022"] },
+      { topic: "Spinal Cord Injury Emergency Stabilization & Care", occurrences: ["SAQ 1, December 2024", "SAQ 1, January 2025", "Q3, September 2022"] },
       { topic: "Raised Intracranial Pressure (ICP) Assessment & Management Steps", occurrences: ["Q9, June 2018"] },
-      { topic: "Traumatic Brain Injury, Intracranial Hematomas & Brain CT Features", occurrences: ["SAQ 4b, Surgery Paper 5", "Q3, June 2018"] }
+      { topic: "Brain CT / MRI Interpretation in Acute Head Trauma & Subdural Haematoma", occurrences: ["SAQ 4, January 2025", "Q3, June 2018"] }
     ],
     "Paediatric Surgery": [
-      { topic: "Ruptured Pediatric Appendicitis & Emergency Management", occurrences: ["SAQ 2, Surgery Paper 1"] }
+      { topic: "Ruptured Pediatric Appendicitis & Emergency Management", occurrences: ["SAQ 2, December 2024"] }
     ],
     "Trauma/Emergency Surgery": [
-      { topic: "Hemorrhagic Shock & Rapid Resuscitation Protocols", occurrences: ["LAQ 2, Surgery Paper 1", "Q2, June 2018", "LAQ 1, Jan 2020"] },
-      { topic: "Abdominal Trauma Secondary to Road Traffic Accidents", occurrences: ["SAQ 9, Jan 2020"] }
+      { topic: "Hemorrhagic Shock & Rapid Trauma Resuscitation", occurrences: ["LAQ 2, December 2024", "Q2, June 2018"] },
+      { topic: "Abdominal Trauma Secondary to Road Traffic Accidents", occurrences: ["SAQ 9, January 2020"] }
     ],
     "ENT": [
-      { topic: "Foreign Body Ingestion/Inhalation & Emergency Tracheotomy", occurrences: ["SAQ 9, Surgery Paper 1", "Q1, ENT 2019", "Q6, June 2018"] },
-      { topic: "Epistaxis Bedside Management & Diagnosis", occurrences: ["Q2, ENT 2019"] },
-      { topic: "Vocal Cord Pathology, Hoarseness & Clinic Laryngoscopy", occurrences: ["Q3, ENT 2019"] },
-      { topic: "Insect in Ear Removal & Complications", occurrences: ["SAQ 8, Jan 2020"] }
+      { topic: "Foreign Body Ingestion/Inhalation & Rigid Bronchoscopy / Esophagoscopy", occurrences: ["SAQ 9, December 2024", "Q1, February 2019", "Q6, June 2018"] },
+      { topic: "Epistaxis Bedside Management & Diagnosis", occurrences: ["Q2, February 2019"] },
+      { topic: "Vocal Cord Pathology, Hoarseness & Clinic Laryngoscopy", occurrences: ["Q3, February 2019"] },
+      { topic: "Insect in Ear Removal & Complications", occurrences: ["SAQ 8, January 2020"] }
     ],
     "Radiology": [
-      { topic: "MRI Basic Sequences (T1 vs T2 comparison)", occurrences: ["SAQ 4a, Surgery Paper 5"] },
+      { topic: "MRI Basic Sequences (T1 vs T2 comparison)", occurrences: ["SAQ 4, January 2025"] },
       { topic: "Brain CT Scanning in Acute Head Trauma", occurrences: ["Q3, June 2018"] }
     ],
     "Anaesthesiology": [
-      { topic: "Anaesthetic Breathing Circuits & Mapleson Systems", occurrences: ["SAQ 2, Surgery Paper 1"] },
-      { topic: "Post-Dural Puncture Headache (PDPH) Characteristics & Treatment", occurrences: ["SAQ 2, Surgery Paper 5"] },
-      { topic: "Local Anesthetic Systemic Toxicity (LAST) Symptoms & Management", occurrences: ["Q5, June 2018", "SAQ 6, Feb 2020"] }
+      { topic: "Anaesthetic Breathing Circuits & Mapleson Classification", occurrences: ["SAQ 2, December 2024"] },
+      { topic: "Post-Dural Puncture Headache (PDPH) & Spinal Anesthesia Complications", occurrences: ["SAQ 2, January 2025"] },
+      { topic: "Local Anesthetic Systemic Toxicity (LAST) Symptoms & Management", occurrences: ["Q5, June 2018"] }
     ],
     "Ophthalmology": [
-      { topic: "Cataract Definition, Etiology & Treatment Modalities", occurrences: ["SAQ 3, Surgery Paper 1", "SAQ 3a, Surgery Paper 5"] },
-      { topic: "Glaucoma, Visual Field Changes & Irreversible Blindness Causes", occurrences: ["SAQ 3b, Surgery Paper 5", "Q4, June 2018", "Q10, Sept 2022", "SAQ 10, Jan 2020"] }
+      { topic: "Cataract Etiology, Refractive Media & Contributing Factors", occurrences: ["SAQ 3, December 2024", "SAQ 3, January 2025"] },
+      { topic: "Glaucoma, Optic Disc Cupping & Irreversible Blindness", occurrences: ["SAQ 3, January 2025", "Q4, June 2018", "Q10, September 2022"] }
     ]
   },
   "Community Medicine": {
     "Epidemiology": [
-      { topic: "Epidemiological Study Designs (Cohort vs Case-Control)", occurrences: ["SAQ 4a, May 2010", "SAQ 6, Feb 2019", "LAQ 11, Feb 2019"] },
-      { topic: "Screening Parameters (Sensitivity, Specificity, PPV & NPV)", occurrences: ["LAQ 11, Sept 2022", "SAQ 6, May 2010", "LAQ 11, May 2010"] },
-      { topic: "Emerging/Re-emerging Infections & Lassa Fever Outbreaks", occurrences: ["SAQ 7, Jan 2016", "SAQ 9, March 2019"] },
-      { topic: "Meningitis Control & Vaccine Campaigns", occurrences: ["SAQ 6, April 2017"] },
-      { topic: "Notifiable Diseases Classification", occurrences: ["SAQ 2, Jan 2016"] },
-      { topic: "Zoonotic Diseases (Epidemiology, Vectors & Reservoirs)", occurrences: ["LAQ 13, Dec 2017"] },
-      { topic: "Disease Elimination vs Eradication Criteria", occurrences: ["SAQ 3, Dec 2007"] },
-      { topic: "Cancer Epidemiology in Africa & Prevention Recommendations", occurrences: ["LAQ 11, Feb 2019"] }
+      {
+        topic: "Epidemiological Study Designs (Cohort vs Case-Control)",
+        occurrences: ["Q4b, May 2010", "Q6a, February 2019", "Q6b, February 2019", "Q11, February 2019"]
+      },
+      {
+        topic: "Screening Parameters (Sensitivity, Specificity, PPV & NPV)",
+        occurrences: ["Q11a, September 2022", "Q11b, September 2022", "Q11a, May 2010", "Q11b, May 2010"]
+      },
+      {
+        topic: "Levels of Disease Prevention (Primordial, Primary, Secondary & Tertiary)",
+        occurrences: ["Q6a, February 2015", "Q10a, June 2013", "Q11a, September 2022"]
+      },
+      {
+        topic: "Emerging/Re-emerging Infections & Lassa Fever Outbreaks",
+        occurrences: ["Q7a, January 2016", "Q7b, January 2016", "Q9, March 2019"]
+      },
+      {
+        topic: "Meningitis Control & Vaccine Campaigns",
+        occurrences: ["Q6, April 2017"]
+      },
+      {
+        topic: "Notifiable Diseases & Public Health Emergencies of International Concern (PHEIC)",
+        occurrences: ["Q2a, January 2016", "Q2b, January 2016", "Q4a, February 2019", "Q4b, February 2019", "Q4b, February 2015"]
+      },
+      {
+        topic: "Zoonotic Diseases (Epidemiology, Vectors & Reservoirs)",
+        occurrences: ["Q13, December 2017", "Q4a, February 2015"]
+      },
+      {
+        topic: "Disease Elimination vs Eradication Criteria",
+        occurrences: ["Q3, December 2007"]
+      },
+      {
+        topic: "Cancer Epidemiology in Africa & Prevention Recommendations",
+        occurrences: ["Q11, February 2019"]
+      },
+      {
+        topic: "HIV/AIDS, Tropical Diseases (TDR) & Care of Vulnerable Populations (PLWHA)",
+        occurrences: ["Q3a, May 2014", "Q3b, May 2014", "Q6a, May 2014", "Q6b, May 2014"]
+      },
+      {
+        topic: "Non-Communicable Diseases (NCDs): Risk Factors (Sugar, Obesity) & Public Health Control",
+        occurrences: ["Q5, June 2013"]
+      }
     ],
     "Occupational Health": [
-      { topic: "Occupational Health Physician Roles & Clinical Functions", occurrences: ["SAQ 5, Feb 2015", "SAQ 1, May 2010", "SAQ 5, Oct 2015", "SAQ 4, Sept 2019"] },
-      { topic: "Ergonomics, Posture at Work & PPE Use", occurrences: ["SAQ 7, April 2017", "SAQ 9, Jan 2016", "SAQ 3, Feb 2019"] },
-      { topic: "Occupational Hazards of Sawmill Workers", occurrences: ["SAQ 7, Dec 2017", "SAQ 5b, Jan 2016"] },
-      { topic: "Occupational Hazards in Mining Industries", occurrences: ["SAQ 1, March 2019"] },
-      { topic: "Occupational Hazards in Agriculture & Farming", occurrences: ["SAQ 6, June 2013"] },
-      { topic: "Occupational Medicine Services in Large Industrial Settings", occurrences: ["SAQ 1, Sept 2022"] },
-      { topic: "Hospital Hazards, Waste Exposure & Biosafety for Health Workers", occurrences: ["SAQ 3, May 2010"] }
+      {
+        topic: "Occupational Health Physician Roles & Clinical Functions",
+        occurrences: ["Q1, September 2022", "Q5a, February 2015", "Q1a, May 2010", "Q1b, May 2010", "Q5a, October 2015", "Q5b, October 2015", "Q4a, September 2019", "Q4b, September 2019", "Q6a, June 2013"]
+      },
+      {
+        topic: "Ergonomics, Posture at Work & PPE Use",
+        occurrences: ["Q7a, April 2017", "Q7b, April 2017", "Q9a, January 2016"]
+      },
+      {
+        topic: "Occupational Hazards: Principles of Control, Industry-Specific Risks & Sawmill Workers",
+        occurrences: ["Q7a, December 2017", "Q7b, December 2017", "Q5a, January 2016", "Q5b, January 2016"]
+      },
+      {
+        topic: "Occupational Hazards in Mining Industries",
+        occurrences: ["Q1a, March 2019", "Q1b, March 2019"]
+      },
+      {
+        topic: "Occupational Hazards in Agriculture & Farming",
+        occurrences: ["Q6b, June 2013", "Q3, August 2014"]
+      },
+      {
+        topic: "Occupational Medicine Services in Large Industrial Settings",
+        occurrences: ["Q1, September 2022"]
+      },
+      {
+        topic: "Hospital Hazards, Waste Exposure & Biosafety for Health Workers",
+        occurrences: ["Q3, May 2010"]
+      }
     ],
     "Environmental Health": [
-      { topic: "Water Quality, Water Sampling & Low-Water Sewage Systems", occurrences: ["SAQ 2, Sept 2019", "SAQ 2, June 2013", "SAQ 7, Aug 2014", "LAQ 13, March 2019"] },
-      { topic: "Healthful Housing Criteria, Goals & Structural Standards", occurrences: ["SAQ 2, Dec 2017", "SAQ 9, Sept 2022", "SAQ 2, Feb 2015"] },
-      { topic: "Air Pollution, Common Contaminants & Health Risks", occurrences: ["SAQ 2, Dec 2017", "SAQ 9, Jan 2016"] },
-      { topic: "Municipal Solid Waste Management & Flocculation Systems", occurrences: ["SAQ 2, Dec 2017", "SAQ 2, Sept 2019"] },
-      { topic: "Healthcare Waste Management, Separation & Safety", occurrences: ["LAQ 11, Jan 2016", "SAQ 9, June 2013"] },
-      { topic: "Environmental Sanitation & Market Hygiene", occurrences: ["SAQ 9, Jan 2016", "SAQ 8, March 2019"] },
-      { topic: "Environmental Impact Assessment (EIA) for Dye/Chemical Industries", occurrences: ["SAQ 5, Jan 2016"] },
-      { topic: "Flooding Events, Drainage & Environmental Control Measures", occurrences: ["LAQ 13, Sept 2022"] }
+      {
+        topic: "Water Quality, Water Sampling & Low-Water Sewage Systems",
+        occurrences: ["Q2b, June 2013", "Q7a, August 2014", "Q7b, August 2014", "Q13, March 2019", "Q2b, February 2015"]
+      },
+      {
+        topic: "Healthful Housing Criteria, Goals & Structural Standards",
+        occurrences: ["Q2ii, December 2017", "Q9a, September 2022", "Q9b, September 2022", "Q2a, February 2015"]
+      },
+      {
+        topic: "Air Pollution, Common Contaminants & Health Risks",
+        occurrences: ["Q2i, December 2017", "Q9a, January 2016"]
+      },
+      {
+        topic: "Municipal Solid Waste & Sewage Disposal: Composting, Incineration & Sanitary Landfills",
+        occurrences: ["Q2iv, December 2017", "Q2v, December 2017", "Q11, January 2016", "Q2a, September 2019", "Q2b, September 2019", "Q2a, October 2015"]
+      },
+      {
+        topic: "Healthcare Waste Management, Separation & Safety",
+        occurrences: ["Q11, January 2016", "Q9a, June 2013"]
+      },
+      {
+        topic: "Environmental Sanitation, Food Premises & Market Hygiene",
+        occurrences: ["Q2iii, December 2017", "Q2a, June 2013", "Q9b, January 2016", "Q9c, January 2016", "Q8b, March 2019", "Q8a, March 2019"]
+      },
+      {
+        topic: "Environmental Impact Assessment (EIA) for Industrial Siting",
+        occurrences: ["Q5, February 2019"]
+      },
+      {
+        topic: "Climate Change, Flooding Events & Environmental Control Measures",
+        occurrences: ["Q13a, September 2022", "Q13b, September 2022", "Q7d, August 2014", "Q13, May 2014"]
+      },
+      {
+        topic: "Vector Biology, Vector-Borne Diseases & Integrated Vector Control Methods",
+        occurrences: ["Q5, February 2019", "Q8, September 2019", "Q3b, June 2013", "Q2b, October 2015"]
+      }
     ],
     "Health Management": [
-      { topic: "Primary Health Care (PHC) Implementation Challenges in Nigeria", occurrences: ["SAQ 5, Dec 2017", "SAQ 1, Jan 2016", "LAQ 12, Feb 2019", "SAQ 6, Sept 2019"] },
-      { topic: "Referral Systems in PHC Structures & Integration", occurrences: ["SAQ 10, Sept 2022", "SAQ 3, Oct 2015"] },
-      { topic: "Medical Officer of Health (MOH) Roles & Administrative Functions", occurrences: ["SAQ 5, Dec 2017"] },
-      { topic: "Drug Management Cycle in Primary Care Units", occurrences: ["SAQ 2, Sept 2022"] },
-      { topic: "Total Quality Management (TQM) in Tertiary Health Care", occurrences: ["LAQ 11, Jan 2016"] },
-      { topic: "Health System Framework, Governance & Ministry Responsibilities", occurrences: ["SAQ 7, Sept 2019"] },
-      { topic: "Supervision, Monitoring & Program Evaluation Techniques", occurrences: ["LAQ 12, March 2019"] },
-      { topic: "Health Management Information System (HMIS) Challenges", occurrences: ["LAQ 12, May 2010"] },
-      { topic: "Modern Health Service Underutilization in Rural Populations", occurrences: ["LAQ 13, Aug 2014"] }
+      {
+        topic: "Primary Health Care (PHC) Principles, Components & Implementation Challenges in Nigeria",
+        occurrences: ["Q5a, December 2017", "Q1a, January 2016", "Q1b, January 2016", "Q12, February 2019", "Q6, September 2019", "Q5a, April 2017", "Q5b, April 2017", "Q6a, January 2016", "Q6b, February 2015", "Q9a, May 2010"]
+      },
+      {
+        topic: "Referral Systems in PHC Structures & Integration",
+        occurrences: ["Q10a, September 2022", "Q10b, September 2022", "Q3, October 2015", "Q3b, October 2015"]
+      },
+      {
+        topic: "Medical Officer of Health (MOH) Roles & Administrative Functions",
+        occurrences: ["Q5b, December 2017"]
+      },
+      {
+        topic: "Drug Management Cycle in Primary Care Units",
+        occurrences: ["Q2v, September 2022"]
+      },
+      {
+        topic: "Total Quality Management (TQM) & Quality Improvement in Health Care",
+        occurrences: ["Q2ii, September 2022"]
+      },
+      {
+        topic: "Health Administration, Organisation Principles & Governance Frameworks in Nigeria",
+        occurrences: ["Q7, September 2019", "Q8a, February 2015", "Q8b, February 2015", "Q10a, May 2010", "Q10b, May 2010"]
+      },
+      {
+        topic: "Health Program Planning Cycle, Situation Analysis & Priority Setting",
+        occurrences: ["Q12, September 2022", "Q1a, June 2013", "Q1b, June 2013"]
+      },
+      {
+        topic: "Supervision, Monitoring & Program Evaluation Techniques",
+        occurrences: ["Q12, March 2019", "Q8b, February 2019", "Q4, May 2014"]
+      },
+      {
+        topic: "Modern Health Service Underutilization in Rural Populations",
+        occurrences: ["Q13, August 2014"]
+      }
     ],
     "Health Economics": [
-      { topic: "Healthcare Financing Mechanisms (Community Insurance, User Fees, Out-of-Pocket)", occurrences: ["SAQ 2, Sept 2022", "SAQ 6, Jan 2016", "SAQ 8, Dec 2017", "SAQ 4, Jan 2016", "SAQ 7, March 2019", "SAQ 4, Aug 2014"] }
+      {
+        topic: "Healthcare Financing Mechanisms (Community Insurance, User Fees, Out-of-Pocket)",
+        occurrences: ["Q2i, September 2022", "Q2iii, September 2022", "Q6b, January 2016", "Q6c, January 2016", "Q8, December 2017", "Q7, March 2019", "Q4a, August 2014", "Q4b, August 2014", "Q16a, May 2010", "Q16b, May 2010", "Q8b, October 2015", "Q8c, October 2015"]
+      }
     ],
     "International Health": [
-      { topic: "Global Agencies Promoting Health (Bilateral & Multilateral)", occurrences: ["SAQ 1, Dec 2017", "SAQ 5, Jan 2016", "SAQ 3, March 2019"] },
-      { topic: "International Health Certificates & Vaccinations", occurrences: ["SAQ 1, Dec 2017", "SAQ 5, Feb 2015"] },
-      { topic: "World Health Organization (WHO) Strategy & Regional Offices", occurrences: ["SAQ 3, May 2010", "SAQ 1b, May 2010"] },
-      { topic: "Port Health Operations & Seaport/Airport Sanitation", occurrences: ["SAQ 9, June 2013"] }
+      {
+        topic: "Global Agencies Promoting Health (Bilateral & Multilateral)",
+        occurrences: ["Q1a, December 2017", "Q3a, March 2019", "Q3b, March 2019", "Q2a, May 2010", "Q2b, May 2010"]
+      },
+      {
+        topic: "International Health Certificates & Vaccinations",
+        occurrences: ["Q1b, December 2017", "Q5b, February 2015", "Q5b, September 2019", "Q5b, October 2015"]
+      },
+      {
+        topic: "World Health Organization (WHO) Strategy & Regional Offices",
+        occurrences: ["Q2b, May 2010"]
+      }
     ],
     "Family & Reproductive Health": [
-      { topic: "Maternal Mortality, Safe Motherhood & Focused Antenatal Care", occurrences: ["SAQ 3, Sept 2022", "SAQ 6, Oct 2015", "SAQ 2, Jan 2016", "SAQ 10, Sept 2019"] },
-      { topic: "Family Planning Methods, Unmet Need & Contraceptive Counseling", occurrences: ["SAQ 3, 600L End of Posting", "SAQ 9, Dec 2017", "SAQ 2, March 2019", "SAQ 6, Aug 2014"] },
-      { topic: "Child Survival Interventions (GOBI-FFF, Immunization, Nutrition)", occurrences: ["SAQ 3, April 2017", "LAQ 13, March 2019", "SAQ 8, June 2013"] },
-      { topic: "Adolescent Health, Classification & Friendly Clinical Services", occurrences: ["SAQ 6, Sept 2022", "SAQ 2, Jan 2016"] },
-      { topic: "Reproductive Health Indicators & Determinants of General Fertility", occurrences: ["SAQ 1, Feb 2015", "SAQ 8, May 2010"] },
-      { topic: "School Health Environment & Waste Disposal Control", occurrences: ["SAQ 7, Jan 2016"] }
+      {
+        topic: "Maternal Mortality, Safe Motherhood & Focused Antenatal Care",
+        occurrences: ["Q3a, September 2022", "Q3b, September 2022", "Q3c, September 2022", "Q6, October 2015", "Q10, September 2019", "Q13, February 2019"]
+      },
+      {
+        topic: "Family Planning Methods, Unmet Need & Contraceptive Counseling",
+        occurrences: ["Q9a, December 2017", "Q9b, December 2017", "Q2, March 2019", "Q6a, August 2014", "Q6b, August 2014", "Q8c, June 2013", "Q8a, October 2015", "Q8b, October 2015"]
+      },
+      {
+        topic: "Child Survival Interventions & Vulnerable Child Care (GOBI-FFF, Immunization, Motherless Babies)",
+        occurrences: ["Q3, April 2017", "Q13, March 2019", "Q8a, June 2013", "Q8b, June 2013", "Q7a, February 2015"]
+      },
+      {
+        topic: "Adolescent Health, Classification & Friendly Clinical Services",
+        occurrences: ["Q6a, September 2022", "Q6b, September 2022"]
+      },
+      {
+        topic: "Reproductive Health Indicators & Determinants of General Fertility",
+        occurrences: ["Q1a, February 2015", "Q1b, February 2015", "Q8, May 2010"]
+      }
     ],
     "Health Education": [
-      { topic: "Health Education Communication Methods & Behavior Adoption Theories", occurrences: ["SAQ 1, April 2017", "SAQ 10, Jan 2016", "SAQ 9, Feb 2019", "SAQ 3, Oct 2015", "SAQ 4, June 2013"] },
-      { topic: "Behavior Change Communication (BCC) Implementation & Patient Charter", occurrences: ["SAQ 8, Jan 2016", "SAQ 10, Aug 2014"] }
+      {
+        topic: "Health Education Communication Methods & Behavior Adoption Theories",
+        occurrences: ["Q1a, April 2017", "Q1b, April 2017", "Q10a, December 2017", "Q10b, December 2017", "Q10, January 2016", "Q10a, March 2019", "Q10b, March 2019", "Q3b, October 2015", "Q4b, June 2013"]
+      },
+      {
+        topic: "Behavior Change Communication (BCC) Implementation & Patient Charter",
+        occurrences: ["Q10a, August 2014", "Q10b, August 2014"]
+      }
     ],
     "Public Health Nutrition": [
-      { topic: "Under-Five Nutritional Status Assessment & Surveys", occurrences: ["SAQ 7, Sept 2022", "LAQ 11, May 2010"] },
-      { topic: "Nutritional Vulnerability in Pregnancy, Lactation & Child Weaning", occurrences: ["LAQ 13, Jan 2016", "SAQ 1, Oct 2015"] },
-      { topic: "Elderly Nutritional Malnutrition, Socioeconomic Factors & Remedies", occurrences: ["SAQ 2, April 2017"] },
-      { topic: "Protein Energy Malnutrition (PEM) Prevention & Clinical Signs", occurrences: ["SAQ 3, May 2010"] },
-      { topic: "Micronutrient Deficiencies (Vitamin A, Iodine, Iron) & National Programs", occurrences: ["SAQ 10, Feb 2015", "LAQ 11, May 2010"] }
+      {
+        topic: "Nutritional Status Assessment: Anthropometry (BMI, Under-Five Surveys & Shakir's Strip)",
+        occurrences: ["Q7a, September 2022", "Q7b, September 2022", "Q11, May 2010", "Q2a, February 2019", "Q2b, February 2019", "Q1c, October 2015", "Q3, September 2019"]
+      },
+      {
+        topic: "Nutritional Vulnerability in Pregnancy, Lactation & Child Weaning",
+        occurrences: ["Q13, January 2016", "Q1a, October 2015", "Q1b, October 2015", "Q12, December 2017"]
+      },
+      {
+        topic: "Aged & Elderly: Health Problems, Social Welfare & Nutritional Needs",
+        occurrences: ["Q2, April 2017", "Q8b, January 2016", "Q7b, February 2015", "Q1, August 2014"]
+      },
+      {
+        topic: "Protein Energy Malnutrition (PEM) Prevention & Clinical Signs",
+        occurrences: ["Q3, May 2010"]
+      },
+      {
+        topic: "Micronutrient Deficiencies (Vitamin A, Iodine, Iron) & National Programs",
+        occurrences: ["Q10, February 2015"]
+      }
     ],
     "Biostatistics": [
-      { topic: "Statistical Calculations: t-Tests, Chi-Square & Confidence Intervals", occurrences: ["LAQ 12, Jan 2016", "LAQ 11, Dec 2017", "LAQ 12, May 2010", "SAQ 7, Oct 2015", "SAQ 2b, May 2010"] },
-      { topic: "Sampling Methods (Probability & Simple Random Techniques)", occurrences: ["SAQ 9, Feb 2015", "SAQ 7, May 2010", "SAQ 1, Feb 2019", "SAQ 5, Sept 2019", "SAQ 2a, May 2010"] },
-      { topic: "Biostatistical Definitions (p-value, SEM, Type I & II errors, Power)", occurrences: ["LAQ 12, Jan 2016", "SAQ 8, May 2010", "LAQ 12, Jan 2016", "LAQ 11, Aug 2014"] },
-      { topic: "Biomedical Research Design, Proposals & Methodological Types", occurrences: ["SAQ 9, May 2010", "SAQ 9, June 2013", "SAQ 5, Dec 2007", "SAQ 9, Aug 2014"] },
-      { topic: "Normal Distribution Curve and Probability Characteristics", occurrences: ["SAQ 8, May 2010", "SAQ 7, June 2013"] },
-      { topic: "Epidemiological Bias vs Confounding Control Methods", occurrences: ["SAQ 8, Sept 2022"] }
+      {
+        topic: "Statistical Calculations: t-Tests, Chi-Square & Confidence Intervals",
+        occurrences: ["Q11, December 2017", "Q12, January 2016", "Q12b, May 2010", "Q7, October 2015", "Q8b, May 2010", "Q6c, February 2019"]
+      },
+      {
+        topic: "Sampling Methods (Probability & Simple Random Techniques)",
+        occurrences: ["Q1a, February 2019", "Q1b, February 2019", "Q5a, September 2019", "Q5b, September 2019", "Q9b, February 2015", "Q7, May 2010", "Q7b, June 2013"]
+      },
+      {
+        topic: "Biostatistical Definitions (p-value, SEM, Type I & II errors, Power)",
+        occurrences: ["Q12a, January 2016", "Q11a, August 2014", "Q12a, May 2010"]
+      },
+      {
+        topic: "Biomedical Research Design, Proposals & Methodological Types",
+        occurrences: ["Q9a, February 2015", "Q9, May 2010", "Q9a, June 2013", "Q9b, June 2013", "Q9, August 2014"]
+      },
+      {
+        topic: "Normal Distribution Curve and Probability Characteristics",
+        occurrences: ["Q8a, May 2010", "Q7a, June 2013"]
+      },
+      {
+        topic: "Epidemiological Bias vs Confounding Control Methods",
+        occurrences: ["Q8a, September 2022", "Q8b, September 2022"]
+      }
     ],
     "Demographics": [
-      { topic: "Demographic Transition Theory & Phases", occurrences: ["SAQ 4, Sept 2022", "SAQ 9, Feb 2019", "SAQ 4, June 2013", "SAQ 4, Sept 2008"] },
-      { topic: "Demographic Data Sources & Demographic Structure Dynamics", occurrences: ["SAQ 3, Dec 2017", "SAQ 4, Sept 2022"] },
-      { topic: "Population Pyramid Construction & Significance", occurrences: ["SAQ 4, Jan 2016", "SAQ 3, Feb 2015", "SAQ 4, Sept 2008"] },
-      { topic: "Population Census Formats & De Facto/De Jure Enumeration", occurrences: ["SAQ 4, Oct 2015", "SAQ 6, Jan 2016"] }
+      {
+        topic: "Demographic Transition Theory & Phases",
+        occurrences: ["Q4b, September 2022", "Q9b, February 2019", "Q4a, June 2013"]
+      },
+      {
+        topic: "Demographic Data Sources & Demographic Structure Dynamics",
+        occurrences: ["Q4a, September 2022", "Q3b, December 2017", "Q9c, February 2019", "Q7, May 2014"]
+      },
+      {
+        topic: "Population Pyramid Construction & Significance",
+        occurrences: ["Q4a, January 2016", "Q3a, February 2015"]
+      },
+      {
+        topic: "Population Census Formats & De Facto/De Jure Enumeration",
+        occurrences: ["Q4, October 2015", "Q4b, October 2015"]
+      }
     ],
     "Social & Rehabilitative Medicine": [
-      { topic: "Health Problems of Internally Displaced Persons (IDPs)", occurrences: ["SAQ 4, April 2017", "SAQ 10, Jan 2016"] },
-      { topic: "Prison Health Care Services & Rehabilitative Measures", occurrences: ["SAQ 8, Jan 2016", "SAQ 1, Sept 2019", "SAQ 1, Sept 2008"] },
-      { topic: "Socioeconomic Welfare Services, Challenges & Infrastructure in Nigeria", occurrences: ["SAQ 7, Feb 2019", "SAQ 5, March 2019"] },
-      { topic: "Health Problems of Destitutes & Homeless Populations", occurrences: ["SAQ 6, Dec 2017", "SAQ 5, May 2010"] }
+      {
+        topic: "Health Problems of Internally Displaced Persons (IDPs)",
+        occurrences: ["Q4, April 2017"]
+      },
+      {
+        topic: "Prison Health Care Services & Rehabilitative Measures",
+        occurrences: ["Q8a, January 2016", "Q1, September 2019"]
+      },
+      {
+        topic: "Socioeconomic Welfare Services, Challenges & Infrastructure in Nigeria",
+        occurrences: ["Q7a, February 2019", "Q7b, February 2019", "Q5a, March 2019", "Q5b, March 2019"]
+      },
+      {
+        topic: "Health Problems of Destitutes & Homeless Populations",
+        occurrences: ["Q6, December 2017"]
+      }
     ],
     "Medical Ethics": [
-      { topic: "Principles of Medical Ethics & Professional Medical Negligence", occurrences: ["SAQ 3, Dec 2017", "SAQ 5, Sept 2022", "SAQ 4, Jan 2016", "SAQ 6, March 2019", "SAQ 9, Sept 2019", "SAQ 2, Dec 2007"] },
-      { topic: "Ethics Codes & Declarations (Nuremberg, Helsinki, Tokyo, Geneva, etc.)", occurrences: ["SAQ 1, 600L End of Posting", "SAQ 7, May 2010", "SAQ 10, Oct 2015", "SAQ 2, Dec 2007"] }
+      {
+        topic: "Principles of Medical Ethics & Professional Medical Negligence",
+        occurrences: ["Q3a, December 2017", "Q5a, September 2022", "Q5b, September 2022", "Q4b, January 2016", "Q6, March 2019", "Q9a, September 2019", "Q9b, September 2019"]
+      },
+      {
+        topic: "Ethics Codes & Declarations (Nuremberg, Helsinki, Tokyo, Geneva, etc.)",
+        occurrences: ["Q7, May 2010", "Q10, October 2015", "Q10a, October 2015", "Q10b, October 2015", "Q10c, October 2015"]
+      }
     ]
   }
 };

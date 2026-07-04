@@ -105,7 +105,7 @@ export default function ChronologicalBrowse({
               <h3 className="mt-4 text-sm font-semibold text-slate-900">No questions indexed for this session</h3>
             </div>
           ) : (
-            ["Internal Medicine", "Surgery", "Community Medicine"].map((spec) => {
+            ["Internal Medicine", "Psychiatry", "Surgery", "Community Medicine"].map((spec) => {
               const questions = chronologicalIndex[selectedYear]?.[spec] || [];
               if (questions.length === 0) return null;
 
@@ -114,7 +114,7 @@ export default function ChronologicalBrowse({
                   <div className="bg-slate-50/80 px-4 py-3 border-b border-slate-200 flex items-center justify-between">
                     <h3 className="text-xs font-bold text-slate-700 flex items-center gap-2 uppercase tracking-wider">
                       <span className="w-2 h-2 rounded-full bg-teal-600"></span>
-                      {spec} Block
+                      {spec === "Internal Medicine" ? "Medicine" : spec} Block
                     </h3>
                     <span className="text-[10px] bg-slate-200 text-slate-600 font-bold px-2.5 py-0.5 rounded-full">
                       {questions.length} Question{questions.length > 1 ? "s" : ""}

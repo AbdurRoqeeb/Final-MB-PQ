@@ -527,21 +527,54 @@ export default function App() {
           <div className="bg-white border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between px-3 md:px-8 py-2 md:py-3 gap-2 shrink-0">
             
             {/* Specialty Selector Tabs */}
-            <div className="flex p-0.5 bg-slate-100 rounded-lg w-full sm:w-auto">
-              {["Internal Medicine", "Surgery", "Community Medicine"].map((spec) => (
-                <button
-                  key={spec}
-                  id={`tab-${spec.toLowerCase().split(' ')[0]}`}
-                  onClick={() => handleSpecialtyChange(spec)}
-                  className={`flex-1 sm:flex-initial px-2.5 md:px-4 py-1 text-[10px] md:text-xs font-bold rounded-md transition-all duration-150 cursor-pointer text-center whitespace-nowrap ${
-                    selectedSpecialty === spec
-                      ? "bg-white text-teal-800 shadow-xs border border-slate-200/50"
-                      : "text-slate-500 hover:text-slate-800 hover:bg-slate-50"
-                  }`}
-                >
-                  {spec.replace("Internal ", "")}
-                </button>
-              ))}
+            <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+              <div className="flex p-0.5 bg-slate-100 rounded-lg">
+                {["Internal Medicine", "Surgery", "Community Medicine"].map((spec) => {
+                  const isActive = spec === "Internal Medicine"
+                    ? (selectedSpecialty === "Internal Medicine" || selectedSpecialty === "Psychiatry")
+                    : selectedSpecialty === spec;
+                  return (
+                    <button
+                      key={spec}
+                      id={`tab-${spec.toLowerCase().split(' ')[0]}`}
+                      onClick={() => handleSpecialtyChange(spec)}
+                      className={`px-2.5 md:px-4 py-1 text-[10px] md:text-xs font-bold rounded-md transition-all duration-150 cursor-pointer text-center whitespace-nowrap ${
+                        isActive
+                          ? "bg-white text-teal-800 shadow-xs border border-slate-200/50"
+                          : "text-slate-500 hover:text-slate-800 hover:bg-slate-50"
+                      }`}
+                    >
+                      {spec.replace("Internal ", "")}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Medicine Sub-tabs: Internal Med & Psychiatry */}
+              {(selectedSpecialty === "Internal Medicine" || selectedSpecialty === "Psychiatry") && (
+                <div className="flex p-0.5 bg-slate-105 rounded-lg border border-slate-200/60 shadow-3xs shrink-0">
+                  <button
+                    onClick={() => handleSpecialtyChange("Internal Medicine")}
+                    className={`px-3 py-1 text-[10px] md:text-xs font-bold rounded-md transition-all duration-150 cursor-pointer text-center whitespace-nowrap ${
+                      selectedSpecialty === "Internal Medicine"
+                        ? "bg-teal-700 text-white shadow-2xs font-extrabold"
+                        : "text-slate-500 hover:text-slate-800"
+                    }`}
+                  >
+                    Internal Med
+                  </button>
+                  <button
+                    onClick={() => handleSpecialtyChange("Psychiatry")}
+                    className={`px-3 py-1 text-[10px] md:text-xs font-bold rounded-md transition-all duration-150 cursor-pointer text-center whitespace-nowrap ${
+                      selectedSpecialty === "Psychiatry"
+                        ? "bg-teal-700 text-white shadow-2xs font-extrabold"
+                        : "text-slate-500 hover:text-slate-800"
+                    }`}
+                  >
+                    Psychiatry
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Search Input */}
@@ -926,7 +959,7 @@ export default function App() {
                               key={idx} 
                               className="text-[9px] font-mono bg-slate-50 border border-slate-200/60 text-slate-600 px-1.5 py-0.5 rounded shadow-2xs whitespace-nowrap"
                             >
-                              {occ.split(',').pop()?.trim() || occ}
+                              {occ}
                             </code>
                           ))}
                         </div>
