@@ -121,7 +121,7 @@ export default function App() {
 
   // Dynamic Chronological Index of Questions
   const chronologicalIndex = useMemo(() => {
-    const index: { [year: string]: { [specialty: string]: { questionId: string; subspecialty: string; topic: string }[] } } = {};
+    const index: { [year: string]: { [specialty: string]: { questionId: string; subspecialty: string; topic: string; occurrence: string }[] } } = {};
 
     Object.entries(database).forEach(([specialty, subData]) => {
       Object.entries(subData).forEach(([subspecialty, topics]) => {
@@ -152,7 +152,8 @@ export default function App() {
             index[yearOrPaper][specialty].push({
               questionId,
               subspecialty,
-              topic: t.topic
+              topic: t.topic,
+              occurrence: occ
             });
           });
         });

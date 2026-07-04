@@ -1,4 +1,5 @@
 import { Award, HelpCircle, Sparkles, BookMarked } from 'lucide-react';
+import { getQuestionText } from '../data/pastQuestionsText';
 
 interface ChronologicalBrowseProps {
   chronologicalIndex: {
@@ -7,6 +8,7 @@ interface ChronologicalBrowseProps {
         questionId: string;
         subspecialty: string;
         topic: string;
+        occurrence: string;
       }[];
     };
   };
@@ -125,14 +127,15 @@ export default function ChronologicalBrowse({
                     {questions.map((q, idx) => {
                       const isBookmarked = bookmarkedTopics.includes(q.topic);
                       const isRevised = revisedTopics.includes(q.topic);
+                      const questionText = getQuestionText(q.occurrence, q.topic);
 
                       return (
-                        <div key={idx} className="p-4 hover:bg-slate-50/30 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                          <div className="flex items-start gap-3">
+                        <div key={idx} className="p-4 hover:bg-slate-50/30 transition-colors flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                          <div className="flex items-start gap-3 flex-1 min-w-0">
                             <span className="bg-teal-100 text-teal-800 font-mono font-extrabold px-2.5 py-0.5 rounded text-xs mt-0.5 shrink-0">
                               {q.questionId}
                             </span>
-                            <div>
+                            <div className="flex-1 min-w-0">
                               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-2">
                                 <span>{q.subspecialty}</span>
                                 {isRevised && (
@@ -144,10 +147,22 @@ export default function ChronologicalBrowse({
                               <h4 className="text-sm font-extrabold text-slate-800 mt-1 leading-snug">
                                 {q.topic}
                               </h4>
+                              
+                              {/* Exact Past Question Text Block */}
+                              {questionText ? (
+                                <div className="mt-2.5 p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl text-xs text-slate-700 font-medium whitespace-pre-wrap leading-relaxed shadow-3xs relative pl-8 border-l-4 border-l-teal-600">
+                                  <span className="absolute left-2.5 top-2.5 text-teal-500 font-serif text-xl font-extrabold select-none">&ldquo;</span>
+                                  {questionText}
+                                </div>
+                              ) : (
+                                <div className="mt-2 p-2 px-3 bg-slate-50/40 border border-slate-200/40 rounded-lg text-[10px] text-slate-400 italic pl-3">
+                                  No exact past question text captured. Select "Study Topic" to view standard clinical focus guidelines.
+                                </div>
+                              )}
                             </div>
                           </div>
 
-                          <div className="flex items-center gap-2 sm:self-center shrink-0">
+                          <div className="flex items-center gap-2 sm:self-start shrink-0 mt-1 sm:mt-0">
                             {/* Checklist status indicators */}
                             {isBookmarked && (
                               <span title="Bookmarked in Study List" className="p-1 text-amber-500 bg-amber-50 rounded border border-amber-100">
