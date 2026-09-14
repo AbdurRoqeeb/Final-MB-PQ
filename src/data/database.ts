@@ -17,7 +17,9 @@ export const database: FullDatabase = {
       { topic: "Type 2 Diabetes Mellitus Comprehensive Cardiovascular & Glycemic Management", occurrences: ["Q1a, September 2022"] },
       { topic: "Diabetic Ketoacidosis (DKA) Pathophysiology, Osmolality/Anion Gap Calculations & Protocols", occurrences: ["Q1b, September 2022", "Q5, February 2020"] },
       { topic: "Diabetes Cutaneous Manifestations, Ulcers & Necrobiosis Lipoidica", occurrences: ["Q2A, January 2025"] },
-      { topic: "Addison's Disease (Adrenal Insufficiency) & Postural Hypotension", occurrences: ["Q6, January 2025"] }
+      { topic: "Type 1 Diabetes Mellitus Clinical Presentation, Diagnostic Criteria & Supportive Investigations", occurrences: ["Q2A, April 2024"] },
+      { topic: "Primary Hypothyroidism Thyroid Function Interpretation, Etiologies & Cardiovascular Signs", occurrences: ["Q2B, April 2024"] },
+      { topic: "Addison's Disease (Adrenal Insufficiency) & Postural Hypotension", occurrences: ["Q6, January 2025", "Q2C, April 2024"] }
     ],
     "Nephrology": [
       { topic: "Acute Kidney Injury (AKI) secondary to Herbal Remedies & NSAIDs (ATN)", occurrences: ["Q1, February 2020"] },
@@ -26,7 +28,8 @@ export const database: FullDatabase = {
     ],
     "Neurology": [
       { topic: "Parkinson's Disease Presentation, Risk Factors & Treatment", occurrences: ["Q1, April 2016"] },
-      { topic: "Acute Ischemic Stroke Diagnosis & Thrombolysis Guidelines", occurrences: ["Q3A, January 2025"] }
+      { topic: "Acute Ischemic Stroke Diagnosis & Thrombolysis Guidelines", occurrences: ["Q3A, January 2025"] },
+      { topic: "Migraine with Aura (Chronic Migraine) Triggers, Abortive & Preventive Pharmacotherapy", occurrences: ["Q4A, April 2024"] }
     ],
     "Cardiology": [
       { topic: "Acute Decompensated Heart Failure & Pulmonary Embolism Co-existence", occurrences: ["Q2, September 2022"] },
@@ -37,8 +40,9 @@ export const database: FullDatabase = {
     ],
     "Dermatology": [
       { topic: "Stevens-Johnson Syndrome (SJS) & Toxic Epidermal Necrolysis (TEN)", occurrences: ["Q4, September 2022"] },
-      { topic: "Lichen Planus Variants, Oral Wickham's Striae & Management", occurrences: ["Q3, February 2020"] },
-      { topic: "HIV Associated Pruritic Papular Eruption & Oral Hairy Leukoplakia", occurrences: ["Q2B, January 2025"] }
+      { topic: "Lichen Planus Variants, Oral Wickham's Striae & Management", occurrences: ["Q3, February 2020", "Q3A, April 2024"] },
+      { topic: "HIV Associated Pruritic Papular Eruption & Oral Hairy Leukoplakia", occurrences: ["Q2B, January 2025"] },
+      { topic: "Molluscum Contagiosum in HIV/AIDS, STI Management & Opportunistic Genital Dermatoses", occurrences: ["Q3B, April 2024"] }
     ],
     "Gastroenterology": [
       { topic: "Paracetamol Poisoning, Drug-Induced Acute Liver Failure & NAC Protocol", occurrences: ["Q6, September 2022"] },
@@ -46,6 +50,7 @@ export const database: FullDatabase = {
       { topic: "Decompensated Liver Cirrhosis, Portal Hypertension & Ascites", occurrences: ["Q1, January 2025"] }
     ],
     "Pulmonology": [
+      { topic: "Community-Acquired & Atypical Pneumonia Pathogens, Diagnostic Confirmation & Antibiotic Duration", occurrences: ["Q1, April 2024"] },
       { topic: "Silicotuberculosis, Occupational Dust Exposure & Restrictive Spirometry", occurrences: ["Q4, February 2020"] },
       { topic: "Asbestosis, Mesothelioma & Pulmonary Fibrosis", occurrences: ["Q5, April 2016"] },
       { topic: "Miliary Tuberculosis vs Metastatic Lung Disease Evaluation", occurrences: ["Q5, September 2022"] }
