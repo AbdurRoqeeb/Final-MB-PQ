@@ -23,7 +23,7 @@ export const database: FullDatabase = {
     ],
     "Nephrology": [
       { topic: "Acute Kidney Injury (AKI) secondary to Herbal Remedies & NSAIDs (ATN)", occurrences: ["Q1, February 2020"] },
-      { topic: "Chronic Kidney Disease & Hypertensive Nephrosclerosis", occurrences: ["Q3, April 2016"] },
+      { topic: "Chronic Kidney Disease & Hypertensive Nephrosclerosis", occurrences: ["Q3, April 2016", "Q4B, April 2024"] },
       { topic: "Urinary Tract Infections: Acute Cystitis & Pyelonephritis Pathogenesis & Management", occurrences: ["Q3B, January 2025"] }
     ],
     "Neurology": [
@@ -33,7 +33,8 @@ export const database: FullDatabase = {
     ],
     "Cardiology": [
       { topic: "Acute Decompensated Heart Failure & Pulmonary Embolism Co-existence", occurrences: ["Q2, September 2022"] },
-      { topic: "Congestive Heart Failure (CHF) Etiology & Pharmacotherapy", occurrences: ["Q2, February 2020", "Q4, January 2025"] },
+      { topic: "Congestive Heart Failure (CHF) Etiology & Pharmacotherapy", occurrences: ["Q2, February 2020", "Q4, January 2025", "Q6, April 2024"] },
+      { topic: "Rheumatic Heart Disease (Valvular Heart Disease), Atrial Fibrillation & Embolic Stroke", occurrences: ["Q6, April 2024"] },
       { topic: "Hypertensive Emergency, Malignant Hypertension & Organ Damage", occurrences: ["Q3, September 2022"] },
       { topic: "Ischemic Heart Disease & Diabetic Cardiomyopathy", occurrences: ["Q2, April 2016"] },
       { topic: "Deep Vein Thrombosis (DVT) Diagnosis & Therapeutic Management", occurrences: ["Q5, January 2025"] }
@@ -47,7 +48,8 @@ export const database: FullDatabase = {
     "Gastroenterology": [
       { topic: "Paracetamol Poisoning, Drug-Induced Acute Liver Failure & NAC Protocol", occurrences: ["Q6, September 2022"] },
       { topic: "Bleeding Peptic Ulcer Disease Pathophysiology & Management", occurrences: ["Q4, April 2016"] },
-      { topic: "Decompensated Liver Cirrhosis, Portal Hypertension & Ascites", occurrences: ["Q1, January 2025"] }
+      { topic: "Decompensated Liver Cirrhosis, Portal Hypertension & Ascites", occurrences: ["Q1, January 2025", "Q5, April 2024"] },
+      { topic: "Hepatic Encephalopathy Precipitants, Paracentesis Complications & Protocolized Therapy", occurrences: ["Q5, April 2024"] }
     ],
     "Pulmonology": [
       { topic: "Community-Acquired & Atypical Pneumonia Pathogens, Diagnostic Confirmation & Antibiotic Duration", occurrences: ["Q1, April 2024"] },
