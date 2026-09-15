@@ -12,9 +12,13 @@ import {
   CheckCircle,
   HelpCircle,
   RefreshCw,
-  ChevronRight
+  ChevronRight,
+  FileText,
+  Copy,
+  Check
 } from 'lucide-react';
 import { database, SpecialtyData } from './data/database';
+import { getQuestionText } from './data/pastQuestionsText';
 import ChronologicalBrowse from './components/ChronologicalBrowse';
 
 export default function App() {
@@ -40,6 +44,7 @@ export default function App() {
   
   // Accordion Expandable state (Expanded topic name)
   const [expandedTopic, setExpandedTopic] = useState<string | null>(null);
+  const [copiedOccurrence, setCopiedOccurrence] = useState<string | null>(null);
 
   // Mobile layout and custom modal states
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
@@ -94,6 +99,16 @@ export default function App() {
     localStorage.removeItem("final_mb_bookmarks");
     localStorage.removeItem("final_mb_revised");
     setShowResetConfirm(false);
+  };
+
+  // Copy verbatim question text to clipboard with feedback
+  const handleCopyQuestion = (text: string, id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(text);
+      setCopiedOccurrence(id);
+      setTimeout(() => setCopiedOccurrence(null), 2000);
+    }
   };
 
   // Switch specialty tab and reset subspecialty filter
@@ -236,7 +251,7 @@ export default function App() {
 
   // Comprehensive Search & Filter Logic
   const processedTopicsList = useMemo(() => {
-    const list: { subspecialty: string; topic: string; occurrences: string[]; frequency: number }[] = [];
+    const list: { specialty: string; subspecialty: string; topic: string; occurrences: string[]; frequency: number }[] = [];
 
     Object.entries(activeSpecialtyData).forEach(([subName, topics]) => {
       // If we filtered by subspecialty and it's not "All", match exactly
@@ -260,6 +275,7 @@ export default function App() {
         if (showRevisedOnly && !isRevised) return;
 
         list.push({
+          specialty: selectedSpecialty,
           subspecialty: subName,
           topic: t.topic,
           occurrences: t.occurrences,
@@ -741,7 +757,7 @@ export default function App() {
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">
-                Syllabus tracker showing question recurrences from clinical essay exams. Click any topic to study key clinical focus points.
+                Syllabus tracker showing question recurrences from clinical essay exams. Click any topic to inspect the verbatim questions from every tested exam year.
               </p>
             </div>
 
@@ -954,15 +970,18 @@ export default function App() {
                         </div>
 
                         {/* Exam Occurrences */}
-                        <div className="col-span-6 md:col-span-3 flex flex-wrap gap-1 items-center pt-2 md:pt-0">
-                          {itemObj.occurrences.map((occ, idx) => (
-                            <code 
-                              key={idx} 
-                              className="text-[9px] font-mono bg-slate-50 border border-slate-200/60 text-slate-600 px-1.5 py-0.5 rounded shadow-2xs whitespace-nowrap"
-                            >
-                              {occ}
-                            </code>
-                          ))}
+                        <div className="col-span-6 md:col-span-3 flex items-center justify-between gap-1.5 pt-2 md:pt-0">
+                          <div className="flex flex-wrap gap-1 items-center">
+                            {itemObj.occurrences.map((occ, idx) => (
+                              <code 
+                                key={idx} 
+                                className="text-[9px] font-mono bg-slate-50 border border-slate-200/60 text-slate-600 px-1.5 py-0.5 rounded shadow-2xs whitespace-nowrap"
+                              >
+                                {occ}
+                              </code>
+                            ))}
+                          </div>
+                          <ChevronRight className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 hidden sm:block ${isExpanded ? "rotate-90 text-teal-600" : "group-hover:translate-x-0.5"}`} />
                         </div>
 
                       </div>
@@ -971,6 +990,77 @@ export default function App() {
                       {isExpanded && (
                         <div className="bg-slate-50/80 border-t border-slate-100 p-4 md:p-5 text-xs md:text-sm space-y-4 animate-fadeIn">
                           
+                          {/* Verbatim Past Examination Questions Panel */}
+                          <div className="space-y-3 bg-white p-3.5 md:p-4 rounded-xl border border-slate-200 shadow-2xs">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-2.5 border-b border-slate-100">
+                              <h4 className="font-bold text-slate-800 flex items-center gap-1.5 text-xs uppercase tracking-wide">
+                                <FileText className="w-4 h-4 text-teal-700" />
+                                Verbatim Past Examination Questions ({itemObj.occurrences.length})
+                              </h4>
+                              <span className="text-[10px] text-slate-400 font-semibold">
+                                Exact essay prompts from every tested exam year
+                              </span>
+                            </div>
+
+                            <div className="space-y-3 pt-1">
+                              {itemObj.occurrences.map((occ, occIdx) => {
+                                const qText = getQuestionText(occ, itemObj.topic, itemObj.specialty);
+                                const isCopied = copiedOccurrence === `${itemObj.topic}-${occ}`;
+
+                                return (
+                                  <div 
+                                    key={occIdx}
+                                    className="p-3.5 bg-slate-50/90 hover:bg-slate-50 border border-slate-200 rounded-xl transition-all relative pl-8 border-l-4 border-l-teal-600 shadow-3xs"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    <span className="absolute left-2.5 top-2.5 text-teal-500/80 font-serif text-2xl font-black select-none leading-none">&ldquo;</span>
+                                    
+                                    <div className="flex items-center justify-between gap-2 mb-2 flex-wrap">
+                                      <div className="flex items-center gap-2 flex-wrap">
+                                        <span className="bg-teal-100 text-teal-900 font-mono font-extrabold px-2.5 py-0.5 rounded text-[11px] shrink-0 border border-teal-200">
+                                          {occ}
+                                        </span>
+                                        <span className="text-[10px] text-slate-500 font-semibold">
+                                          Part IV Final MBBS Examination
+                                        </span>
+                                      </div>
+
+                                      {qText && (
+                                        <button
+                                          onClick={(e) => handleCopyQuestion(qText, `${itemObj.topic}-${occ}`, e)}
+                                          className="inline-flex items-center gap-1 text-[10px] font-bold text-slate-600 hover:text-teal-800 bg-white hover:bg-slate-100 px-2 py-1 rounded border border-slate-200 transition-colors shrink-0 cursor-pointer shadow-3xs"
+                                          title="Copy question text"
+                                        >
+                                          {isCopied ? (
+                                            <>
+                                              <Check className="w-3 h-3 text-emerald-600" />
+                                              <span className="text-emerald-600">Copied</span>
+                                            </>
+                                          ) : (
+                                            <>
+                                              <Copy className="w-3 h-3 text-slate-400" />
+                                              <span>Copy Text</span>
+                                            </>
+                                          )}
+                                        </button>
+                                      )}
+                                    </div>
+
+                                    {qText ? (
+                                      <div className="text-xs md:text-[13px] text-slate-800 font-medium whitespace-pre-wrap leading-relaxed">
+                                        {qText}
+                                      </div>
+                                    ) : (
+                                      <div className="text-xs text-slate-400 italic">
+                                        Clinical vignette or short note question indexed under {occ}.
+                                      </div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+
                           {/* Alert priority */}
                           <div className="flex items-start gap-2 bg-white px-3 py-2.5 rounded-lg border border-slate-200 shadow-3xs">
                             <Sparkles className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />

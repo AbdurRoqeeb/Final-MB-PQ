@@ -947,12 +947,124 @@ export const pastQuestionsText: { [occurrence: string]: string } = {
     "a) Enumerate the key differences between observational and analytical epidemiology.\nb) The results of a 10-year cohort study investigating the association between cigarette smoking and coronary heart disease (CHD) are as follows:\n  - Smokers: 65 developed CHD, 1,935 did not (Total = 2,000)\n  - Non-smokers: 20 developed CHD, 3,980 did not (Total = 4,000)\nIs there an association between smoking and coronary heart disease? Justify your result by calculating the Relative Risk (Risk Ratio) and Attributable Risk.",
 
   "Q12, 600L End of Posting":
-    "In a double-blind randomized controlled clinical trial, 100 hypertensive patients were randomized into two experimental groups: 'Drug' and 'Placebo'. The treatment outcome (Died vs Survived) was documented. Of the 35 patients in the placebo group, 25 survived and 10 died; of the 65 patients in the experimental drug group, 60 survived and 5 died.\na. Present the data in a 2x2 contingency table.\nb. Use the Chi-square (X2) test to determine if there is a statistically significant difference in mortality between the drug and placebo groups at alpha = 0.05 (critical X2 at 1 df = 3.84).\nc. State your conclusion and clinical recommendation."
+    "In a double-blind randomized controlled clinical trial, 100 hypertensive patients were randomized into two experimental groups: 'Drug' and 'Placebo'. The treatment outcome (Died vs Survived) was documented. Of the 35 patients in the placebo group, 25 survived and 10 died; of the 65 patients in the experimental drug group, 60 survived and 5 died.\na. Present the data in a 2x2 contingency table.\nb. Use the Chi-square (X2) test to determine if there is a statistically significant difference in mortality between the drug and placebo groups at alpha = 0.05 (critical X2 at 1 df = 3.84).\nc. State your conclusion and clinical recommendation.",
+
+  // June 2013 (Community Medicine)
+  "Q1a, June 2013":
+    "Outline the systematic stages of the health management planning cycle (situation analysis, priority setting, objectives, strategies, resource allocation, implementation, and monitoring & evaluation).",
+
+  "Q1b, June 2013":
+    "Discuss situation analysis and state four criteria used in setting health priorities when resources are limited in developing country healthcare planning.",
+
+  "Q2a, June 2013":
+    "What are the essential environmental sanitation standards and hygienic requirements for commercial food premises and local markets in urban and semi-urban communities?",
+
+  "Q2b, June 2013":
+    "Outline the biological, physical, and chemical standards of potable drinking water, and describe the systematic procedure for sanitary inspection and water sampling.",
+
+  "Q3b, June 2013":
+    "Enumerate four major arthropod vectors of public health importance in Nigeria, the diseases they transmit, and discuss the principles of Integrated Vector Management (IVM).",
+
+  "Q4a, June 2013":
+    "Describe the Demographic Transition Theory, highlighting the demographic features, birth rates, death rates, and population growth rates across each of the four stages.",
+
+  "Q4b, June 2013":
+    "Compare individual, group, and mass media communication methods in health education, highlighting the core constructs of the Health Belief Model (HBM) and Rogers' Diffusion of Innovations theory.",
+
+  "Q5, June 2013":
+    "a. Define Non-Communicable Diseases (NCDs) and list the four major behavioral risk factors (tobacco use, unhealthy diet, physical inactivity, and harmful use of alcohol).\nb. Discuss population-level and clinical strategies for the prevention and control of obesity and hypertension in Nigeria.",
+
+  "Q6a, June 2013":
+    "Enumerate and explain five statutory roles and clinical functions of an Occupational Health Physician in a manufacturing company.",
+
+  "Q6b, June 2013":
+    "Discuss the physical, chemical, biological, mechanical, and ergonomic hazards that agricultural/farming workers are exposed to in rural Nigeria, and outline preventive measures.",
+
+  "Q7a, June 2013":
+    "Describe the mathematical and graphical characteristics of the Gaussian (Normal) Distribution curve, including the empirical rule (68-95-99.7 rule) and its clinical application in establishing normal laboratory reference ranges.",
+
+  "Q7b, June 2013":
+    "Differentiate between probability and non-probability sampling techniques, and explain how to select a representative sample using simple random sampling and multistage cluster sampling.",
+
+  "Q8a, June 2013":
+    "a. Outline the core components of the Child Survival Strategy (GOBI-FFF).\nb. Describe the cold chain equipment and temperature monitoring system used in Nigeria's National Routine Immunization schedule.",
+
+  "Q8b, June 2013":
+    "Discuss the health vulnerabilities, common medical conditions, and public health interventions for motherless babies and vulnerable children in developing countries.",
+
+  "Q8c, June 2013":
+    "Describe the mechanisms of action, clinical indications, contraindications, and non-contraceptive health benefits of Intrauterine Contraceptive Devices (IUCDs).",
+
+  "Q9a, June 2013":
+    "Classify healthcare and clinical waste, outline the color-coding segregation system at source, and describe safe handling, transportation, and final disposal methods in a healthcare facility.",
+
+  "Q9b, June 2013":
+    "What is Port Health Service? Describe the quarantine procedures and international health regulations (IHR) enforced at Nigerian international airports and seaports to prevent importation of communicable diseases.",
+
+  "Q10a, June 2013":
+    "Define disease prevention and describe with vivid clinical examples the four levels of prevention (primordial, primary, secondary, and tertiary) as applied to coronary artery disease or cervical cancer.",
+
+  // August 2014 (Community Medicine)
+  "Q1, August 2014":
+    "Discuss the physical, mental, and social health challenges of the elderly in Nigeria, and outline comprehensive public health strategies and community social support systems required for healthy ageing.",
+
+  "Q2, August 2014":
+    "Discuss the epidemiology, health problems, and social rehabilitation strategies for destitutes, street children, and homeless populations in urban Nigerian cities.",
+
+  "Q3, August 2014":
+    "Discuss the major occupational health hazards (biological, chemical, physical, and ergonomic) associated with agricultural farming in rural Nigeria, and suggest viable preventive and control strategies.",
+
+  "Q4a, August 2014":
+    "Compare and contrast out-of-pocket spending (user fees) with Community-Based Health Insurance (CBHI) in rural healthcare financing in Nigeria.",
+
+  "Q4b, August 2014":
+    "Outline the operational structure, revenue mobilization, risk pooling, and purchasing mechanisms under the National Health Insurance Scheme / Authority (NHIS/NHIA).",
+
+  "Q6a, August 2014":
+    "Define unmet need for family planning and enumerate the socio-cultural, economic, and health facility barriers contributing to low modern contraceptive prevalence in Nigeria.",
+
+  "Q6b, August 2014":
+    "Classify modern methods of contraception and discuss the 'BRAIDED' framework for effective contraceptive counseling and client consent.",
+
+  "Q7a, August 2014":
+    "State the WHO criteria, physical, chemical, and microbiological indicator standards for potable safe drinking water.",
+
+  "Q7b, August 2014":
+    "Describe the engineering principles, advantages, limitations, and public health significance of low-water on-site sanitation and sewage disposal systems (VIP latrines, pour-flush toilets).",
+
+  "Q7d, August 2014":
+    "Discuss the direct and indirect public health consequences of perennial flooding events and climate change in Nigerian riverine and urban settlements, outlining community disaster mitigation strategies.",
+
+  "Q8, August 2014":
+    "Define nosocomial (hospital-acquired) infections. Itemize the most common causative pathogens, routes of cross-infection, and outline comprehensive hospital infection prevention and control (IPC) measures.",
+
+  "Q9, August 2014":
+    "Outline the key components of a biomedical research proposal/protocol and explain the ethical considerations required for clinical research involving human subjects (informed consent, beneficence, confidentiality).",
+
+  "Q10a, August 2014":
+    "What is Behavior Change Communication (BCC)? Explain the systematic steps involved in designing, implementing, and evaluating a community BCC intervention for Lassa fever or Cholera prevention.",
+
+  "Q10b, August 2014":
+    "Discuss the core components, ethical basis, and clinical importance of the Patients' Bill of Rights (Patient Charter) in enhancing quality of care and patient satisfaction in healthcare facilities.",
+
+  "Q11a, August 2014":
+    "In biostatistics, define and explain the practical clinical interpretation and significance of:\ni. P-value and Level of Significance (alpha)\nii. Standard Error of the Mean (SEM)\niii. Type I (alpha) and Type II (beta) errors\niv. Statistical Power (1 - beta).",
+
+  // May 2014 (Community Medicine)
+  "Q13, May 2014":
+    "Discuss the environmental sanitation and infrastructure challenges in Nigerian urban centers, focusing on municipal drainage networks, refuse disposal methods, and strategies for prevention of recurrent urban flash flooding.",
+
+  // May 2010 (Community Medicine)
+  "Q16a, May 2010":
+    "Enumerate five distinct healthcare financing options available in developing countries.",
+
+  "Q16b, May 2010":
+    "Discuss the comparative advantages, disadvantages, and equity implications of user fees versus social health insurance in developing health economies."
 
   // End of database entries
 };
 
-export function getQuestionText(occurrence: string, topicName: string): string | undefined {
+export function getQuestionText(occurrence: string, topicName: string, specialty?: string): string | undefined {
   const sanitizedOcc = occurrence.trim();
   
   // Specific collision resolution for Q6, September 2022 / January 2025
@@ -969,6 +1081,26 @@ export function getQuestionText(occurrence: string, topicName: string): string |
   const surgeryKey = sanitizedOcc.includes("(Surgery)") ? sanitizedOcc : `${sanitizedOcc} (Surgery)`;
   const commKey = sanitizedOcc.includes("(Comm. Med)") ? sanitizedOcc : `${sanitizedOcc} (Comm. Med)`;
   const psychKey = sanitizedOcc.includes("(Psychiatry)") ? sanitizedOcc : `${sanitizedOcc} (Psychiatry)`;
+
+  // Specialty-guided lookup
+  if (specialty === "Surgery" && pastQuestionsText[surgeryKey]) return pastQuestionsText[surgeryKey];
+  if (specialty === "Community Medicine" && pastQuestionsText[commKey]) return pastQuestionsText[commKey];
+  if (specialty === "Psychiatry" && pastQuestionsText[psychKey]) return pastQuestionsText[psychKey];
+
+  // Try replacing LAQ with Q
+  const laqReplaced = sanitizedOcc.replace(/\bLAQ\s*/i, "Q");
+  if (pastQuestionsText[laqReplaced]) return pastQuestionsText[laqReplaced];
+  if (pastQuestionsText[`${laqReplaced} (Surgery)`]) return pastQuestionsText[`${laqReplaced} (Surgery)`];
+  if (pastQuestionsText[`${laqReplaced} (Comm. Med)`]) return pastQuestionsText[`${laqReplaced} (Comm. Med)`];
+
+  // Check sub-letters like Q3b, January 2025 (Psychiatry) -> Q3, January 2025 (Psychiatry)
+  const baseSubPart = sanitizedOcc.replace(/^([A-Za-z]+\s*\d+)[a-zA-Z]+(.*)$/, "$1$2");
+  if (baseSubPart !== sanitizedOcc) {
+    if (pastQuestionsText[baseSubPart]) return pastQuestionsText[baseSubPart];
+    if (pastQuestionsText[`${baseSubPart} (Psychiatry)`]) return pastQuestionsText[`${baseSubPart} (Psychiatry)`];
+    if (pastQuestionsText[`${baseSubPart} (Comm. Med)`]) return pastQuestionsText[`${baseSubPart} (Comm. Med)`];
+    if (pastQuestionsText[`${baseSubPart} (Surgery)`]) return pastQuestionsText[`${baseSubPart} (Surgery)`];
+  }
 
   const lowerTopic = topicName.toLowerCase();
 
@@ -1038,14 +1170,12 @@ export function getQuestionText(occurrence: string, topicName: string): string |
     return pastQuestionsText[strippedKey];
   }
 
-  // Fallback: match sub-letter occurrences like "Q11a, September 2022" -> "Q11, September 2022 (Comm. Med)" or "Q11, September 2022"
-  const subMatch = strippedKey.match(/^([A-Za-z]+)\s*(\d+)[a-z]+(,\s*.+)$/i);
-  if (subMatch) {
-    const baseOcc = `${subMatch[1]}${subMatch[2]}${subMatch[3]}`; // e.g. "Q11, September 2022"
-    if (pastQuestionsText[`${baseOcc} (Comm. Med)`]) return pastQuestionsText[`${baseOcc} (Comm. Med)`];
-    if (pastQuestionsText[baseOcc]) return pastQuestionsText[baseOcc];
-    if (pastQuestionsText[`${baseOcc} (Surgery)`]) return pastQuestionsText[`${baseOcc} (Surgery)`];
-  }
+  // Try stripped sub-letters: "Q11a, September 2022" -> "Q11, September 2022"
+  const strippedBaseSubPart = strippedKey.replace(/^([A-Za-z]+\s*\d+)[a-zA-Z]+(.*)$/, "$1$2");
+  if (pastQuestionsText[strippedBaseSubPart]) return pastQuestionsText[strippedBaseSubPart];
+  if (pastQuestionsText[`${strippedBaseSubPart} (Comm. Med)`]) return pastQuestionsText[`${strippedBaseSubPart} (Comm. Med)`];
+  if (pastQuestionsText[`${strippedBaseSubPart} (Surgery)`]) return pastQuestionsText[`${strippedBaseSubPart} (Surgery)`];
+  if (pastQuestionsText[`${strippedBaseSubPart} (Psychiatry)`]) return pastQuestionsText[`${strippedBaseSubPart} (Psychiatry)`];
 
   return undefined;
 }
