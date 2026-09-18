@@ -467,6 +467,102 @@ export default function App() {
       };
     }
 
+    if (t.includes("amputation")) {
+      return {
+        keyConcepts: [
+          "Definition: Surgical removal of all or part of an extremity or digit through a bone (distinguished from disarticulation, which is removal through a joint).",
+          "Indications for Major Amputation (Dead, Deadly, Damn Nuisance): 1. Dead/Non-viable limb (irreversible peripheral vascular gangrene, extensive crush trauma, severe frostbite). 2. Deadly conditions (spreading necrotizing fasciitis/gas gangrene, malignant bone/soft-tissue tumors e.g., osteosarcoma, life-threatening septic shock). 3. Damn nuisance/Severe functional impairment (severe fixed deformities, chronic osteomyelitis with intractable pain, paraplegic limb with intractable ulcers).",
+          "Lower Limb Amputation Classification: Minor (toe amputation, trans-metatarsal, Ray amputation, Lisfranc, Chopart) vs Major (Syme's disarticulation, Below-Knee Amputation / Burgess posterior flap, Through-Knee / Gritti-Stokes, Above-Knee Amputation / equal anterior-posterior flaps, Hip disarticulation, Hemipelvectomy).",
+          "Complications: Immediate/Early (primary/reactionary/secondary hemorrhage, hematoma, stump infection/gas gangrene, flap ischemia/necrosis, DVT/PE), Late (phantom limb sensation and pain, neuromas/stump pain, flexion contractures, bone spurs, stump breakdown/ulceration, prosthetic misfit)."
+        ],
+        studyReferences: [
+          "Bailey & Love's Short Practice of Surgery — Amputations and Artificial Limbs",
+          "Apley & Solomon's System of Orthopaedics and Trauma — Principles of Amputation"
+        ],
+        priority: "HIGH YIELD — Frequently tested in Orthopaedics/Vascular surgery essays with high recurrence."
+      };
+    }
+
+    if (t.includes("pressure ulcer") || t.includes("decubitus")) {
+      return {
+        keyConcepts: [
+          "Definition & Pathogenesis: Localized injury to the skin and underlying tissue, usually over a bony prominence, resulting from sustained pressure alone or pressure combined with shear and/or friction. Sustained pressure exceeding capillary closing pressure (32 mmHg) causes microvascular occlusion, tissue ischemia, anoxia, cell necrosis, and ulceration.",
+          "Etiological Factors: Extrinsic (unrelieved pressure, shear forces, friction, excess moisture/maceration from incontinence or perspiration). Intrinsic (advanced age, immobility/bedbound status, sensory loss/neuropathy, severe malnutrition/hypoalbuminemia, anemia, dehydration, peripheral vascular disease).",
+          "Staging (NPUAP/EPUAP): Stage I (non-blanchable erythema of intact skin), Stage II (partial-thickness skin loss with exposed dermis/blister), Stage III (full-thickness skin loss with visible subcutaneous fat), Stage IV (full-thickness skin and tissue loss with exposed fascia, muscle, tendon, or bone), Unstageable (slough/eschar obscuring depth), Deep Tissue Pressure Injury (persistent non-blanchable deep red/maroon/purple discoloration).",
+          "Prevention in High-Risk Patients: 1. Risk assessment (Waterlow or Braden scale). 2. Regular 2-hourly repositioning (30-degree tilt). 3. Pressure-relieving surfaces (alternating-pressure dynamic air mattress, gel cushions). 4. Skin hygiene and moisture barriers (barrier creams, prompt incontinence care). 5. Nutritional support (high protein, vitamin C, zinc). 6. Avoid friction/shear (sliding sheets, avoid dragging, keep head of bed ≤30 degrees unless contraindicated)."
+        ],
+        studyReferences: [
+          "Bailey & Love's Short Practice of Surgery — Plastic and Reconstructive Surgery: Pressure sores",
+          "NPUAP/EPUAP/PPPIA International Clinical Practice Guideline on Prevention and Treatment of Pressure Ulcers"
+        ],
+        priority: "HIGH YIELD — Core General/Plastic surgery essay topic with repeated occurrence across examination diets."
+      };
+    }
+
+    if (t.includes("papilloedema") || t.includes("papillitis")) {
+      return {
+        keyConcepts: [
+          "Definitions: Papilloedema is non-inflammatory, passive swelling of the optic nerve head (optic disc) secondary to raised intracranial pressure (ICP), classically bilateral. Papillitis (anterior optic neuritis) is active inflammation and swelling of the optic nerve head, typically unilateral.",
+          "Etiologies of Papilloedema: Space-occupying intracranial lesions (brain tumors, abscess, subdural/extradural hematoma), Impaired CSF dynamics (hydrocephalus, dural venous sinus thrombosis), Idiopathic Intracranial Hypertension (pseudotumor cerebri), Meningitis/Encephalitis, Malignant hypertension.",
+          "Etiologies of Papillitis: Demyelinating disease (Multiple Sclerosis, neuromyelitis optica), Autoimmune/Systemic vasculitis (SLE, sarcoidosis, giant cell arteritis), Post-viral / Infectious demyelination (measles, mumps, varicella, syphilis, tuberculosis, cat scratch disease/Bartonella), Toxic/Metabolic (methanol, ethambutol).",
+          "Key Clinical Differences: Visual Acuity (severely impaired early in papillitis; preserved/normal early with transient visual obscurations in papilloedema). Laterality (papillitis usually unilateral; papilloedema usually bilateral). Afferent Pupillary Defect (RAPD/Marcus Gunn pupil present in unilateral papillitis; absent in symmetric papilloedema). Pain (ocular/retrobulbar pain aggravated by eye movements in papillitis; painless in papilloedema). Visual field (central scotoma in papillitis; enlarged blind spot in papilloedema)."
+        ],
+        studyReferences: [
+          "Kanski's Clinical Ophthalmology — Neuro-Ophthalmology: The Optic Nerve",
+          "American Academy of Ophthalmology (AAO) BCSC — Neuro-Ophthalmology: Disc Edema vs Optic Neuritis"
+        ],
+        priority: "HIGH YIELD — Direct repeat question appearing in both Mock and Final 2024 surgery examination papers."
+      };
+    }
+
+    if (t.includes("bph") || t.includes("benign prostatic hyperplasia")) {
+      return {
+        keyConcepts: [
+          "IPSS Staging & Evaluation: International Prostate Symptom Score: 0–7 (Mild), 8–19 (Moderate), 20–35 (Severe). Quality of life score (0-6). Objective assessment with post-void residual (PVR) volume (>100–200 mL is abnormal), uroflowmetry (Qmax <10 mL/s indicates obstruction), DRE, urinalysis, serum PSA, and renal ultrasound.",
+          "Treatment Modalities: 1. Watchful waiting/Lifestyle modifications (fluid restriction before bedtime, avoid caffeine/alcohol, stop decongestants/anticholinergics). 2. Medical pharmacotherapy (Alpha-1 blockers e.g., Tamsulosin, Alfuzosin; 5-Alpha reductase inhibitors e.g., Finasteride, Dutasteride; Combination therapy). 3. Surgical intervention: Transurethral Resection of the Prostate (TURP — gold standard), Laser enucleation (HoLEP), Open prostatectomy (Millin's retropubic or Freyer's transvesical for very large glands >80-100g).",
+          "Adverse Effects of the Most Appropriate Option (TURP Complications): 1. TURP syndrome (dilutional hyponatremia, fluid overload, cerebral edema from absorption of glycine irrigant). 2. Retrograde ejaculation (in 70-80% of patients due to bladder neck damage). 3. Post-operative hematuria and clot retention. 4. Urethral stricture or bladder neck contracture. 5. Transient or permanent urinary incontinence (<1-2%). 6. Erectile dysfunction (5-10%). 7. Epididymo-orchitis or urinary tract infection."
+        ],
+        studyReferences: [
+          "Bailey & Love's Short Practice of Surgery — The Prostate and Seminal Vesicles",
+          "European Association of Urology (EAU) Guidelines on the Management of Non-neurogenic Male LUTS"
+        ],
+        priority: "HIGH YIELD — Examined identically in multiple diets; essential knowledge for urological surgery."
+      };
+    }
+
+    if (t.includes("computed tomography") || t.includes("radiographic densities") || t.includes("mri")) {
+      return {
+        keyConcepts: [
+          "Radiographic Densities (5 Basic Densities from lowest to highest attenuation): 1. Air/Gas (appears black/radiolucent e.g., lungs, bowel gas). 2. Fat (dark gray e.g., subcutaneous/retroperitoneal fat). 3. Soft tissue/Fluid (intermediate gray/water density e.g., heart, liver, bladder, blood). 4. Bone/Calcium (white/radiopaque e.g., cortical bone, calculus). 5. Metal/Contrast material (dense stark white e.g., barium, bullet fragment, surgical clips).",
+          "CT Advantages: Rapid acquisition time (ideal in acute trauma/resuscitation), superior bone/cortical detail and acute intracranial hemorrhage detection, widely available, lower cost compared to MRI, compatible with cardiac pacemakers/ferromagnetic implants.",
+          "CT Disadvantages: Ionizing radiation exposure (carcinogenic risk, contraindicated in pregnancy), potential adverse reactions to iodinated contrast media (contrast-induced nephropathy, anaphylactoid reactions), poorer soft tissue contrast resolution compared to MRI, streak artifacts from dense bone or metallic hardware.",
+          "MRI Advantages: Excellent multiplanar soft tissue contrast resolution (ideal for brain, spinal cord, ligaments, cartilage, pelvis), no ionizing radiation (safe in pregnant patients), non-contrast vascular imaging (MRA/MRV), functional and diffusion-weighted sequences (DWI for acute ischemic stroke within minutes).",
+          "MRI Disadvantages: Long scan duration (motion artifacts), contraindication in patients with non-MRI compatible ferromagnetic implants/pacemakers/metallic foreign bodies in the eye, claustrophobia, loud acoustic noise, high capital/maintenance cost, nephrogenic systemic fibrosis (NSF) risk with gadolinium contrast in severe renal failure (eGFR <30 mL/min)."
+        ],
+        studyReferences: [
+          "Sutton's Textbook of Radiology and Imaging — Principles of CT and MRI",
+          "Armstrong & Wastie's Diagnostic Imaging — Technical Principles of Cross-Sectional Imaging"
+        ],
+        priority: "HIGH YIELD — Directly tested across 2024 surgery papers in the radiology specialty section."
+      };
+    }
+
+    if (t.includes("extradural") || t.includes("head trauma") || t.includes("traumatic brain")) {
+      return {
+        keyConcepts: [
+          "Extradural (Epidural) Haemorrhage Pathophysiology: Bleeding into the potential space between the inner table of the skull and the outer endosteal layer of the dura mater, most commonly due to traumatic rupture of the middle meningeal artery or vein associated with a temporoparietal skull fracture across the pterion.",
+          "Clinical Presentation: Classical 'lucid interval' (initial brief loss of consciousness from concussion, followed by temporary mental clarity, then progressive deterioration of consciousness as the hematoma expands). Ipsilateral pupil dilatation (compression of the 3rd cranial nerve by uncal herniation) and contralateral hemiparesis (compression of the cerebral peduncle). Cushing's triad (hypertension, bradycardia, irregular respirations) indicates life-threatening raised ICP.",
+          "Emergency Management: 1. Trauma ABCDE resuscitation (secure airway with endotracheal intubation if GCS ≤8, maintain PaO2 >60 mmHg and PaCO2 35-40 mmHg, target MAP ≥80 mmHg to preserve cerebral perfusion pressure CPP = MAP - ICP). 2. Immediate non-contrast CT brain (characteristic biconvex/hyperdense lens-shaped lenticular hematoma limited by cranial sutures). 3. Medical ICP lowering (IV Mannitol 0.25-1 g/kg or 3% Hypertonic saline, 30-degree head-of-bed elevation, seizure prophylaxis). 4. Emergency surgical decompression: Urgent craniotomy or burr-hole evacuation of the clot and bipolar coagulation of the bleeding middle meningeal vessels."
+        ],
+        studyReferences: [
+          "Bailey & Love's Short Practice of Surgery — Head and Spinal Cord Injuries",
+          "Advanced Trauma Life Support (ATLS) Student Course Manual — Head Trauma",
+          "Brain Trauma Foundation Guidelines for the Management of Severe Traumatic Brain Injury"
+        ],
+        priority: "CRITICAL HIGH YIELD — Core neurosurgical emergency with distinct radiographic and clinical presentation."
+      };
+    }
+
     // Generic Clinical Study Guide
     return {
       keyConcepts: [

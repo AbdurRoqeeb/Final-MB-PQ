@@ -1059,7 +1059,133 @@ export const pastQuestionsText: { [occurrence: string]: string } = {
     "Enumerate five distinct healthcare financing options available in developing countries.",
 
   "Q16b, May 2010":
-    "Discuss the comparative advantages, disadvantages, and equity implications of user fees versus social health insurance in developing health economies."
+    "Discuss the comparative advantages, disadvantages, and equity implications of user fees versus social health insurance in developing health economies.",
+
+  // ==========================================
+  // MARCH 2024 (Mock Examination in Surgery and Surgical Specialties - March 27, 2024)
+  // ==========================================
+  "LAQ 1, March 2024":
+    "Discuss the management of a 34-year-old female who presented with a right breast lump and a solitary mobile axillary lymph node. (20 marks)",
+  "LAQ 1, March 2024 (Surgery)":
+    "Discuss the management of a 34-year-old female who presented with a right breast lump and a solitary mobile axillary lymph node. (20 marks)",
+
+  "LAQ 2, March 2024":
+    "Discuss the management of a 56-year-old man who was involved in a road traffic injury and brought to the emergency room with features of open tibia fracture, and with pulse rate of 105/minute and blood pressure of 90/50 mm Hg. (20 marks)",
+  "LAQ 2, March 2024 (Surgery)":
+    "Discuss the management of a 56-year-old man who was involved in a road traffic injury and brought to the emergency room with features of open tibia fracture, and with pulse rate of 105/minute and blood pressure of 90/50 mm Hg. (20 marks)",
+
+  "SAQ 1, March 2024":
+    "Outline the management of a patient with moderate traumatic brain injury and extradural haemorrhage. (10 marks)",
+  "SAQ 1, March 2024 (Surgery)":
+    "Outline the management of a patient with moderate traumatic brain injury and extradural haemorrhage. (10 marks)",
+
+  "SAQ 2, March 2024":
+    "A male child of 5-year-old presented with features suggestive of acute appendicitis and required general anaesthesia for appendectomy.\n(a) What type of breathing circuit will you use to provide general anaesthesia for this patient? (4 marks)\n(b) With the aid of a diagram classify the anaesthetic breathing circuit using the Mapleson classification. (6 marks)",
+  "SAQ 2, March 2024 (Surgery)":
+    "A male child of 5-year-old presented with features suggestive of acute appendicitis and required general anaesthesia for appendectomy.\n(a) What type of breathing circuit will you use to provide general anaesthesia for this patient? (4 marks)\n(b) With the aid of a diagram classify the anaesthetic breathing circuit using the Mapleson classification. (6 marks)",
+
+  "SAQ 3, March 2024":
+    "(a) Define papilloedema. (2 marks)\n(b) List 3 causes of papilloedema. (3 marks)\n(c) Define papillitis. (2 marks)\n(d) List 3 causes of papillitis. (3 marks)",
+  "SAQ 3, March 2024 (Surgery)":
+    "(a) Define papilloedema. (2 marks)\n(b) List 3 causes of papilloedema. (3 marks)\n(c) Define papillitis. (2 marks)\n(d) List 3 causes of papillitis. (3 marks)",
+
+  "SAQ 4, March 2024":
+    "Discuss the radiographic densities used in radiology. Give examples and state the terminologies used in describing them. (10 marks)",
+  "SAQ 4, March 2024 (Surgery)":
+    "Discuss the radiographic densities used in radiology. Give examples and state the terminologies used in describing them. (10 marks)",
+
+  "SAQ 5, March 2024":
+    "(a) What are pressure ulcers? (2 marks)\n(b) Describe briefly how pressure ulcers are formed. (2 marks)\n(c) List 3 extrinsic causes and 3 intrinsic causes of pressure ulcers. (3 marks)\n(d) List 6 ways to prevent pressure ulcers in patients at risk. (3 marks)",
+  "SAQ 5, March 2024 (Surgery)":
+    "(a) What are pressure ulcers? (2 marks)\n(b) Describe briefly how pressure ulcers are formed. (2 marks)\n(c) List 3 extrinsic causes and 3 intrinsic causes of pressure ulcers. (3 marks)\n(d) List 6 ways to prevent pressure ulcers in patients at risk. (3 marks)",
+
+  "SAQ 6, March 2024":
+    "A 15-month-old male child presents with bluish discolouration of the lips and easy fatigability noticed since birth. Symptoms are exacerbated during breastfeeding and when he cries. He also has failure to thrive.\n(a) Define central cyanosis. (1 mark)\n(b) List 5 most common cyanotic congenital heart diseases. (2.5 marks)\n(c) Which of these 5 is most common and likely to be responsible for diagnosis in the patient presented above? (0.5 mark)\n(d) What is the most common palliative surgical procedure performed for the condition? (2 marks)\n(e) What does the palliative procedure entail in the two existing standard techniques? (4 marks)",
+  "SAQ 6, March 2024 (Surgery)":
+    "A 15-month-old male child presents with bluish discolouration of the lips and easy fatigability noticed since birth. Symptoms are exacerbated during breastfeeding and when he cries. He also has failure to thrive.\n(a) Define central cyanosis. (1 mark)\n(b) List 5 most common cyanotic congenital heart diseases. (2.5 marks)\n(c) Which of these 5 is most common and likely to be responsible for diagnosis in the patient presented above? (0.5 mark)\n(d) What is the most common palliative surgical procedure performed for the condition? (2 marks)\n(e) What does the palliative procedure entail in the two existing standard techniques? (4 marks)",
+
+  "SAQ 7, March 2024":
+    "(a) What is amputation? (2 marks)\n(b) Classify lower limb amputations. (2 marks)\n(c) Mention 5 indications of major amputation. (3 marks)\n(d) What are the complications of amputations? (3 marks)",
+  "SAQ 7, March 2024 (Surgery)":
+    "(a) What is amputation? (2 marks)\n(b) Classify lower limb amputations. (2 marks)\n(c) Mention 5 indications of major amputation. (3 marks)\n(d) What are the complications of amputations? (3 marks)",
+
+  "SAQ 8, March 2024":
+    "A 63-year-old man presented at the SOPD of LAUTECH Teaching Hospital with a 2-month history of difficulty in passing urine. A clinical diagnosis of BPH was made. His IPSS score was 17 and post-void residual was 280 mls.\n(a) What is the most appropriate treatment option?\n(b) List other options.\n(c) List 5 specific adverse effects of the most appropriate treatment option.",
+  "SAQ 8, March 2024 (Surgery)":
+    "A 63-year-old man presented at the SOPD of LAUTECH Teaching Hospital with a 2-month history of difficulty in passing urine. A clinical diagnosis of BPH was made. His IPSS score was 17 and post-void residual was 280 mls.\n(a) What is the most appropriate treatment option?\n(b) List other options.\n(c) List 5 specific adverse effects of the most appropriate treatment option.",
+
+  "SAQ 9, March 2024":
+    "A 5-year-old girl was brought to the emergency room by her mother on account of unprovoked bleeding from the nose.\n(a) List 5 relevant questions that will assist in your diagnosis.\n(b) List 3 differential diagnoses.\n(c) List 3 investigations to be done at the emergency.\n(d) Mention 3 medical management options.",
+  "SAQ 9, March 2024 (Surgery)":
+    "A 5-year-old girl was brought to the emergency room by her mother on account of unprovoked bleeding from the nose.\n(a) List 5 relevant questions that will assist in your diagnosis.\n(b) List 3 differential diagnoses.\n(c) List 3 investigations to be done at the emergency.\n(d) Mention 3 medical management options.",
+
+  "SAQ 10, March 2024":
+    "A 10-year-old is diagnosed with generalised peritonitis. Briefly describe how to prepare him for a major operation.",
+  "SAQ 10, March 2024 (Surgery)":
+    "A 10-year-old is diagnosed with generalised peritonitis. Briefly describe how to prepare him for a major operation.",
+
+  // ==========================================
+  // APRIL 2024 (Part IV Final Examination in Surgery and Surgical Specialities - April 17, 2024)
+  // ==========================================
+  "LAQ 1, April 2024":
+    "A 54-year-old bricklayer presented to the accident and emergency unit with a history of easy fatiguability, and anorexia of about a month duration. Further direct inquiry revealed a history of the passage of pellet-like stool, blood-stained stool and tenesmus for 3 months before presentation.\nDiscuss the management of this patient. (20 marks)",
+  "LAQ 1, April 2024 (Surgery)":
+    "A 54-year-old bricklayer presented to the accident and emergency unit with a history of easy fatiguability, and anorexia of about a month duration. Further direct inquiry revealed a history of the passage of pellet-like stool, blood-stained stool and tenesmus for 3 months before presentation.\nDiscuss the management of this patient. (20 marks)",
+
+  "LAQ 2, April 2024":
+    "Outline the acute or immediate complications of blood transfusion and discuss the treatment and prevention of one of the common ones / List acute complications of blood transfusion and outline the management of one. (20 marks)",
+  "LAQ 2, April 2024 (Surgery)":
+    "Outline the acute or immediate complications of blood transfusion and discuss the treatment and prevention of one of the common ones / List acute complications of blood transfusion and outline the management of one. (20 marks)",
+
+  "SAQ 1, April 2024":
+    "Write a short note on the care of a spinal cord injured patient in the emergency unit. (10 marks)",
+  "SAQ 1, April 2024 (Surgery)":
+    "Write a short note on the care of a spinal cord injured patient in the emergency unit. (10 marks)",
+
+  "SAQ 2, April 2024":
+    "A 35-year-old man presented in the emergency unit with severe pain on account of a compound fracture of the left femur.\n(a) Prescribe appropriate medication to relieve this patient's pain. (5 marks)\n(b) Enumerate pain assessment tools. (5 marks)",
+  "SAQ 2, April 2024 (Surgery)":
+    "A 35-year-old man presented in the emergency unit with severe pain on account of a compound fracture of the left femur.\n(a) Prescribe appropriate medication to relieve this patient's pain. (5 marks)\n(b) Enumerate pain assessment tools. (5 marks)",
+
+  "SAQ 3, April 2024":
+    "(a) Define papilloedema. (2 marks)\n(b) List 3 causes of papilloedema. (3 marks)\n(c) Define papillitis. (2 marks)\n(d) List 3 causes of papillitis. (3 marks)",
+  "SAQ 3, April 2024 (Surgery)":
+    "(a) Define papilloedema. (2 marks)\n(b) List 3 causes of papilloedema. (3 marks)\n(c) Define papillitis. (2 marks)\n(d) List 3 causes of papillitis. (3 marks)",
+
+  "SAQ 4, April 2024":
+    "In a tabular form, discuss the advantages and disadvantages of CT and MRI as imaging modalities. (10 marks)",
+  "SAQ 4, April 2024 (Surgery)":
+    "In a tabular form, discuss the advantages and disadvantages of CT and MRI as imaging modalities. (10 marks)",
+
+  "SAQ 5, April 2024":
+    "(a) What are pressure ulcers? (2 marks)\n(b) Describe briefly how pressure ulcers are formed. (2 marks)\n(c) List 3 extrinsic causes and 3 intrinsic causes of pressure ulcers. (3 marks)\n(d) List 6 ways to prevent pressure ulcers in patients at risk. (3 marks)",
+  "SAQ 5, April 2024 (Surgery)":
+    "(a) What are pressure ulcers? (2 marks)\n(b) Describe briefly how pressure ulcers are formed. (2 marks)\n(c) List 3 extrinsic causes and 3 intrinsic causes of pressure ulcers. (3 marks)\n(d) List 6 ways to prevent pressure ulcers in patients at risk. (3 marks)",
+
+  "SAQ 6, April 2024":
+    "A 62-year-old man presents with a 6-month history of progressive dysphagia, presently grade 3 with no odynophagia but with recurrent haematemesis. There is a positive history of weight loss and hoarseness of voice. He has a 30-year history of cigarette smoking and consumes alcohol.\n(a) Define dysphagia.\n(b) What is grade 3 dysphagia?\n(c) Define odynophagia.\n(d) What is the likely clinical diagnosis in the patient presented above?\n(e) List the relevant investigations you will request.\n(f) List the endoscopic or endoscopically aided palliative procedures for the condition.",
+  "SAQ 6, April 2024 (Surgery)":
+    "A 62-year-old man presents with a 6-month history of progressive dysphagia, presently grade 3 with no odynophagia but with recurrent haematemesis. There is a positive history of weight loss and hoarseness of voice. He has a 30-year history of cigarette smoking and consumes alcohol.\n(a) Define dysphagia.\n(b) What is grade 3 dysphagia?\n(c) Define odynophagia.\n(d) What is the likely clinical diagnosis in the patient presented above?\n(e) List the relevant investigations you will request.\n(f) List the endoscopic or endoscopically aided palliative procedures for the condition.",
+
+  "SAQ 7, April 2024":
+    "(a) What is amputation? (2 marks)\n(b) Classify lower limb amputations. (2 marks)\n(c) Mention 5 indications of major amputation. (3 marks)\n(d) What are the complications of amputations? (3 marks)",
+  "SAQ 7, April 2024 (Surgery)":
+    "(a) What is amputation? (2 marks)\n(b) Classify lower limb amputations. (2 marks)\n(c) Mention 5 indications of major amputation. (3 marks)\n(d) What are the complications of amputations? (3 marks)",
+
+  "SAQ 8, April 2024":
+    "A 63-year-old man presented at the SOPD of LAUTECH Teaching Hospital with a 2-month history of difficulty in passing urine. A clinical diagnosis of BPH was made. His IPSS score was 17 and post-void residual was 280 mls.\n(a) What is the most appropriate treatment option?\n(b) List other options.\n(c) List 5 specific adverse effects of the most appropriate treatment option.",
+  "SAQ 8, April 2024 (Surgery)":
+    "A 63-year-old man presented at the SOPD of LAUTECH Teaching Hospital with a 2-month history of difficulty in passing urine. A clinical diagnosis of BPH was made. His IPSS score was 17 and post-void residual was 280 mls.\n(a) What is the most appropriate treatment option?\n(b) List other options.\n(c) List 5 specific adverse effects of the most appropriate treatment option.",
+
+  "SAQ 9, April 2024":
+    "A 25-year-old tailor was brought to the adult emergency room on account of sudden onset cough and throat discomfort after accidental ingestion of a large button while working.\n(a) State 2 most likely differential diagnoses.\n(b) In a tabulated form, mention 4 symptoms each which differentiate the 2 diagnoses in question (a).\n(c) What is the definitive management for one of (a) above?\n(d) List 3 baseline investigations required before taking this patient to the theatre.\n(e) List 2 likely complications of the procedure.",
+  "SAQ 9, April 2024 (Surgery)":
+    "A 25-year-old tailor was brought to the adult emergency room on account of sudden onset cough and throat discomfort after accidental ingestion of a large button while working.\n(a) State 2 most likely differential diagnoses.\n(b) In a tabulated form, mention 4 symptoms each which differentiate the 2 diagnoses in question (a).\n(c) What is the definitive management for one of (a) above?\n(d) List 3 baseline investigations required before taking this patient to the theatre.\n(e) List 2 likely complications of the procedure.",
+
+  "SAQ 10, April 2024":
+    "A 10-year-old is diagnosed with generalised peritonitis. Briefly describe how to prepare him for a major operation.",
+  "SAQ 10, April 2024 (Surgery)":
+    "A 10-year-old is diagnosed with generalised peritonitis. Briefly describe how to prepare him for a major operation."
 
   // End of database entries
 };
