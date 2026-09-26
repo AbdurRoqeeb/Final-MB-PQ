@@ -1237,19 +1237,19 @@ export default function App() {
           </div>
 
           {/* Footer Status Panel */}
-          <footer className="flex items-center justify-between py-1.5 px-2 text-[10px] text-slate-400 font-medium shrink-0 gap-2">
-            <div className="flex items-center gap-2">
-              <span>&copy; Clinical Curriculum Analyst</span>
-              <span className="h-3 w-px bg-slate-200"></span>
+          <footer className="mt-auto pt-3 pb-1 px-2 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500 font-medium shrink-0">
+            <div className="flex items-center gap-2 flex-wrap text-[11px]">
+              <span className="text-slate-600">Built by <strong className="font-semibold text-slate-800">Ismail Abdur-Roqeeb</strong> for <strong className="font-bold text-teal-700">The Dilectus</strong></span>
+              <span className="h-3 w-px bg-slate-200 hidden sm:inline-block"></span>
               <button 
                 onClick={() => setShowMethodology(true)}
-                className="underline text-slate-400 hover:text-teal-700 transition-colors cursor-pointer"
+                className="underline text-slate-400 hover:text-teal-700 transition-colors cursor-pointer text-[10px]"
               >
                 Methodology Guide
               </button>
             </div>
             
-            <div className="font-bold uppercase tracking-wider text-teal-700 hidden xs:block">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-teal-700">
               Showing {processedTopicsList.length} of {Object.values(activeSpecialtyData).reduce((sum, item) => sum + item.length, 0)} modules
             </div>
           </footer>

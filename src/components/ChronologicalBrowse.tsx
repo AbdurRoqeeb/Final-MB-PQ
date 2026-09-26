@@ -1,4 +1,5 @@
-import { Award, HelpCircle, Sparkles, BookMarked } from 'lucide-react';
+import { useState } from 'react';
+import { Award, HelpCircle, Sparkles, BookMarked, Copy, Check } from 'lucide-react';
 import { getQuestionText } from '../data/pastQuestionsText';
 
 interface ChronologicalBrowseProps {
@@ -29,6 +30,16 @@ export default function ChronologicalBrowse({
   revisedTopics,
   handleStudyTopic,
 }: ChronologicalBrowseProps) {
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+
+  const handleCopy = (text: string, key: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(text);
+      setCopiedKey(key);
+      setTimeout(() => setCopiedKey(null), 2000);
+    }
+  };
 
   return (
     <div className="flex-1 flex overflow-hidden flex-col lg:flex-row bg-slate-100">
@@ -127,7 +138,8 @@ export default function ChronologicalBrowse({
                     {questions.map((q, idx) => {
                       const isBookmarked = bookmarkedTopics.includes(q.topic);
                       const isRevised = revisedTopics.includes(q.topic);
-                      const questionText = getQuestionText(q.occurrence, q.topic);
+                      const questionText = getQuestionText(q.occurrence, q.topic, spec);
+                      const isCopied = copiedKey === `${selectedYear}-${spec}-${idx}`;
 
                       return (
                         <div key={idx} className="p-4 hover:bg-slate-50/30 transition-colors flex flex-col sm:flex-row sm:items-start justify-between gap-3">
@@ -152,6 +164,25 @@ export default function ChronologicalBrowse({
                               {questionText ? (
                                 <div className="mt-2.5 p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl text-xs text-slate-700 font-medium whitespace-pre-wrap leading-relaxed shadow-3xs relative pl-8 border-l-4 border-l-teal-600">
                                   <span className="absolute left-2.5 top-2.5 text-teal-500 font-serif text-xl font-extrabold select-none">&ldquo;</span>
+                                  <div className="flex items-center justify-end mb-1">
+                                    <button
+                                      onClick={(e) => handleCopy(questionText, `${selectedYear}-${spec}-${idx}`, e)}
+                                      className="inline-flex items-center gap-1 text-[10px] font-bold text-slate-600 hover:text-teal-800 bg-white hover:bg-slate-100 px-2 py-0.5 rounded border border-slate-200 transition-colors shrink-0 cursor-pointer shadow-3xs"
+                                      title="Copy verbatim question"
+                                    >
+                                      {isCopied ? (
+                                        <>
+                                          <Check className="w-3 h-3 text-emerald-600" />
+                                          <span className="text-emerald-600">Copied</span>
+                                        </>
+                                      ) : (
+                                        <>
+                                          <Copy className="w-3 h-3 text-slate-400" />
+                                          <span>Copy Text</span>
+                                        </>
+                                      )}
+                                    </button>
+                                  </div>
                                   {questionText}
                                 </div>
                               ) : (
@@ -188,11 +219,11 @@ export default function ChronologicalBrowse({
         </div>
 
         {/* Footer status bar specific to chronological browse */}
-        <footer className="flex items-center justify-between py-1.5 px-2 text-[10px] text-slate-400 font-medium shrink-0 gap-2">
-          <div>
-            <span>&copy; Clinical Curriculum Analyst</span>
+        <footer className="mt-auto pt-3 pb-1 px-2 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500 font-medium shrink-0">
+          <div className="flex items-center gap-2 text-[11px]">
+            <span className="text-slate-600">Built by <strong className="font-semibold text-slate-800">Ismail Abdur-Roqeeb</strong> for <strong className="font-bold text-teal-700">The Dilectus</strong></span>
           </div>
-          <div className="font-bold uppercase tracking-wider text-teal-700 hidden xs:block">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-teal-700">
             Chronological Browse &bull; {selectedYear} Session
           </div>
         </footer>
