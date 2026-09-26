@@ -839,10 +839,11 @@ export default function App() {
         </aside>
 
         {/* Main Content Area (Optimized Padding and Gaps for Mobile) */}
-        <main className="flex-1 p-2 md:p-6 flex flex-col gap-2 md:gap-4 overflow-y-auto min-w-0">
+        <main className="flex-1 flex flex-col min-w-0 min-h-0 overflow-hidden bg-slate-100">
           
-          {/* Header Description & Yield Legend (Compact and responsive) */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white p-3 md:p-4 rounded-xl border border-slate-200/80 shadow-xs shrink-0">
+          <div className="flex-1 p-2 md:p-6 flex flex-col gap-2 md:gap-4 overflow-y-auto min-w-0">
+            {/* Header Description & Yield Legend (Compact and responsive) */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white p-3 md:p-4 rounded-xl border border-slate-200/80 shadow-xs shrink-0">
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-sm md:text-xl font-extrabold text-slate-800 tracking-tight">
@@ -1236,8 +1237,10 @@ export default function App() {
 
           </div>
 
-          {/* Footer Status Panel */}
-          <footer className="mt-auto pt-3 pb-1 px-2 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500 font-medium shrink-0">
+          </div>
+
+          {/* Solid grounded footer docked at bottom */}
+          <footer className="shrink-0 bg-white border-t border-slate-200 px-3 md:px-6 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500 font-medium z-10 shadow-2xs">
             <div className="flex items-center gap-2 flex-wrap text-[11px]">
               <span className="text-slate-600">Built by <strong className="font-semibold text-slate-800">Ismail Abdur-Roqeeb</strong> for <strong className="font-bold text-teal-700">The Dilectus</strong></span>
               <span className="h-3 w-px bg-slate-200 hidden sm:inline-block"></span>
@@ -1259,13 +1262,12 @@ export default function App() {
       </>
       ) : (
         <ChronologicalBrowse
-          chronologicalIndex={chronologicalIndex}
-          sortedYearsList={sortedYearsList}
-          selectedYear={selectedYear}
-          setSelectedYear={setSelectedYear}
           bookmarkedTopics={bookmarkedTopics}
           revisedTopics={revisedTopics}
+          toggleBookmark={toggleBookmark}
+          toggleRevised={toggleRevised}
           handleStudyTopic={handleStudyTopic}
+          activeSpecialty={selectedSpecialty}
         />
       )}
 
