@@ -1198,39 +1198,72 @@ export function getQuestionText(occurrence: string, topicName: string, specialty
     return pastQuestionsText["Q6, January 2025"];
   }
 
-  // Check direct lookup
-  if (pastQuestionsText[sanitizedOcc]) {
-    return pastQuestionsText[sanitizedOcc];
-  }
-
-  // If sanitizedOcc has or lacks specialty suffix, check variants
+  // Pre-compute specialty variants
   const surgeryKey = sanitizedOcc.includes("(Surgery)") ? sanitizedOcc : `${sanitizedOcc} (Surgery)`;
   const commKey = sanitizedOcc.includes("(Comm. Med)") ? sanitizedOcc : `${sanitizedOcc} (Comm. Med)`;
   const psychKey = sanitizedOcc.includes("(Psychiatry)") ? sanitizedOcc : `${sanitizedOcc} (Psychiatry)`;
 
-  // Specialty-guided lookup
-  if (specialty === "Surgery" && pastQuestionsText[surgeryKey]) return pastQuestionsText[surgeryKey];
-  if (specialty === "Community Medicine" && pastQuestionsText[commKey]) return pastQuestionsText[commKey];
-  if (specialty === "Psychiatry" && pastQuestionsText[psychKey]) return pastQuestionsText[psychKey];
+  const strippedKey = sanitizedOcc.replace(/\s*\([^)]*\)/g, "").trim();
+  const strippedBaseSubPart = strippedKey.replace(/^([A-Za-z]+\s*\d+)[a-zA-Z0-9]+(.*)$/, "$1$2");
 
-  // Try replacing LAQ with Q
+  // PRIORITY 1: When department/specialty is known, ALWAYS check department-specific keys first!
+  // This prevents Community Medicine queries from accidentally grabbing Internal Medicine questions with the same label (e.g. Q2, Q3, Q4, Q5, Q6, Q7).
+  if (specialty === "Community Medicine") {
+    if (pastQuestionsText[commKey]) return pastQuestionsText[commKey];
+    if (pastQuestionsText[`${sanitizedOcc} (Comm. Med)`]) return pastQuestionsText[`${sanitizedOcc} (Comm. Med)`];
+    if (pastQuestionsText[`${strippedKey} (Comm. Med)`]) return pastQuestionsText[`${strippedKey} (Comm. Med)`];
+    if (pastQuestionsText[`${strippedBaseSubPart} (Comm. Med)`]) return pastQuestionsText[`${strippedBaseSubPart} (Comm. Med)`];
+  } else if (specialty === "Surgery") {
+    if (pastQuestionsText[surgeryKey]) return pastQuestionsText[surgeryKey];
+    if (pastQuestionsText[`${sanitizedOcc} (Surgery)`]) return pastQuestionsText[`${sanitizedOcc} (Surgery)`];
+    if (pastQuestionsText[`${strippedKey} (Surgery)`]) return pastQuestionsText[`${strippedKey} (Surgery)`];
+    if (pastQuestionsText[`${strippedBaseSubPart} (Surgery)`]) return pastQuestionsText[`${strippedBaseSubPart} (Surgery)`];
+  } else if (specialty === "Psychiatry") {
+    if (pastQuestionsText[psychKey]) return pastQuestionsText[psychKey];
+    if (pastQuestionsText[`${sanitizedOcc} (Psychiatry)`]) return pastQuestionsText[`${sanitizedOcc} (Psychiatry)`];
+    if (pastQuestionsText[`${strippedKey} (Psychiatry)`]) return pastQuestionsText[`${strippedKey} (Psychiatry)`];
+    if (pastQuestionsText[`${strippedBaseSubPart} (Psychiatry)`]) return pastQuestionsText[`${strippedBaseSubPart} (Psychiatry)`];
+  }
+
+  // PRIORITY 2: Direct lookup by exact occurrence string
+  if (pastQuestionsText[sanitizedOcc]) {
+    return pastQuestionsText[sanitizedOcc];
+  }
+
+  // PRIORITY 3: LAQ / Q normalization
   const laqReplaced = sanitizedOcc.replace(/\bLAQ\s*/i, "Q");
+  if (specialty === "Community Medicine" && pastQuestionsText[`${laqReplaced} (Comm. Med)`]) return pastQuestionsText[`${laqReplaced} (Comm. Med)`];
+  if (specialty === "Surgery" && pastQuestionsText[`${laqReplaced} (Surgery)`]) return pastQuestionsText[`${laqReplaced} (Surgery)`];
+  if (specialty === "Psychiatry" && pastQuestionsText[`${laqReplaced} (Psychiatry)`]) return pastQuestionsText[`${laqReplaced} (Psychiatry)`];
   if (pastQuestionsText[laqReplaced]) return pastQuestionsText[laqReplaced];
   if (pastQuestionsText[`${laqReplaced} (Surgery)`]) return pastQuestionsText[`${laqReplaced} (Surgery)`];
   if (pastQuestionsText[`${laqReplaced} (Comm. Med)`]) return pastQuestionsText[`${laqReplaced} (Comm. Med)`];
 
-  // Check sub-letters like Q3b, January 2025 (Psychiatry) -> Q3, January 2025 (Psychiatry)
-  const baseSubPart = sanitizedOcc.replace(/^([A-Za-z]+\s*\d+)[a-zA-Z]+(.*)$/, "$1$2");
+  // PRIORITY 4: Sub-letter stripping (e.g. Q11a -> Q11)
+  const baseSubPart = sanitizedOcc.replace(/^([A-Za-z]+\s*\d+)[a-zA-Z0-9]+(.*)$/, "$1$2");
   if (baseSubPart !== sanitizedOcc) {
+    if (specialty === "Community Medicine" && pastQuestionsText[`${baseSubPart} (Comm. Med)`]) return pastQuestionsText[`${baseSubPart} (Comm. Med)`];
+    if (specialty === "Surgery" && pastQuestionsText[`${baseSubPart} (Surgery)`]) return pastQuestionsText[`${baseSubPart} (Surgery)`];
+    if (specialty === "Psychiatry" && pastQuestionsText[`${baseSubPart} (Psychiatry)`]) return pastQuestionsText[`${baseSubPart} (Psychiatry)`];
+
     if (pastQuestionsText[baseSubPart]) return pastQuestionsText[baseSubPart];
-    if (pastQuestionsText[`${baseSubPart} (Psychiatry)`]) return pastQuestionsText[`${baseSubPart} (Psychiatry)`];
     if (pastQuestionsText[`${baseSubPart} (Comm. Med)`]) return pastQuestionsText[`${baseSubPart} (Comm. Med)`];
     if (pastQuestionsText[`${baseSubPart} (Surgery)`]) return pastQuestionsText[`${baseSubPart} (Surgery)`];
+    if (pastQuestionsText[`${baseSubPart} (Psychiatry)`]) return pastQuestionsText[`${baseSubPart} (Psychiatry)`];
   }
 
-  const lowerTopic = topicName.toLowerCase();
+  // Sub-letter 'a' fallback (e.g. Q1, June 2013 -> Q1a, June 2013)
+  const aSubPart = sanitizedOcc.replace(/^([A-Za-z]+\s*\d+)(,\s*.+)$/, "$1a$2");
+  if (aSubPart !== sanitizedOcc) {
+    if (specialty === "Community Medicine" && pastQuestionsText[`${aSubPart} (Comm. Med)`]) return pastQuestionsText[`${aSubPart} (Comm. Med)`];
+    if (specialty === "Surgery" && pastQuestionsText[`${aSubPart} (Surgery)`]) return pastQuestionsText[`${aSubPart} (Surgery)`];
+    if (pastQuestionsText[aSubPart]) return pastQuestionsText[aSubPart];
+    if (pastQuestionsText[`${aSubPart} (Comm. Med)`]) return pastQuestionsText[`${aSubPart} (Comm. Med)`];
+    if (pastQuestionsText[`${aSubPart} (Surgery)`]) return pastQuestionsText[`${aSubPart} (Surgery)`];
+  }
 
-  // Check if topic indicates Surgery context
+  // PRIORITY 5: Topic semantic heuristics
+  const lowerTopic = topicName.toLowerCase();
   if (
     lowerTopic.includes("jaundice") ||
     lowerTopic.includes("breast") ||
@@ -1254,7 +1287,6 @@ export function getQuestionText(occurrence: string, topicName: string, specialty
     }
   }
 
-  // Check if topic indicates Community Medicine context
   if (
     lowerTopic.includes("epidemiol") ||
     lowerTopic.includes("screening") ||
@@ -1285,19 +1317,15 @@ export function getQuestionText(occurrence: string, topicName: string, specialty
     if (pastQuestionsText[commKey]) return pastQuestionsText[commKey];
   }
 
-  // Try direct specialty keys
+  // Fallback direct specialty keys
   if (pastQuestionsText[commKey]) return pastQuestionsText[commKey];
   if (pastQuestionsText[surgeryKey]) return pastQuestionsText[surgeryKey];
   if (pastQuestionsText[psychKey]) return pastQuestionsText[psychKey];
 
-  // Try stripped key (without parenthesis)
-  const strippedKey = sanitizedOcc.replace(/\s*\([^)]*\)/g, "").trim();
   if (pastQuestionsText[strippedKey]) {
     return pastQuestionsText[strippedKey];
   }
 
-  // Try stripped sub-letters: "Q11a, September 2022" -> "Q11, September 2022"
-  const strippedBaseSubPart = strippedKey.replace(/^([A-Za-z]+\s*\d+)[a-zA-Z]+(.*)$/, "$1$2");
   if (pastQuestionsText[strippedBaseSubPart]) return pastQuestionsText[strippedBaseSubPart];
   if (pastQuestionsText[`${strippedBaseSubPart} (Comm. Med)`]) return pastQuestionsText[`${strippedBaseSubPart} (Comm. Med)`];
   if (pastQuestionsText[`${strippedBaseSubPart} (Surgery)`]) return pastQuestionsText[`${strippedBaseSubPart} (Surgery)`];

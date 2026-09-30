@@ -59,6 +59,11 @@ export const DEPARTMENTS: DepartmentMeta[] = [
   },
 ];
 
+export interface TopicRef {
+  topic: string;
+  subspecialty: string;
+}
+
 export interface ChronologicalQuestion {
   questionId: string;
   occurrence: string;
@@ -67,6 +72,8 @@ export interface ChronologicalQuestion {
   departmentKey: DepartmentKey;
   session: string;
   text?: string;
+  relatedTopics: TopicRef[];
+  allSubspecialties: string[];
 }
 
 interface ChronologicalBrowseProps {
@@ -76,6 +83,7 @@ interface ChronologicalBrowseProps {
   toggleRevised: (topicName: string, e?: React.SyntheticEvent) => void;
   handleStudyTopic: (specialty: string, subspecialty: string, topicName: string) => void;
   activeSpecialty?: string;
+  onSpecialtyChange?: (dept: DepartmentKey) => void;
   // Optional backwards compatibility props if needed
   chronologicalIndex?: any;
   sortedYearsList?: string[];
@@ -124,7 +132,8 @@ export default function ChronologicalBrowse({
   toggleBookmark,
   toggleRevised,
   handleStudyTopic,
-  activeSpecialty = "Internal Medicine"
+  activeSpecialty = "Internal Medicine",
+  onSpecialtyChange
 }: ChronologicalBrowseProps) {
 
   // Selected Department state (default to activeSpecialty if valid, otherwise Internal Medicine)
@@ -135,7 +144,14 @@ export default function ChronologicalBrowse({
     return "Internal Medicine";
   });
 
-  // Build the complete Department-organized index
+  // Keep selectedDept in sync with activeSpecialty prop
+  useEffect(() => {
+    if (activeSpecialty && DEPARTMENTS.some(d => d.key === activeSpecialty)) {
+      setSelectedDept(activeSpecialty as DepartmentKey);
+    }
+  }, [activeSpecialty]);
+
+  // Build the complete Department-organized index with deduplicated questions per session
   const departmentData = useMemo(() => {
     const data: Record<DepartmentKey, Record<string, ChronologicalQuestion[]>> = {
       "Internal Medicine": {},
@@ -173,16 +189,54 @@ export default function ChronologicalBrowse({
             }
 
             const text = getQuestionText(occ, t.topic, dept.key);
+            const baseIdMatch = qId.match(/^([A-Za-z]+\s*\d+)/);
+            const baseId = baseIdMatch ? baseIdMatch[1].trim().toUpperCase() : qId.trim().toUpperCase();
 
-            data[dept.key][cleanSession].push({
-              questionId: qId,
-              occurrence: occ,
-              topic: t.topic,
-              subspecialty,
-              departmentKey: dept.key,
-              session: cleanSession,
-              text
+            // Check if this exact question has already been logged in this session:
+            // 1. By matching question text (if text is available)
+            // 2. Or by base question identifier (e.g. Q11a & Q11b are both parts of Q11 in that paper)
+            const existingIndex = data[dept.key][cleanSession].findIndex(q => {
+              if (text && q.text && q.text.trim() === text.trim()) return true;
+              const exBaseMatch = q.questionId.match(/^([A-Za-z]+\s*\d+)/);
+              const exBaseId = exBaseMatch ? exBaseMatch[1].trim().toUpperCase() : q.questionId.trim().toUpperCase();
+              if (baseId && exBaseId && baseId === exBaseId) return true;
+              return false;
             });
+
+            if (existingIndex >= 0) {
+              const existing = data[dept.key][cleanSession][existingIndex];
+              // Merge related topics
+              if (!existing.relatedTopics.some(rt => rt.topic === t.topic)) {
+                existing.relatedTopics.push({ topic: t.topic, subspecialty });
+              }
+              // Merge subspecialties
+              if (!existing.allSubspecialties.includes(subspecialty)) {
+                existing.allSubspecialties.push(subspecialty);
+              }
+              // Simplify question ID to base number e.g. Q11
+              const baseMatch = qId.match(/^([A-Za-z]+\s*\d+)/);
+              if (baseMatch) {
+                existing.questionId = baseMatch[1];
+              }
+              // Merge or preserve text
+              if (!existing.text && text) {
+                existing.text = text;
+              } else if (existing.text && text && !existing.text.includes(text) && !text.includes(existing.text)) {
+                existing.text = `${existing.text}\n\n${text}`;
+              }
+            } else {
+              data[dept.key][cleanSession].push({
+                questionId: qId,
+                occurrence: occ,
+                topic: t.topic,
+                subspecialty,
+                departmentKey: dept.key,
+                session: cleanSession,
+                text,
+                relatedTopics: [{ topic: t.topic, subspecialty }],
+                allSubspecialties: [subspecialty]
+              });
+            }
           }
         }
       }
@@ -255,25 +309,28 @@ export default function ChronologicalBrowse({
   // Distinct subspecialties in current session for quick filter
   const distinctSubspecialties = useMemo(() => {
     const set = new Set<string>();
-    currentSessionQuestions.forEach((q) => set.add(q.subspecialty));
+    currentSessionQuestions.forEach((q) => {
+      q.allSubspecialties.forEach(sub => set.add(sub));
+    });
     return Array.from(set).sort();
   }, [currentSessionQuestions]);
 
   // Filtered questions based on search & subspecialty pill
   const filteredQuestions = useMemo(() => {
     return currentSessionQuestions.filter((q) => {
-      // Subspecialty filter
-      if (selectedSubspecialtyFilter !== "All" && q.subspecialty !== selectedSubspecialtyFilter) {
+      // Subspecialty filter: check if the selected subspecialty is anywhere among the question's topics
+      if (selectedSubspecialtyFilter !== "All" && !q.allSubspecialties.includes(selectedSubspecialtyFilter)) {
         return false;
       }
       // Search keyword filter
       if (sessionSearchQuery.trim()) {
         const query = sessionSearchQuery.toLowerCase().trim();
-        const matchesTopic = q.topic.toLowerCase().includes(query);
+        const matchesPrimaryTopic = q.topic.toLowerCase().includes(query);
+        const matchesAnyTopic = q.relatedTopics.some(rt => rt.topic.toLowerCase().includes(query));
         const matchesId = q.questionId.toLowerCase().includes(query);
-        const matchesSub = q.subspecialty.toLowerCase().includes(query);
+        const matchesSub = q.allSubspecialties.some(sub => sub.toLowerCase().includes(query));
         const matchesText = q.text ? q.text.toLowerCase().includes(query) : false;
-        return matchesTopic || matchesId || matchesSub || matchesText;
+        return matchesPrimaryTopic || matchesAnyTopic || matchesId || matchesSub || matchesText;
       }
       return true;
     });
@@ -282,8 +339,13 @@ export default function ChronologicalBrowse({
   // Current session stats
   const sessionStats = useMemo(() => {
     const total = currentSessionQuestions.length;
-    const revised = currentSessionQuestions.filter((q) => revisedTopics.includes(q.topic)).length;
-    const bookmarked = currentSessionQuestions.filter((q) => bookmarkedTopics.includes(q.topic)).length;
+    // A question is revised if any of its associated topics are revised
+    const revised = currentSessionQuestions.filter((q) => 
+      q.relatedTopics.some(rt => revisedTopics.includes(rt.topic))
+    ).length;
+    const bookmarked = currentSessionQuestions.filter((q) => 
+      q.relatedTopics.some(rt => bookmarkedTopics.includes(rt.topic))
+    ).length;
     const percentRevised = total > 0 ? Math.round((revised / total) * 100) : 0;
     return { total, revised, bookmarked, percentRevised };
   }, [currentSessionQuestions, revisedTopics, bookmarkedTopics]);
@@ -327,7 +389,10 @@ export default function ChronologicalBrowse({
               return (
                 <button
                   key={dept.key}
-                  onClick={() => setSelectedDept(dept.key)}
+                  onClick={() => {
+                    setSelectedDept(dept.key);
+                    onSpecialtyChange?.(dept.key);
+                  }}
                   className={`flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:py-2 rounded-xl text-xs font-bold transition-all cursor-pointer shrink-0 border ${
                     isSelected
                       ? "bg-teal-700 text-white border-teal-800 shadow-xs"
@@ -611,16 +676,18 @@ export default function ChronologicalBrowse({
                     className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-sm transition-all overflow-hidden p-4 md:p-5 flex flex-col gap-3"
                   >
                     
-                    {/* Question Header: Number, Subspecialty, Controls */}
+                    {/* Question Header: Number, Subspecialties, Status Badges */}
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-2.5 border-b border-slate-100">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="bg-teal-100 text-teal-900 border border-teal-200 font-mono font-black px-2.5 py-0.5 rounded-md text-xs shrink-0 shadow-3xs">
                           {q.questionId}
                         </span>
                         
-                        <span className="text-[10px] font-black uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
-                          {q.subspecialty}
-                        </span>
+                        {q.allSubspecialties.map((sub, sIdx) => (
+                          <span key={sIdx} className="text-[10px] font-black uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
+                            {sub}
+                          </span>
+                        ))}
 
                         {isRevised && (
                           <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full flex items-center gap-1">
@@ -637,7 +704,7 @@ export default function ChronologicalBrowse({
                         )}
                       </div>
 
-                      {/* Action buttons: Study Topic, Bookmark, Revised */}
+                      {/* Primary Quick Action buttons: Study Topic, Bookmark, Revised */}
                       <div className="flex items-center gap-1.5 self-start sm:self-auto shrink-0">
                         <button
                           title={isRevised ? "Mark as unread" : "Mark as revised"}
@@ -673,11 +740,32 @@ export default function ChronologicalBrowse({
                       </div>
                     </div>
 
-                    {/* Topic Title */}
-                    <div>
+                    {/* Topic Title & Linked Multi-Topics if merged */}
+                    <div className="space-y-1.5">
                       <h4 className="text-sm md:text-base font-extrabold text-slate-900 leading-snug">
                         {q.topic}
                       </h4>
+
+                      {q.relatedTopics.length > 1 && (
+                        <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
+                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                            Also covers:
+                          </span>
+                          {q.relatedTopics
+                            .filter(rt => rt.topic !== q.topic)
+                            .map((rt, rtIdx) => (
+                              <button
+                                key={rtIdx}
+                                onClick={() => handleStudyTopic(q.departmentKey, rt.subspecialty, rt.topic)}
+                                className="inline-flex items-center gap-1 text-[11px] font-semibold text-teal-700 hover:text-teal-900 bg-teal-50/70 hover:bg-teal-100 px-2 py-0.5 rounded-md border border-teal-200/60 transition-colors cursor-pointer"
+                                title={`Study: ${rt.topic} (${rt.subspecialty})`}
+                              >
+                                <span>{rt.topic}</span>
+                                <span className="text-[9px] text-teal-500 font-bold">({rt.subspecialty})</span>
+                              </button>
+                            ))}
+                        </div>
+                      )}
                     </div>
 
                     {/* Verbatim Question Prompt Block */}

@@ -6,6 +6,7 @@ import {
   Sparkles, 
   TrendingUp, 
   Award,
+  Stethoscope,
   BookOpen,
   Filter,
   Flame,
@@ -19,7 +20,7 @@ import {
 } from 'lucide-react';
 import { database, SpecialtyData } from './data/database';
 import { getQuestionText } from './data/pastQuestionsText';
-import ChronologicalBrowse from './components/ChronologicalBrowse';
+import ChronologicalBrowse, { DEPARTMENTS } from './components/ChronologicalBrowse';
 
 export default function App() {
   // View mode switcher: "frequency" | "chronological"
@@ -584,9 +585,9 @@ export default function App() {
       
       {/* Top Navigation Bar with Integrated Tabs */}
       <nav className="h-14 md:h-16 flex items-center justify-between px-3 md:px-8 bg-teal-800 text-white shadow-sm shrink-0">
-        <div className="flex items-center gap-1.5 md:gap-3">
-          <div className="p-1 md:p-1.5 bg-teal-100 rounded-md shrink-0">
-            <Award className="w-5 h-5 md:w-6 md:h-6 text-teal-800" />
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="p-1.5 md:p-2 bg-teal-100 rounded-xl shadow-xs shrink-0 flex items-center justify-center">
+            <Stethoscope className="w-5 h-5 md:w-6 md:h-6 text-teal-800" />
           </div>
           <div>
             <h1 className="text-xs md:text-base lg:text-lg font-bold leading-tight uppercase tracking-wide">Final MB</h1>
@@ -636,70 +637,70 @@ export default function App() {
 
       {activeTab === "frequency" ? (
         <>
-          {/* Specialty Navigation and Search Bar (Optimized for Mobile) */}
-          <div className="bg-white border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between px-3 md:px-8 py-2 md:py-3 gap-2 shrink-0">
-            
-            {/* Specialty Selector Tabs */}
-            <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
-              <div className="flex p-0.5 bg-slate-100 rounded-lg">
-                {["Internal Medicine", "Surgery", "Community Medicine"].map((spec) => {
-                  const isActive = spec === "Internal Medicine"
-                    ? (selectedSpecialty === "Internal Medicine" || selectedSpecialty === "Psychiatry")
-                    : selectedSpecialty === spec;
+          {/* 1. Top Department Navigation Bar (Matching Year Tab Design) */}
+          <div className="bg-white border-b border-slate-200 px-3 md:px-8 py-2.5 shrink-0 shadow-2xs">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+              
+              {/* Department Selector Tabs */}
+              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-0.5 sm:pb-0">
+                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest shrink-0 mr-1 hidden lg:inline">
+                  Department:
+                </span>
+                
+                {DEPARTMENTS.map((dept) => {
+                  const Icon = dept.icon;
+                  const isSelected = selectedSpecialty === dept.key;
+                  const deptData = database[dept.key] || {};
+                  const topicCount = Object.values(deptData).reduce((sum, list) => sum + list.length, 0);
+                  const questionCount = Object.values(deptData).reduce(
+                    (sum, list) => sum + list.reduce((s2, t) => s2 + t.occurrences.length, 0),
+                    0
+                  );
+
                   return (
                     <button
-                      key={spec}
-                      id={`tab-${spec.toLowerCase().split(' ')[0]}`}
-                      onClick={() => handleSpecialtyChange(spec)}
-                      className={`px-2.5 md:px-4 py-1 text-[10px] md:text-xs font-bold rounded-md transition-all duration-150 cursor-pointer text-center whitespace-nowrap ${
-                        isActive
-                          ? "bg-white text-teal-800 shadow-xs border border-slate-200/50"
-                          : "text-slate-500 hover:text-slate-800 hover:bg-slate-50"
+                      key={dept.key}
+                      id={`tab-${dept.key.toLowerCase().split(' ')[0]}`}
+                      onClick={() => handleSpecialtyChange(dept.key)}
+                      className={`flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:py-2 rounded-xl text-xs font-bold transition-all cursor-pointer shrink-0 border ${
+                        isSelected
+                          ? "bg-teal-700 text-white border-teal-800 shadow-xs"
+                          : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 hover:border-slate-300"
                       }`}
                     >
-                      {spec.replace("Internal ", "")}
+                      <Icon className={`w-3.5 h-3.5 md:w-4 md:h-4 shrink-0 ${isSelected ? "text-teal-200" : "text-slate-500"}`} />
+                      <span className="whitespace-nowrap">{dept.shortLabel}</span>
+                      <span className={`text-[10px] font-extrabold px-1.5 py-0.2 rounded-full shrink-0 ${
+                        isSelected ? "bg-teal-800/80 text-teal-100" : "bg-slate-200 text-slate-600"
+                      }`}>
+                        {topicCount} topics ({questionCount} Qs)
+                      </span>
                     </button>
                   );
                 })}
               </div>
 
-              {/* Medicine Sub-tabs: Internal Med & Psychiatry */}
-              {(selectedSpecialty === "Internal Medicine" || selectedSpecialty === "Psychiatry") && (
-                <div className="flex p-0.5 bg-slate-105 rounded-lg border border-slate-200/60 shadow-3xs shrink-0">
+              {/* Search Input Filter */}
+              <div className="relative w-full sm:w-64 md:w-72 lg:w-80 shrink-0">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-slate-400 pointer-events-none" />
+                <input
+                  type="text"
+                  placeholder={`Search ${selectedSpecialty.replace("Internal ", "")} topics or keywords...`}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-8.5 pr-8 py-1.5 bg-slate-50 hover:bg-slate-100/60 focus:bg-white border border-slate-200 focus:border-teal-500 rounded-xl text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500/20 transition-all h-9"
+                />
+                {searchQuery && (
                   <button
-                    onClick={() => handleSpecialtyChange("Internal Medicine")}
-                    className={`px-3 py-1 text-[10px] md:text-xs font-bold rounded-md transition-all duration-150 cursor-pointer text-center whitespace-nowrap ${
-                      selectedSpecialty === "Internal Medicine"
-                        ? "bg-teal-700 text-white shadow-2xs font-extrabold"
-                        : "text-slate-500 hover:text-slate-800"
-                    }`}
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-0.5 rounded-full hover:bg-slate-200 cursor-pointer"
+                    title="Clear search"
                   >
-                    Internal Med
+                    <span className="text-xs font-bold leading-none px-1">×</span>
                   </button>
-                  <button
-                    onClick={() => handleSpecialtyChange("Psychiatry")}
-                    className={`px-3 py-1 text-[10px] md:text-xs font-bold rounded-md transition-all duration-150 cursor-pointer text-center whitespace-nowrap ${
-                      selectedSpecialty === "Psychiatry"
-                        ? "bg-teal-700 text-white shadow-2xs font-extrabold"
-                        : "text-slate-500 hover:text-slate-800"
-                    }`}
-                  >
-                    Psychiatry
-                  </button>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
 
-            {/* Search Input */}
-            <div className="relative w-full sm:w-64 md:w-80">
-              <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-slate-400 pointer-events-none" />
-              <input
-                type="text"
-                placeholder="Search topic or keyword..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-8 pr-4 py-1.5 bg-slate-50 border border-slate-200 rounded-md text-[11px] focus:outline-none focus:ring-1 focus:ring-teal-500 focus:bg-white transition-all h-8"
-              />
             </div>
           </div>
 
@@ -1268,6 +1269,7 @@ export default function App() {
           toggleRevised={toggleRevised}
           handleStudyTopic={handleStudyTopic}
           activeSpecialty={selectedSpecialty}
+          onSpecialtyChange={(dept) => setSelectedSpecialty(dept)}
         />
       )}
 
