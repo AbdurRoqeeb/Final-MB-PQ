@@ -17,6 +17,8 @@ import {
 } from 'lucide-react';
 import { database } from '../data/database';
 import { getQuestionText } from '../data/pastQuestionsText';
+import { getQuestionAttachment } from '../data/questionImages';
+import QuestionFigure from './QuestionFigure';
 
 export type DepartmentKey = "Internal Medicine" | "Surgery" | "Community Medicine" | "Psychiatry";
 
@@ -800,6 +802,12 @@ export default function ChronologicalBrowse({
                         Standard essay format. Click "Study Topic" above to view curriculum study guidelines and key clinical concepts.
                       </div>
                     )}
+
+                    {/* Question Figure / Dataset Attachment if present */}
+                    {(() => {
+                      const attachment = getQuestionAttachment(q.occurrence) || getQuestionAttachment(`${q.questionId}, ${selectedSession}`);
+                      return attachment ? <QuestionFigure attachment={attachment} /> : null;
+                    })()}
 
                   </div>
                 );

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="100%" height="auto" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="760" height="440" fill="#f8fafc" rx="16"/>
+  <rect x="20" y="20" width="720" height="400" fill="#ffffff" rx="12" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Exam Header Badge -->
+  <rect x="40" y="38" width="680" height="46" rx="8" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1"/>
+  <text x="56" y="60" font-size="12" font-weight="800" fill="#0f766e" letter-spacing="1">PART IV FINAL M.B., B.S. EXAMINATION • COMMUNITY MEDICINE</text>
+  <text x="56" y="74" font-size="11" font-weight="600" fill="#115e59">EPIDEMIOLOGY SECTION • 10-YEAR PROSPECTIVE COHORT STUDY</text>
+
+  <!-- Question Title -->
+  <text x="40" y="112" font-size="15" font-weight="800" fill="#0f172a">10-Year Follow-up Cohort Table: Smoking vs. Coronary Heart Disease (CHD)</text>
+  <text x="40" y="132" font-size="12" font-style="italic" fill="#475569">
+    "The result of a 10-year follow-up study investigating the relationship between smoking and coronary heart disease is shown below:"
+  </text>
+
+  <!-- 2x2 Table Container -->
+  <g transform="translate(40, 150)">
+    <!-- Column Super Header -->
+    <rect x="210" y="0" width="470" height="28" fill="#0d9488" rx="4"/>
+    <text x="445" y="18" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">
+      10-YEAR CORONARY HEART DISEASE (CHD) OUTCOME
+    </text>
+
+    <!-- Header Row -->
+    <rect x="0" y="32" width="205" height="34" fill="#0f766e" rx="4"/>
+    <text x="102" y="53" font-size="10.5" font-weight="800" fill="#ffffff" text-anchor="middle">EXPOSURE STATUS</text>
+
+    <rect x="210" y="32" width="150" height="34" fill="#115e59" rx="4"/>
+    <text x="285" y="53" font-size="10.5" font-weight="800" fill="#ffffff" text-anchor="middle">DEVELOPED CHD (+)</text>
+
+    <rect x="365" y="32" width="165" height="34" fill="#115e59" rx="4"/>
+    <text x="447" y="53" font-size="10.5" font-weight="800" fill="#ffffff" text-anchor="middle">DID NOT DEVELOP (-)</text>
+
+    <rect x="535" y="32" width="145" height="34" fill="#0f766e" rx="4"/>
+    <text x="607" y="53" font-size="10.5" font-weight="800" fill="#ffffff" text-anchor="middle">TOTAL</text>
+
+    <!-- Row 1: Smokers -->
+    <rect x="0" y="70" width="205" height="42" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="20" y="96" font-size="11" font-weight="800" fill="#0f172a">Smokers</text>
+
+    <rect x="210" y="70" width="150" height="42" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="285" y="96" font-size="14" font-family="monospace" font-weight="700" fill="#0f172a" text-anchor="middle">65</text>
+
+    <rect x="365" y="70" width="165" height="42" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="447" y="96" font-size="14" font-family="monospace" font-weight="700" fill="#0f172a" text-anchor="middle">1,935</text>
+
+    <rect x="535" y="70" width="145" height="42" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="607" y="96" font-size="14" font-family="monospace" font-weight="800" fill="#0f172a" text-anchor="middle">2,000</text>
+
+    <!-- Row 2: Non-smokers -->
+    <rect x="0" y="116" width="205" height="42" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="20" y="142" font-size="11" font-weight="800" fill="#0f172a">Non-Smokers</text>
+
+    <rect x="210" y="116" width="150" height="42" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="285" y="142" font-size="14" font-family="monospace" font-weight="700" fill="#0f172a" text-anchor="middle">20</text>
+
+    <rect x="365" y="116" width="165" height="42" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="447" y="142" font-size="14" font-family="monospace" font-weight="700" fill="#0f172a" text-anchor="middle">3,980</text>
+
+    <rect x="535" y="116" width="145" height="42" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="607" y="142" font-size="14" font-family="monospace" font-weight="800" fill="#0f172a" text-anchor="middle">4,000</text>
+
+    <!-- Column Totals -->
+    <rect x="0" y="162" width="205" height="36" fill="#0f766e" rx="4"/>
+    <text x="102" y="184" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">TOTAL</text>
+
+    <rect x="210" y="162" width="150" height="36" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.5"/>
+    <text x="285" y="185" font-size="13" font-family="monospace" font-weight="800" fill="#0f766e" text-anchor="middle">85</text>
+
+    <rect x="365" y="162" width="165" height="36" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.5"/>
+    <text x="447" y="185" font-size="13" font-family="monospace" font-weight="800" fill="#0f766e" text-anchor="middle">5,915</text>
+
+    <rect x="535" y="162" width="145" height="36" fill="#042f2e" rx="4"/>
+    <text x="607" y="185" font-size="13" font-family="monospace" font-weight="900" fill="#2dd4bf" text-anchor="middle">6,000</text>
+  </g>
+
+  <!-- Question Instruction Footer (No Calculations) -->
+  <rect x="40" y="375" width="680" height="28" fill="#f1f5f9" rx="4"/>
+  <text x="50" y="393" font-size="10.5" font-weight="700" fill="#334155">
+    REQUIRED: Calculate incidence rates in smokers and non-smokers. Determine if there is an association (Relative Risk, Attributable Risk).
+  </text>
+</svg>

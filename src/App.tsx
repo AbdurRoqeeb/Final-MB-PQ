@@ -20,6 +20,8 @@ import {
 } from 'lucide-react';
 import { database, SpecialtyData } from './data/database';
 import { getQuestionText } from './data/pastQuestionsText';
+import { getQuestionAttachment } from './data/questionImages';
+import QuestionFigure from './components/QuestionFigure';
 import ChronologicalBrowse, { DEPARTMENTS } from './components/ChronologicalBrowse';
 
 export default function App() {
@@ -1153,6 +1155,12 @@ export default function App() {
                                         Clinical vignette or short note question indexed under {occ}.
                                       </div>
                                     )}
+
+                                    {/* Question Figure / Dataset Attachment if present */}
+                                    {(() => {
+                                      const attachment = getQuestionAttachment(occ);
+                                      return attachment ? <QuestionFigure attachment={attachment} /> : null;
+                                    })()}
                                   </div>
                                 );
                               })}
