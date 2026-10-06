@@ -176,32 +176,24 @@ export const database: FullDatabase = {
   "Community Medicine": {
     "Epidemiology": [
       {
-        topic: "Epidemiological Study Designs (Cohort vs Case-Control)",
-        occurrences: ["Q4b, May 2010", "Q6, February 2019", "Q11, February 2019", "Q11a, 600L End of Posting"]
+        topic: "Epidemiological Study Designs (Cohort vs Case-Control vs Cross-Sectional)",
+        occurrences: ["Q6, February 2019", "Q11, 600L End of Posting", "Q11a, 600L End of Posting", "Q5, December 2007"]
       },
       {
         topic: "Screening Parameters (Sensitivity, Specificity, PPV & NPV)",
-        occurrences: ["Q11, September 2022", "Q6a, May 2010", "Q9, May 2010"]
+        occurrences: ["Q11, September 2022", "Q6, May 2010", "Q6a, May 2010"]
       },
       {
         topic: "Levels of Disease Prevention (Primordial, Primary, Secondary & Tertiary)",
-        occurrences: ["Q6a, February 2015", "Q10a, June 2013", "Q11, September 2022", "Q6a, May 2010"]
+        occurrences: ["Q6a, February 2015", "Q10a, June 2013", "Q11, September 2022", "Q6, May 2010"]
       },
       {
-        topic: "Emerging/Re-emerging Infections & Lassa Fever Outbreaks",
-        occurrences: ["Q7, January 2016", "Q9, March 2019"]
-      },
-      {
-        topic: "Meningitis Control & Vaccine Campaigns",
-        occurrences: ["Q6, April 2017"]
-      },
-      {
-        topic: "Notifiable Diseases & Public Health Emergencies of International Concern (PHEIC)",
-        occurrences: ["Q2, January 2016", "Q4, February 2019", "Q4b, February 2015", "Q5, January 2016"]
+        topic: "Emerging/Re-emerging Infections & Outbreak Investigation (Lassa Fever, Meningitis)",
+        occurrences: ["Q7, January 2016", "Q9, March 2019", "Q11, September 2019", "Q6, April 2017"]
       },
       {
         topic: "Zoonotic Diseases (Epidemiology, Vectors & Reservoirs)",
-        occurrences: ["Q13, December 2017", "Q4a, February 2015"]
+        occurrences: ["Q13, December 2017", "Q4a, February 2015", "Q4, February 2015"]
       },
       {
         topic: "Disease Elimination vs Eradication Criteria",
@@ -224,7 +216,7 @@ export const database: FullDatabase = {
         occurrences: ["Q9, October 2015"]
       },
       {
-        topic: "Non-Communicable Diseases (NCDs): Risk Factors (Sugar, Obesity) & Public Health Control",
+        topic: "Non-Communicable Diseases (NCDs): Risk Factors & Public Health Control",
         occurrences: ["Q5, June 2013"]
       },
       {
@@ -234,20 +226,24 @@ export const database: FullDatabase = {
       {
         topic: "Waterborne Outbreaks: Cholera Epidemiology, Pathogenesis, Transmission & Outbreak Control",
         occurrences: ["LAQ 11, January 2025 (Comm. Med)"]
+      },
+      {
+        topic: "Public Health Laboratory in Disease Surveillance & Epidemic Control",
+        occurrences: ["Q9, May 2010", "Q5, October 2015"]
       }
     ],
     "Occupational Health": [
       {
-        topic: "Occupational Health Physician Roles & Clinical Functions",
-        occurrences: ["Q1, September 2022", "Q5a, February 2015", "Q1, May 2010", "Q5, October 2015", "Q4, September 2019", "Q6a, June 2013", "SAQ 4, January 2025 (Comm. Med)"]
+        topic: "Occupational Health Physician Roles, Statutory Functions & Medical Examinations",
+        occurrences: ["Q1, September 2022", "Q5a, February 2015", "Q4, September 2019", "Q6a, June 2013", "SAQ 4, January 2025 (Comm. Med)", "SAQ 7c, August 2014"]
       },
       {
         topic: "Ergonomics, Posture at Work & PPE Use",
         occurrences: ["Q7, April 2017", "Q9, January 2016", "Q3, February 2019"]
       },
       {
-        topic: "Occupational Hazards: Principles of Control, Industry-Specific Risks & Sawmill Workers",
-        occurrences: ["Q7, December 2017", "Q5, January 2016", "SAQ 9b, August 2014"]
+        topic: "Occupational Hazards: Principles of Control, Factory Inspections & Sawmill Workers",
+        occurrences: ["Q7, December 2017", "Q5, January 2016", "Q5a, January 2016", "SAQ 9b, August 2014"]
       },
       {
         topic: "Occupational Deafness, Factory Inspectorate Division & Industrial Rehabilitation",
@@ -262,10 +258,6 @@ export const database: FullDatabase = {
         occurrences: ["Q6b, June 2013", "Q3, August 2014"]
       },
       {
-        topic: "Occupational Medicine Services in Large Industrial Settings",
-        occurrences: ["Q1, September 2022", "SAQ 7c, August 2014", "Q4, September 2019"]
-      },
-      {
         topic: "Hospital Hazards, Waste Exposure & Biosafety for Health Workers",
         occurrences: ["Q3, May 2010"]
       }
@@ -273,7 +265,7 @@ export const database: FullDatabase = {
     "Environmental Health": [
       {
         topic: "Water Quality, Water Sampling & Low-Water Sewage Systems",
-        occurrences: ["Q2b, June 2013", "Q7, August 2014", "Q13, March 2019", "Q2b, February 2015", "Q2, May 2014", "Q13, May 2010"]
+        occurrences: ["Q2b, June 2013", "Q7, August 2014", "Q7a, August 2014", "Q7b, August 2014", "Q2b, February 2015", "Q2, May 2014"]
       },
       {
         topic: "Healthful Housing Criteria, Goals & Structural Standards",
@@ -285,7 +277,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Municipal Solid Waste & Sewage Disposal: Composting, Incineration & Sanitary Landfills",
-        occurrences: ["Q2, December 2017", "Q11, January 2016", "Q2, September 2019", "Q2a, October 2015", "SAQ 9a, August 2014"]
+        occurrences: ["Q2, December 2017", "Q13, May 2010", "Q2, September 2019", "Q2a, October 2015", "SAQ 9a, August 2014"]
       },
       {
         topic: "Healthcare Waste Management, Separation & Safety",
@@ -293,11 +285,11 @@ export const database: FullDatabase = {
       },
       {
         topic: "Environmental Sanitation, Food Premises & Market Hygiene",
-        occurrences: ["Q2iii, December 2017", "Q2a, June 2013", "Q9, January 2016", "Q7, January 2016", "Q8, March 2019"]
+        occurrences: ["Q2iii, December 2017", "Q2a, June 2013", "Q9, January 2016", "Q8, March 2019"]
       },
       {
         topic: "Environmental Impact Assessment (EIA) for Industrial Siting",
-        occurrences: ["Q5, February 2019", "Q5, 600L End of Posting"]
+        occurrences: ["Q5, 600L End of Posting"]
       },
       {
         topic: "Climate Change, Flooding Events & Environmental Control Measures",
@@ -306,16 +298,12 @@ export const database: FullDatabase = {
       {
         topic: "Vector Biology, Vector-Borne Diseases & Integrated Vector Control Methods",
         occurrences: ["Q5, February 2019", "Q8, September 2019", "Q3b, June 2013", "Q2b, October 2015", "Q4, 600L End of Posting"]
-      },
-      {
-        topic: "Port Health Services & Quarantine Inspection at Seaports/Airports",
-        occurrences: ["Q9b, June 2013"]
       }
     ],
     "Health Management": [
       {
         topic: "Primary Health Care (PHC) Principles, Components & Implementation Challenges in Nigeria",
-        occurrences: ["Q5a, December 2017", "Q1, January 2016", "Q12, February 2019", "Q6, September 2019", "Q5, April 2017", "Q6a, January 2016", "Q6b, February 2015", "Q9a, May 2010", "Q13, January 2016", "Q13, May 2010", "SAQ 9, January 2025 (Comm. Med)"]
+        occurrences: ["Q1, January 2016", "Q5a, December 2017", "Q12, February 2019", "Q6, September 2019", "Q5, April 2017", "Q6a, January 2016", "Q6b, February 2015", "Q9, May 2010", "SAQ 9, January 2025 (Comm. Med)"]
       },
       {
         topic: "Referral Systems in PHC Structures & Integration",
@@ -326,16 +314,16 @@ export const database: FullDatabase = {
         occurrences: ["Q5b, December 2017"]
       },
       {
-        topic: "Drug Management Cycle in Primary Care Units",
+        topic: "Drug Management Cycle & Rational Drug Use in Primary Care Units",
         occurrences: ["Q2, September 2022"]
       },
       {
         topic: "Total Quality Management (TQM) & Quality Improvement in Health Care",
-        occurrences: ["Q2, September 2022", "Q11, January 2016"]
+        occurrences: ["Q2, September 2022"]
       },
       {
         topic: "Health Administration, Organisation Principles & Governance Frameworks in Nigeria",
-        occurrences: ["Q7, September 2019", "Q8, February 2015", "Q10, May 2010"]
+        occurrences: ["Q7, September 2019", "Q8, February 2015", "Q10, May 2010", "Q6, January 2016"]
       },
       {
         topic: "Health Program Planning Cycle, Situation Analysis & Priority Setting",
@@ -346,8 +334,8 @@ export const database: FullDatabase = {
         occurrences: ["Q12, March 2019", "Q8, February 2019", "Q4, May 2014", "Q8, 600L End of Posting"]
       },
       {
-        topic: "Modern Health Service Underutilization in Rural Populations",
-        occurrences: ["Q13, August 2014"]
+        topic: "Modern Health Service Underutilization & Inverse Care Law",
+        occurrences: ["Q13, August 2014", "Q8, October 2015"]
       },
       {
         topic: "Human Resources for Health (HRH) at Primary Health Care Level",
@@ -361,27 +349,35 @@ export const database: FullDatabase = {
     "Health Economics": [
       {
         topic: "Healthcare Financing Mechanisms (Community Insurance, User Fees, Out-of-Pocket)",
-        occurrences: ["Q2, September 2022", "Q6, January 2016", "Q4a, January 2016", "Q8, December 2017", "Q7, March 2019", "Q4, August 2014", "Q16, May 2010", "Q8, October 2015", "SAQ 10, August 2014"]
+        occurrences: ["Q2, September 2022", "Q6, January 2016", "Q8, December 2017", "Q7, March 2019", "Q4, August 2014", "Q4a, August 2014", "Q4b, August 2014", "Q16a, May 2010", "Q16b, May 2010", "Q8, October 2015", "SAQ 10, August 2014"]
       }
     ],
     "International Health": [
       {
-        topic: "Global Agencies Promoting Health (Bilateral & Multilateral)",
-        occurrences: ["Q1a, December 2017", "Q3, March 2019", "Q1, May 2010", "Q2, May 2010", "Q5a, January 2016", "SAQ 8, January 2025 (Comm. Med)"]
+        topic: "Global Agencies Promoting Health (Bilateral, Multilateral & NGOs)",
+        occurrences: ["Q1a, December 2017", "Q3, March 2019", "Q1, May 2010", "Q5, May 2014", "SAQ 8, January 2025 (Comm. Med)"]
       },
       {
-        topic: "International Health Certificates & Vaccinations",
-        occurrences: ["Q1b, December 2017", "Q5b, February 2015", "Q5b, September 2019", "Q5b, October 2015", "Q5b, May 2014"]
+        topic: "World Health Organization (WHO) Strategy, Governance & Regional Offices",
+        occurrences: ["Q1, May 2010", "Q3, March 2019", "SAQ 8, January 2025 (Comm. Med)"]
       },
       {
-        topic: "World Health Organization (WHO) Strategy & Regional Offices",
-        occurrences: ["Q1, May 2010", "Q2, May 2010", "SAQ 8, January 2025 (Comm. Med)"]
+        topic: "Internationally Notifiable Diseases, International Health Regulations (IHR) & PHEIC",
+        occurrences: ["Q2, January 2016", "Q4, February 2019", "Q4b, February 2015", "Q5, October 2015"]
+      },
+      {
+        topic: "International Health Certificates & Travel Vaccinations (Yellow Card)",
+        occurrences: ["Q1b, December 2017", "Q5, May 2014", "Q5, October 2015"]
+      },
+      {
+        topic: "Port Health Services & Quarantine Inspection at Points of Entry",
+        occurrences: ["Q9b, June 2013"]
       }
     ],
     "Family & Reproductive Health": [
       {
         topic: "Maternal Mortality, Safe Motherhood & Focused Antenatal Care",
-        occurrences: ["Q3, September 2022", "Q6, October 2015", "Q10, September 2019", "Q13, February 2019", "Q1, January 2016", "Q2, January 2016", "Q3, September 2008", "LAQ 12, August 2014"]
+        occurrences: ["Q3, September 2022", "Q6, October 2015", "Q10, September 2019", "Q13, February 2019", "Q3, January 2016", "Q3, September 2008", "LAQ 12, August 2014"]
       },
       {
         topic: "Antenatal Care Models: 2016 WHO 8-Contact Model vs Focused ANC Model (FANC)",
@@ -389,7 +385,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Family Planning Methods, Unmet Need & Contraceptive Counseling",
-        occurrences: ["Q9, December 2017", "Q2, March 2019", "Q6, August 2014", "Q8c, June 2013", "Q8, October 2015", "Q3, 600L End of Posting", "LAQ 13, January 2025 (Comm. Med)"]
+        occurrences: ["Q9, December 2017", "Q2, March 2019", "Q6, August 2014", "Q6a, August 2014", "Q6b, August 2014", "Q8c, June 2013", "Q3, 600L End of Posting", "LAQ 13, January 2025 (Comm. Med)"]
       },
       {
         topic: "Child Survival Interventions & Vulnerable Child Care (GOBI-FFF, Immunization, Motherless Babies)",
@@ -401,27 +397,31 @@ export const database: FullDatabase = {
       },
       {
         topic: "Adolescent Health, Classification & Friendly Clinical Services",
-        occurrences: ["Q6, September 2022", "Q2, January 2016"]
+        occurrences: ["Q6, September 2022", "Q2, March 2019"]
       },
       {
         topic: "Reproductive Health Indicators & Determinants of General Fertility",
-        occurrences: ["Q1, February 2015", "Q8, May 2010", "Q3a, January 2016"]
+        occurrences: ["Q1, February 2015", "Q3, January 2016", "LAQ 12, August 2014"]
       }
     ],
     "Health Education": [
       {
         topic: "Health Education Communication Methods & Behavior Adoption Theories",
-        occurrences: ["Q1, April 2017", "Q10, December 2017", "Q10, January 2016", "Q10, March 2019", "Q3b, October 2015", "Q4b, June 2013", "Q9, 600L End of Posting", "SAQ 10, January 2025 (Comm. Med)"]
+        occurrences: ["Q1, April 2017", "Q10, December 2017", "Q10, January 2016", "Q10, March 2019", "Q3, October 2015", "Q4b, June 2013", "Q9, 600L End of Posting", "SAQ 10, January 2025 (Comm. Med)"]
       },
       {
         topic: "Behavior Change Communication (BCC) Implementation & Patient Charter",
-        occurrences: ["Q10, August 2014", "Q8, January 2016"]
+        occurrences: ["Q10, August 2014", "Q10a, August 2014", "Q10b, August 2014"]
+      },
+      {
+        topic: "Information, Education and Communication (IEC) & Communication Barriers in Health",
+        occurrences: ["Q10, February 2019", "SAQ 10, January 2025 (Comm. Med)"]
       }
     ],
     "Public Health Nutrition": [
       {
         topic: "Nutritional Status Assessment: Anthropometry (BMI, Under-Five Surveys & Shakir's Strip)",
-        occurrences: ["Q7, September 2022", "Q11, May 2010", "Q2, February 2019", "Q1c, October 2015", "Q3, September 2019"]
+        occurrences: ["Q7, September 2022", "Q2, February 2019", "Q1c, October 2015", "Q3, September 2019"]
       },
       {
         topic: "Nutritional Vulnerability in Pregnancy, Lactation & Child Weaning",
@@ -429,7 +429,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Aged & Elderly: Health Problems, Social Welfare & Nutritional Needs",
-        occurrences: ["Q2, April 2017", "Q8b, January 2016", "Q7b, February 2015", "Q1, August 2014"]
+        occurrences: ["Q2, April 2017", "Q4, January 2016", "Q8, January 2016", "Q7b, February 2015", "Q1, August 2014"]
       },
       {
         topic: "Childhood Nutritional Disorders & Nutritional Surveillance Systems",
@@ -437,7 +437,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Protein Energy Malnutrition (PEM) Prevention & Clinical Signs",
-        occurrences: ["Q3, May 2010"]
+        occurrences: ["Q1, December 2007"]
       },
       {
         topic: "Micronutrient Deficiencies (Vitamin A, Iodine, Iron) & National Programs",
@@ -451,23 +451,23 @@ export const database: FullDatabase = {
     "Biostatistics": [
       {
         topic: "Statistical Calculations: t-Tests, Chi-Square & Confidence Intervals",
-        occurrences: ["Q11, December 2017", "Q12, January 2016", "Q12, May 2010", "Q7, October 2015", "Q8, May 2010", "Q6c, February 2019", "Q11, March 2019", "Q11, 600L End of Posting", "Q12, 600L End of Posting", "LAQ 11, August 2014"]
+        occurrences: ["Q11, December 2017", "Q12, January 2016", "Q7, October 2015", "Q8, May 2010", "Q6, February 2019", "Q11, March 2019", "Q11, 600L End of Posting", "Q12, 600L End of Posting", "LAQ 11, August 2014"]
       },
       {
         topic: "Sampling Methods (Probability & Simple Random Techniques)",
-        occurrences: ["Q1, February 2019", "Q5, September 2019", "Q9b, February 2015", "Q7, May 2010", "Q2, May 2010", "Q7b, June 2013", "SAQ 3, January 2025 (Comm. Med)"]
+        occurrences: ["Q1, February 2019", "Q5, September 2019", "Q9b, February 2015", "Q2, May 2010", "Q7b, June 2013", "SAQ 3, January 2025 (Comm. Med)"]
       },
       {
         topic: "Biostatistical Definitions (p-value, SEM, Type I & II errors, Power)",
-        occurrences: ["Q12a, January 2016", "Q11a, August 2014", "Q12a, May 2010"]
+        occurrences: ["Q12, January 2016", "Q11a, August 2014"]
       },
       {
         topic: "Biomedical Research Design, Proposals & Methodological Types",
-        occurrences: ["Q9a, February 2015", "Q9, May 2010", "Q9, August 2014", "Q5, December 2007"]
+        occurrences: ["Q9a, February 2015", "Q9, August 2014", "Q5, December 2007"]
       },
       {
         topic: "Normal Distribution Curve and Probability Characteristics",
-        occurrences: ["Q8a, May 2010", "Q7a, June 2013", "SAQ 3, January 2025 (Comm. Med)"]
+        occurrences: ["Q8, May 2010", "Q7a, June 2013", "SAQ 3, January 2025 (Comm. Med)"]
       },
       {
         topic: "Epidemiological Bias vs Confounding Control Methods",
@@ -477,25 +477,25 @@ export const database: FullDatabase = {
     "Demographics": [
       {
         topic: "Demographic Transition Theory & Phases",
-        occurrences: ["Q4, September 2022", "Q9b, February 2019", "Q4a, June 2013", "Q4b, September 2008"]
+        occurrences: ["Q4, September 2022", "Q9, February 2019", "Q4a, June 2013", "Q4, September 2008"]
       },
       {
         topic: "Demographic Data Sources & Demographic Structure Dynamics",
-        occurrences: ["Q4, September 2022", "Q3b, December 2017", "Q9c, February 2019", "Q7, May 2014"]
+        occurrences: ["Q4, September 2022", "Q3b, December 2017", "Q9, February 2019", "Q7, May 2014"]
       },
       {
         topic: "Population Pyramid Construction & Significance",
-        occurrences: ["Q4a, January 2016", "Q3a, February 2015", "Q4a, September 2008", "SAQ 8b, August 2014"]
+        occurrences: ["Q4, January 2016", "Q3a, February 2015", "Q4, September 2008", "SAQ 8b, August 2014"]
       },
       {
         topic: "Population Census Formats & De Facto/De Jure Enumeration",
-        occurrences: ["Q4, October 2015", "Q6a, March 2019", "Q6a, January 2016"]
+        occurrences: ["Q4, October 2015", "Q6, March 2019"]
       }
     ],
     "Social & Rehabilitative Medicine": [
       {
         topic: "Health Problems of Internally Displaced Persons (IDPs)",
-        occurrences: ["Q4, April 2017", "Q10, January 2016"]
+        occurrences: ["Q4, April 2017"]
       },
       {
         topic: "Prison Health Care Services & Rehabilitative Measures",
@@ -511,17 +511,17 @@ export const database: FullDatabase = {
       },
       {
         topic: "Handicapping Conditions, Impairments, Disabilities & Rehabilitative Management",
-        occurrences: ["Q4a, October 2015", "SAQ 6, January 2025 (Comm. Med)"]
+        occurrences: ["Q4, October 2015", "SAQ 6, January 2025 (Comm. Med)"]
       }
     ],
     "Medical Ethics": [
       {
         topic: "Principles of Medical Ethics & Professional Medical Negligence",
-        occurrences: ["Q3a, December 2017", "Q5, September 2022", "Q4b, January 2016", "Q6, March 2019", "Q9, September 2019", "Q1a, 600L End of Posting", "SAQ 2, January 2025 (Comm. Med)", "SAQ 8a, August 2014"]
+        occurrences: ["Q3a, December 2017", "Q5, September 2022", "Q6, March 2019", "Q9, September 2019", "Q1, 600L End of Posting", "SAQ 2, January 2025 (Comm. Med)", "SAQ 8a, August 2014"]
       },
       {
         topic: "Ethics Codes & Declarations (Nuremberg, Helsinki, Tokyo, Geneva, etc.)",
-        occurrences: ["Q7, May 2010", "Q10, October 2015", "Q1b, 600L End of Posting", "Q2ii, December 2007"]
+        occurrences: ["Q7, May 2010", "Q10, October 2015", "Q1, 600L End of Posting", "Q2, December 2007"]
       }
     ]
   }
