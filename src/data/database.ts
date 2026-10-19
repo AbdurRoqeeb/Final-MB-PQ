@@ -239,7 +239,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Ergonomics, Posture at Work & PPE Use",
-        occurrences: ["Q7, April 2017", "Q9, January 2016", "Q3, February 2019"]
+        occurrences: ["Q7, April 2017", "Q3, February 2019"]
       },
       {
         topic: "Occupational Hazards: Principles of Control, Factory Inspections & Sawmill Workers",
@@ -247,7 +247,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Occupational Deafness, Factory Inspectorate Division & Industrial Rehabilitation",
-        occurrences: ["Q9, January 2016", "Q3, February 2019"]
+        occurrences: ["Q3, February 2019"]
       },
       {
         topic: "Occupational Hazards in Mining Industries",
@@ -355,7 +355,7 @@ export const database: FullDatabase = {
     "International Health": [
       {
         topic: "Global Agencies Promoting Health (Bilateral, Multilateral & NGOs)",
-        occurrences: ["Q1a, December 2017", "Q3, March 2019", "Q1, May 2010", "Q5, May 2014", "SAQ 8, January 2025 (Comm. Med)"]
+        occurrences: ["Q1, December 2017", "Q1a, December 2017", "Q3, March 2019", "Q1, May 2010", "Q5, May 2014", "SAQ 8, January 2025 (Comm. Med)"]
       },
       {
         topic: "World Health Organization (WHO) Strategy, Governance & Regional Offices",
@@ -367,11 +367,15 @@ export const database: FullDatabase = {
       },
       {
         topic: "International Health Certificates & Travel Vaccinations (Yellow Card)",
-        occurrences: ["Q1b, December 2017", "Q5, May 2014", "Q5, October 2015"]
+        occurrences: ["Q1, December 2017", "Q1b, December 2017", "Q3, February 2019", "Q5, February 2015", "Q5b, February 2015", "Q5, May 2014", "Q5, October 2015"]
       },
       {
         topic: "Port Health Services & Quarantine Inspection at Points of Entry",
         occurrences: ["Q9b, June 2013"]
+      },
+      {
+        topic: "International Health Indicators & Comparative National Health Rankings",
+        occurrences: ["Q4, December 2017"]
       }
     ],
     "Family & Reproductive Health": [

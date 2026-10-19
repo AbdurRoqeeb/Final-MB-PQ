@@ -1,5 +1,6 @@
 export interface QuestionAttachment {
   occurrenceKey: string;
+  department: string;
   title: string;
   figureLabel: string;
   imageUrl: string;
@@ -10,6 +11,7 @@ export const questionAttachments: Record<string, QuestionAttachment> = {
   // 1. December 2017 & March 2019 Q11
   "q11, december 2017": {
     occurrenceKey: "Q11, December 2017",
+    department: "Community Medicine",
     title: "Clinical Trial of New Tranquilizer vs. Placebo in Psychoneurotic Patients (N = 9)",
     figureLabel: "December 2017 • Question 11 Examination Table",
     imageUrl: "/images/clinical_trial_table_svg.svg",
@@ -19,6 +21,7 @@ export const questionAttachments: Record<string, QuestionAttachment> = {
   // 2. January 2016 Q12
   "q12, january 2016": {
     occurrenceKey: "Q12, January 2016",
+    department: "Community Medicine",
     title: "Comparative Blood Pressure Trial: Digital vs. Mercury Sphygmomanometer (N = 9)",
     figureLabel: "2016 (January) • Question 12 Examination Table",
     imageUrl: "/images/sphygmomanometer_table_2016_q12.svg",
@@ -28,6 +31,7 @@ export const questionAttachments: Record<string, QuestionAttachment> = {
   // 3. September 2022 Q11
   "q11, september 2022": {
     occurrenceKey: "Q11, September 2022",
+    department: "Community Medicine",
     title: "2×2 Screening Matrix for Pulmonary Tuberculosis (N = 3,000)",
     figureLabel: "September 2022 • Question 11 Examination Table",
     imageUrl: "/images/screening_tb_table_2022_q11.svg",
@@ -37,6 +41,7 @@ export const questionAttachments: Record<string, QuestionAttachment> = {
   // 4. February 2019 Q6 & 600L End of Posting Q11
   "q6, february 2019": {
     occurrenceKey: "Q6, February 2019",
+    department: "Community Medicine",
     title: "10-Year Prospective Cohort Table: Smoking vs. Coronary Heart Disease (N = 6,000)",
     figureLabel: "February 2019 • Question 6 Examination Table",
     imageUrl: "/images/cohort_smoking_chd_table_2019_q6.svg",
@@ -46,6 +51,7 @@ export const questionAttachments: Record<string, QuestionAttachment> = {
   // 5. 600L End of Posting Q12
   "q12, 600l end of posting": {
     occurrenceKey: "Q12, 600L End of Posting",
+    department: "Community Medicine",
     title: "2×2 Clinical Trial Table: Antihypertensive Drug vs. Placebo Mortality (N = 100)",
     figureLabel: "600L Clinical End of Posting • Question 12 Table",
     imageUrl: "/images/rct_hypertension_table_600l_q12.svg",
@@ -55,6 +61,7 @@ export const questionAttachments: Record<string, QuestionAttachment> = {
   // 6. August 2014 LAQ 11 / Q11
   "laq 11, august 2014": {
     occurrenceKey: "LAQ 11, August 2014",
+    department: "Community Medicine",
     title: "Term Infant Birth Weights Comparison: Males vs. Females (N = 20)",
     figureLabel: "August 2014 • Section II (Biostatistics) Question 11 Table",
     imageUrl: "/images/birth_weight_table_2014_q11.svg",
@@ -64,6 +71,7 @@ export const questionAttachments: Record<string, QuestionAttachment> = {
   // 7. October 2015 Q7
   "q7, october 2015": {
     occurrenceKey: "Q7, October 2015",
+    department: "Community Medicine",
     title: "Neonatal Serum HDL Cholesterol Observations (N = 10)",
     figureLabel: "October 2015 • Question 7 Examination Table",
     imageUrl: "/images/neonatal_hdl_table_2015_q7.svg",
@@ -71,27 +79,44 @@ export const questionAttachments: Record<string, QuestionAttachment> = {
   }
 };
 
-export function getQuestionAttachment(occOrQ: string): QuestionAttachment | null {
+export function getQuestionAttachment(occOrQ: string, department?: string): QuestionAttachment | null {
   if (!occOrQ) return null;
+
+  // Strict department check: all current stat tables belong exclusively to Community Medicine.
+  // If department is explicitly specified and is NOT Community Medicine (e.g. Surgery, Internal Medicine, Psychiatry), return null.
+  if (department && department.trim() !== "Community Medicine") {
+    return null;
+  }
+
   const clean = occOrQ.toLowerCase().replace(/\s+/g, " ").trim();
-  
-  // Direct match
+
+  // If the occurrence explicitly specifies another department, return null immediately.
+  if (
+    clean.includes("surgery") || 
+    clean.includes("internal medicine") || 
+    clean.includes("psychiatry")
+  ) {
+    return null;
+  }
+
+  // Direct match in registry
   if (questionAttachments[clean]) {
     return questionAttachments[clean];
   }
   
-  // Substring match for December 2017 & March 2019 Q11
+  // Substring match for December 2017 & March 2019 Q11 (Tranquilizer paired trial)
   if (clean.includes("q11") && (clean.includes("2017") || clean.includes("march 2019") || clean.includes("december"))) {
     return questionAttachments["q11, december 2017"];
   }
 
-  // Substring match for 2016 Q12 / Q12a / Q12b
+  // Substring match for 2016 Q12 / Q12a / Q12b (Sphygmomanometer paired trial)
   if (clean.includes("q12") && clean.includes("2016")) {
     return questionAttachments["q12, january 2016"];
   }
 
-  // Substring match for September 2022 Q11 (TB Screening)
-  if (clean.includes("q11") && clean.includes("2022")) {
+  // Substring match for September 2022 Q11 (TB 2x2 Screening Matrix)
+  // Must NOT match surgery (handled above) and must strictly match the September 2022 Q11 Comm Med context
+  if (clean.includes("q11") && clean.includes("2022") && (clean.includes("sep") || clean.includes("tb") || clean.includes("screening") || clean.includes("comm"))) {
     return questionAttachments["q11, september 2022"];
   }
 

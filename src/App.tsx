@@ -1158,7 +1158,7 @@ export default function App() {
 
                                     {/* Question Figure / Dataset Attachment if present */}
                                     {(() => {
-                                      const attachment = getQuestionAttachment(occ);
+                                      const attachment = getQuestionAttachment(occ, itemObj.specialty);
                                       return attachment ? <QuestionFigure attachment={attachment} /> : null;
                                     })()}
                                   </div>

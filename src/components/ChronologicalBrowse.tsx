@@ -805,7 +805,7 @@ export default function ChronologicalBrowse({
 
                     {/* Question Figure / Dataset Attachment if present */}
                     {(() => {
-                      const attachment = getQuestionAttachment(q.occurrence) || getQuestionAttachment(`${q.questionId}, ${selectedSession}`);
+                      const attachment = getQuestionAttachment(q.occurrence, selectedDept) || getQuestionAttachment(`${q.questionId}, ${selectedSession}`, selectedDept);
                       return attachment ? <QuestionFigure attachment={attachment} /> : null;
                     })()}
 
