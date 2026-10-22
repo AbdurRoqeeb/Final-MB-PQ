@@ -95,7 +95,7 @@ export const database: FullDatabase = {
     "General Surgery": [
       { topic: "Breast Cancer Evaluation, TNM Staging & Surgical Mastectomy", occurrences: ["LAQ 1, March 2024", "LAQ 2, January 2025", "Q8, June 2018", "Q2, September 2022 (Surgery)", "SAQ 4, December 2024", "LAQ 2, January 2020", "SAQ 4, February 2020"] },
       { topic: "Generalized Peritonitis in Pediatrics & Pre-operative Preparation", occurrences: ["SAQ 10, April 2024", "SAQ 10, March 2024", "SAQ 10, December 2024", "Q1, June 2018", "SAQ 10, January 2025", "SAQ 4, January 2020"] },
-      { topic: "Blood Transfusion Indications, Procedures & Complications", occurrences: ["LAQ 2, April 2024", "LAQ 1, January 2025", "Q5, May 2018", "LAQ 1, February 2020 (Surgery)"] },
+      { topic: "Blood Transfusion Indications, Procedures & Complications", occurrences: ["LAQ 1, October 2026 Mock (Surgery)", "LAQ 2, April 2024", "LAQ 1, January 2025", "Q5, May 2018", "LAQ 1, February 2020 (Surgery)"] },
       { topic: "Esophageal Carcinoma, Dysphagia Grading & Palliative Interventions", occurrences: ["SAQ 6, April 2024", "SAQ 6, December 2024", "SAQ 6, January 2025"] },
       { topic: "Colorectal Carcinoma (Left-Sided / Rectal Cancer) Evaluation, Staging & Surgical Management", occurrences: ["LAQ 1, April 2024"] },
       { topic: "Pressure Ulcers (Decubitus): Pathogenesis, Etiologies & Prevention in High-Risk Patients", occurrences: ["SAQ 5, April 2024", "SAQ 5, March 2024"] },
@@ -105,24 +105,24 @@ export const database: FullDatabase = {
       { topic: "Chronic Leg Ulcers, Venous Insufficiency & Marjolin's Ulcer", occurrences: ["Q2, May 2018", "SAQ 5, January 2020"] },
       { topic: "Bowel Preparation & Abdomino-perineal Resection for Rectal Tumors", occurrences: ["SAQ 3, February 2020"] },
       { topic: "Diabetic Foot Ulcer Grading (Meggit-Wagner) & Management", occurrences: ["SAQ 5, December 2024", "SAQ 5, January 2025"] },
-      { topic: "Thyroid Disease, Toxic Goitre / Graves' Disease & Surgical Management", occurrences: ["Q4, May 2018", "LAQ 2, February 2020 (Surgery)"] },
+      { topic: "Thyroid Disease, Toxic Goitre / Graves' Disease & Surgical Management", occurrences: ["LAQ 2, October 2026 Mock (Surgery)", "Q4, May 2018", "LAQ 2, February 2020 (Surgery)"] },
       { topic: "Cutaneous Ulcers, ABPI & Arterial vs Venous Ulcer Differentiation", occurrences: ["Q7, September 2022 (Surgery)"] },
       { topic: "Haemorrhoids Grading, Pathophysiology & Treatment Modalities", occurrences: ["Q4, Finals Paper II (Surgery)"] },
       { topic: "Intestinal Obstruction Radiological Evaluation & Management", occurrences: ["SAQ 9, January 2020"] }
     ],
     "Plastics": [
-      { topic: "Burns, Thermal/Chemical Trauma & Inhalational Airway Injury", occurrences: ["Q10, June 2018", "Q5, September 2022 (Surgery)", "SAQ 5, February 2020"] }
+      { topic: "Burns, Thermal/Chemical Trauma & Inhalational Airway Injury", occurrences: ["SAQ 3, October 2026 Mock (Surgery)", "Q10, June 2018", "Q5, September 2022 (Surgery)", "SAQ 5, February 2020"] }
     ],
     "Orthopaedics": [
       { topic: "Open Tibial Fractures and Gustilo-Anderson Classification", occurrences: ["LAQ 2, March 2024", "Q3, September 2022 (Surgery)"] },
-      { topic: "Amputation: Indications, Classification of Lower Limb Amputations & Complications", occurrences: ["SAQ 7, April 2024", "SAQ 7, March 2024"] },
+      { topic: "Amputation: Indications, Classification of Lower Limb Amputations & Complications", occurrences: ["SAQ 5, October 2026 Mock (Surgery)", "SAQ 7, April 2024", "SAQ 7, March 2024"] },
       { topic: "Talipes Equinovarus (Clubfoot) Deformities & Correction Order", occurrences: ["SAQ 7, December 2024", "SAQ 7, January 2025"] },
       { topic: "Septic Arthritis vs Osteomyelitis in Pediatric Hip & Limb", occurrences: ["Q1, May 2018", "SAQ 11, January 2020"] },
       { topic: "Angular Knee Deformities & Pediatric Genu Valgum", occurrences: ["Q7, June 2018"] }
     ],
     "Urology": [
       { topic: "Benign Prostatic Hyperplasia (BPH): IPSS Staging, Medical vs Surgical Management & Adverse Effects", occurrences: ["SAQ 8, April 2024", "SAQ 8, March 2024"] },
-      { topic: "Metastatic Prostate Cancer & Emergency Clot/Urinary Retention", occurrences: ["SAQ 8, December 2024", "Q3, May 2018", "SAQ 8, January 2025", "SAQ 7, February 2020", "SAQ 7, January 2020", "Q11, June 2018"] },
+      { topic: "Metastatic Prostate Cancer & Emergency Clot/Urinary Retention", occurrences: ["SAQ 6, October 2026 Mock (Surgery)", "SAQ 8, December 2024", "Q3, May 2018", "SAQ 8, January 2025", "SAQ 7, February 2020", "SAQ 7, January 2020", "Q11, June 2018"] },
       { topic: "Hematuria Causes in Elderly Males & Diagnostic Workup", occurrences: ["Q4, September 2022 (Surgery)"] },
       { topic: "Testicular Torsion Presentation & Emergency Detorsion", occurrences: ["SAQ 6, January 2020"] }
     ],
@@ -148,27 +148,27 @@ export const database: FullDatabase = {
       { topic: "Foreign Body Ingestion/Inhalation & Rigid Bronchoscopy / Esophagoscopy", occurrences: ["SAQ 9, April 2024", "SAQ 9, December 2024", "Q1, February 2019", "Q6, June 2018", "Q10, September 2022 (Surgery)"] },
       { topic: "Epistaxis Bedside Management & Diagnosis", occurrences: ["SAQ 9, March 2024", "Q2, February 2019", "SAQ 9, January 2025"] },
       { topic: "Vocal Cord Pathology, Hoarseness & Clinic Laryngoscopy", occurrences: ["Q3, February 2019"] },
-      { topic: "Insect in Ear Removal & Complications", occurrences: ["SAQ 8, January 2020"] }
+      { topic: "Insect in Ear Removal & Complications", occurrences: ["SAQ 7, October 2026 Mock (Surgery)", "SAQ 8, January 2020"] }
     ],
     "Radiology": [
       { topic: "Computed Tomography (CT) vs Magnetic Resonance Imaging (MRI): Comparative Advantages & Disadvantages", occurrences: ["SAQ 4, April 2024"] },
       { topic: "Radiographic Densities, Terminologies & Tissue Attenuation in Radiology", occurrences: ["SAQ 4, March 2024"] },
       { topic: "MRI Basic Sequences (T1 vs T2 comparison)", occurrences: ["SAQ 4, January 2025"] },
       { topic: "Brain CT Scanning in Acute Head Trauma", occurrences: ["Q3, June 2018"] },
-      { topic: "Sonomammography Indications & Breast Mass Characterization", occurrences: ["Q6, September 2022 (Surgery)"] }
+      { topic: "Sonomammography Indications & Breast Mass Characterization", occurrences: ["SAQ 8, October 2026 Mock (Surgery)", "Q6, September 2022 (Surgery)"] }
     ],
     "Anaesthesiology": [
       { topic: "Anaesthetic Breathing Circuits & Mapleson Classification", occurrences: ["SAQ 2, March 2024", "SAQ 2, December 2024"] },
       { topic: "Acute Trauma Pain Management, WHO Analgesic Ladder & Pain Assessment Tools", occurrences: ["SAQ 2, April 2024"] },
       { topic: "Post-Dural Puncture Headache (PDPH) & Spinal Anesthesia Complications", occurrences: ["SAQ 2, January 2025"] },
-      { topic: "Local Anesthetic Systemic Toxicity (LAST) Symptoms & Management", occurrences: ["Q5, June 2018", "SAQ 6, February 2020"] },
+      { topic: "Local Anesthetic Systemic Toxicity (LAST) Symptoms & Management", occurrences: ["SAQ 4, October 2026 Mock (Surgery)", "Q5, June 2018", "SAQ 6, February 2020"] },
       { topic: "Oxygen Therapy Administration Devices & Complications", occurrences: ["Q8, September 2022 (Surgery)"] },
       { topic: "Hypoxia Definition & Etiologies under General Anaesthesia", occurrences: ["Q7, Finals Paper II (Surgery)"] }
     ],
     "Ophthalmology": [
       { topic: "Papilloedema vs Papillitis: Definitions, Etiologies & Differentiation", occurrences: ["SAQ 3, April 2024", "SAQ 3, March 2024"] },
       { topic: "Cataract Etiology, Refractive Media & Contributing Factors", occurrences: ["SAQ 3, December 2024", "SAQ 3, January 2025"] },
-      { topic: "Glaucoma, Optic Disc Cupping & Irreversible Blindness", occurrences: ["SAQ 3, January 2025", "SAQ 10, January 2020", "Q1, Finals Paper II (Surgery)"] },
+      { topic: "Glaucoma, Optic Disc Cupping & Irreversible Blindness", occurrences: ["SAQ 9, October 2026 Mock (Surgery)", "SAQ 3, January 2025", "SAQ 10, January 2020", "Q1, Finals Paper II (Surgery)"] },
       { topic: "Pterygium Etiology, Clinical Presentation & Recurrence Prevention", occurrences: ["Q4, June 2018"] },
       { topic: "Chemical Eye Injury Emergency Management & Causes of Blindness", occurrences: ["Q9, September 2022 (Surgery)"] }
     ]

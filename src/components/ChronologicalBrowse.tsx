@@ -182,9 +182,13 @@ export default function ChronologicalBrowse({
             }
 
             // Clean session name by removing redundant department tags
-            const cleanSession = rawSession
+            let cleanSession = rawSession
               .replace(/\s*\((Surgery|Comm\.?\s*Med\.?|Psychiatry)\)/gi, "")
               .trim();
+
+            if (cleanSession.toLowerCase().includes("october 2026")) {
+              cleanSession = "October 2026 (Mock Exam)";
+            }
 
             if (!data[dept.key][cleanSession]) {
               data[dept.key][cleanSession] = [];
@@ -355,7 +359,7 @@ export default function ChronologicalBrowse({
   // Session badge tag helper
   const getSessionBadge = (sessionName: string) => {
     const s = sessionName.toLowerCase();
-    if (s.includes("mock") || s.includes("march 2024")) {
+    if (s.includes("mock") || s.includes("march 2024") || s.includes("october 2026") || s.includes("december 2024")) {
       return { label: "Mock Exam", color: "bg-amber-100 text-amber-800 border-amber-200" };
     }
     if (s.includes("finals paper")) {
@@ -363,9 +367,6 @@ export default function ChronologicalBrowse({
     }
     if (s.includes("600l")) {
       return { label: "Posting Exam", color: "bg-purple-100 text-purple-800 border-purple-200" };
-    }
-    if (s.includes("2025")) {
-      return { label: "Latest Diet", color: "bg-emerald-100 text-emerald-800 border-emerald-200" };
     }
     return null;
   };
@@ -515,7 +516,7 @@ export default function ChronologicalBrowse({
                           {badge.label}
                         </span>
                       )}
-                      <span>Part IV Final MB</span>
+                      <span>{badge?.label === "Mock Exam" ? "Part IV Mock Exam" : "Part IV Final MB"}</span>
                     </div>
 
                     {revisedInSession > 0 && (
@@ -558,7 +559,7 @@ export default function ChronologicalBrowse({
                     </span>
                   )}
                   <span className="text-[11px] text-slate-400 font-semibold hidden sm:inline">
-                    &bull; Final MBBS Examination Diet
+                    &bull; {getSessionBadge(selectedSession)?.label === "Mock Exam" ? "Part IV Mock Examination" : "Final MBBS Examination Diet"}
                   </span>
                 </div>
 

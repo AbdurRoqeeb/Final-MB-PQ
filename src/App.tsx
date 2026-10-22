@@ -844,42 +844,43 @@ export default function App() {
         {/* Main Content Area (Optimized Padding and Gaps for Mobile) */}
         <main className="flex-1 flex flex-col min-w-0 min-h-0 overflow-hidden bg-slate-100">
           
-          <div className="flex-1 p-2 md:p-6 flex flex-col gap-2 md:gap-4 overflow-y-auto min-w-0">
-            {/* Header Description & Yield Legend (Compact and responsive) */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white p-3 md:p-4 rounded-xl border border-slate-200/80 shadow-xs shrink-0">
-            <div>
-              <div className="flex items-center gap-2">
-                <h2 className="text-sm md:text-xl font-extrabold text-slate-800 tracking-tight">
+          <div className="flex-1 p-2 md:p-3.5 flex flex-col gap-2 overflow-y-auto min-w-0">
+            {/* Slim Header Description & Yield Legend (Ultra-compact for maximum question real estate) */}
+            <div className="flex flex-row items-center justify-between gap-2 bg-white px-3 py-1.5 md:py-2 rounded-lg border border-slate-200/80 shadow-2xs shrink-0">
+              <div className="flex items-center gap-2 min-w-0">
+                <h2 className="text-xs md:text-sm font-extrabold text-slate-800 tracking-tight truncate">
                   {selectedSubspecialty === "All" ? `${selectedSpecialty} Overview` : `${selectedSubspecialty} Analysis`}
                 </h2>
-                <span className="bg-slate-100 text-slate-600 text-[9px] md:text-[10px] px-2 py-0.5 rounded font-mono font-bold">
+                <span className="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded font-mono font-bold shrink-0">
                   {processedTopicsList.length} Topics
                 </span>
+                <span className="text-[11px] text-slate-400 hidden xl:inline truncate font-normal">
+                  • Click any topic to view verbatim questions
+                </span>
               </div>
-              <p className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">
-                Syllabus tracker showing question recurrences from clinical essay exams. Click any topic to inspect the verbatim questions from every tested exam year.
-              </p>
-            </div>
 
-            {/* Legends */}
-            <div className="flex flex-wrap gap-2.5 sm:self-center shrink-0">
-              <div className="flex items-center gap-1">
-                <span className="w-2 h-2 rounded-full bg-orange-500 block"></span>
-                <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">High Yield (≥3x)</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-2 h-2 rounded-full bg-teal-500 block"></span>
-                <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Common (2x)</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="w-2 h-2 rounded-full bg-slate-300 block"></span>
-                <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Single (1x)</span>
+              {/* Legends */}
+              <div className="flex items-center gap-2.5 shrink-0">
+                <div className="flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-orange-500 block shrink-0"></span>
+                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider hidden sm:inline">High Yield (≥3x)</span>
+                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider sm:hidden">≥3x</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-teal-500 block shrink-0"></span>
+                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider hidden sm:inline">Common (2x)</span>
+                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider sm:hidden">2x</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-slate-300 block shrink-0"></span>
+                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider hidden sm:inline">Single (1x)</span>
+                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider sm:hidden">1x</span>
+                </div>
               </div>
             </div>
-          </div>
 
           {/* Quick Filters Panel (Extremely Compact) */}
-          <div className="bg-white p-2.5 rounded-xl border border-slate-200/70 shrink-0">
+          <div className="bg-white px-3 py-1.5 md:py-2 rounded-lg border border-slate-200/70 shadow-2xs shrink-0">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div className="flex flex-wrap items-center gap-1.5">
                 <span className="text-[9px] font-extrabold uppercase text-slate-400 tracking-wider px-1 flex items-center gap-1">
@@ -1121,7 +1122,9 @@ export default function App() {
                                           {occ}
                                         </span>
                                         <span className="text-[10px] text-slate-500 font-semibold">
-                                          Part IV Final MBBS Examination
+                                          {occ.toLowerCase().includes("mock") || occ.toLowerCase().includes("october 2026") || occ.toLowerCase().includes("march 2024") || occ.toLowerCase().includes("december 2024")
+                                            ? "Part IV Mock Examination"
+                                            : "Part IV Final MBBS Examination"}
                                         </span>
                                       </div>
 

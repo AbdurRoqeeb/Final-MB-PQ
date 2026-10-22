@@ -1,4 +1,125 @@
 export const pastQuestionsText: { [occurrence: string]: string } = {
+  // ==========================================
+  // OCTOBER 2026 (Mock Examination in Surgery and Surgical Specialties - Tuesday 20th October 2026)
+  // Faculty of Clinical Sciences, Department of Surgery
+  // ==========================================
+  "LAQ 1, October 2026":
+    "Discuss blood transfusion in Surgery",
+  "LAQ 1, October 2026 (Surgery)":
+    "Discuss blood transfusion in Surgery",
+  "LAQ 1, October 2026 Mock (Surgery)":
+    "Discuss blood transfusion in Surgery",
+  "LAQ 1, October 2026 (Mock Surgery)":
+    "Discuss blood transfusion in Surgery",
+  "LAQ 1, October 2026 (Mock Exam)":
+    "Discuss blood transfusion in Surgery",
+  "Q1, October 2026 (Surgery)":
+    "Discuss blood transfusion in Surgery",
+
+  "LAQ 2, October 2026":
+    "A 45-year-old female teacher presented at the surgical outpatient clinic with a five-year history of painless lump on the anterior part of the neck. This became associated with protruding eyes, palpitation and oligomenorrhoea in the last 6 months. She was found to have a blood pressure of 90 / 60 mmHg., pulse rate of 96 / min, irregular heartbeat, feet and leg edema.\n\na. What is the most likely diagnosis?\nb. Discuss the management of this patient.",
+  "LAQ 2, October 2026 (Surgery)":
+    "A 45-year-old female teacher presented at the surgical outpatient clinic with a five-year history of painless lump on the anterior part of the neck. This became associated with protruding eyes, palpitation and oligomenorrhoea in the last 6 months. She was found to have a blood pressure of 90 / 60 mmHg., pulse rate of 96 / min, irregular heartbeat, feet and leg edema.\n\na. What is the most likely diagnosis?\nb. Discuss the management of this patient.",
+  "LAQ 2, October 2026 Mock (Surgery)":
+    "A 45-year-old female teacher presented at the surgical outpatient clinic with a five-year history of painless lump on the anterior part of the neck. This became associated with protruding eyes, palpitation and oligomenorrhoea in the last 6 months. She was found to have a blood pressure of 90 / 60 mmHg., pulse rate of 96 / min, irregular heartbeat, feet and leg edema.\n\na. What is the most likely diagnosis?\nb. Discuss the management of this patient.",
+  "LAQ 2, October 2026 (Mock Surgery)":
+    "A 45-year-old female teacher presented at the surgical outpatient clinic with a five-year history of painless lump on the anterior part of the neck. This became associated with protruding eyes, palpitation and oligomenorrhoea in the last 6 months. She was found to have a blood pressure of 90 / 60 mmHg., pulse rate of 96 / min, irregular heartbeat, feet and leg edema.\n\na. What is the most likely diagnosis?\nb. Discuss the management of this patient.",
+  "LAQ 2, October 2026 (Mock Exam)":
+    "A 45-year-old female teacher presented at the surgical outpatient clinic with a five-year history of painless lump on the anterior part of the neck. This became associated with protruding eyes, palpitation and oligomenorrhoea in the last 6 months. She was found to have a blood pressure of 90 / 60 mmHg., pulse rate of 96 / min, irregular heartbeat, feet and leg edema.\n\na. What is the most likely diagnosis?\nb. Discuss the management of this patient.",
+  "Q2, October 2026 (Surgery)":
+    "A 45-year-old female teacher presented at the surgical outpatient clinic with a five-year history of painless lump on the anterior part of the neck. This became associated with protruding eyes, palpitation and oligomenorrhoea in the last 6 months. She was found to have a blood pressure of 90 / 60 mmHg., pulse rate of 96 / min, irregular heartbeat, feet and leg edema.\n\na. What is the most likely diagnosis?\nb. Discuss the management of this patient.",
+
+  "SAQ 3, October 2026":
+    "Outline the management of an 18year-old lady who sustained flame burn injuries from gas explosion while cooking in the kitchen.",
+  "SAQ 3, October 2026 (Surgery)":
+    "Outline the management of an 18year-old lady who sustained flame burn injuries from gas explosion while cooking in the kitchen.",
+  "SAQ 3, October 2026 Mock (Surgery)":
+    "Outline the management of an 18year-old lady who sustained flame burn injuries from gas explosion while cooking in the kitchen.",
+  "SAQ 3, October 2026 (Mock Surgery)":
+    "Outline the management of an 18year-old lady who sustained flame burn injuries from gas explosion while cooking in the kitchen.",
+  "SAQ 3, October 2026 (Mock Exam)":
+    "Outline the management of an 18year-old lady who sustained flame burn injuries from gas explosion while cooking in the kitchen.",
+  "Q3, October 2026 (Surgery)":
+    "Outline the management of an 18year-old lady who sustained flame burn injuries from gas explosion while cooking in the kitchen.",
+
+  "SAQ 4, October 2026":
+    "List the clinical signs and symptoms of systemic toxicity of Local anaesthetic agents. Outline the managements of systemic toxicity of local anaesthetic Agents",
+  "SAQ 4, October 2026 (Surgery)":
+    "List the clinical signs and symptoms of systemic toxicity of Local anaesthetic agents. Outline the managements of systemic toxicity of local anaesthetic Agents",
+  "SAQ 4, October 2026 Mock (Surgery)":
+    "List the clinical signs and symptoms of systemic toxicity of Local anaesthetic agents. Outline the managements of systemic toxicity of local anaesthetic Agents",
+  "SAQ 4, October 2026 (Mock Surgery)":
+    "List the clinical signs and symptoms of systemic toxicity of Local anaesthetic agents. Outline the managements of systemic toxicity of local anaesthetic Agents",
+  "SAQ 4, October 2026 (Mock Exam)":
+    "List the clinical signs and symptoms of systemic toxicity of Local anaesthetic agents. Outline the managements of systemic toxicity of local anaesthetic Agents",
+  "Q4, October 2026 (Surgery)":
+    "List the clinical signs and symptoms of systemic toxicity of Local anaesthetic agents. Outline the managements of systemic toxicity of local anaesthetic Agents",
+
+  "SAQ 5, October 2026":
+    "a. Define Amputation and disarticulation\nb. Enumerate various indications for amputation\nc. Mention 2 named amputations in the foot\nd. Mention 6 complications of amputation",
+  "SAQ 5, October 2026 (Surgery)":
+    "a. Define Amputation and disarticulation\nb. Enumerate various indications for amputation\nc. Mention 2 named amputations in the foot\nd. Mention 6 complications of amputation",
+  "SAQ 5, October 2026 Mock (Surgery)":
+    "a. Define Amputation and disarticulation\nb. Enumerate various indications for amputation\nc. Mention 2 named amputations in the foot\nd. Mention 6 complications of amputation",
+  "SAQ 5, October 2026 (Mock Surgery)":
+    "a. Define Amputation and disarticulation\nb. Enumerate various indications for amputation\nc. Mention 2 named amputations in the foot\nd. Mention 6 complications of amputation",
+  "SAQ 5, October 2026 (Mock Exam)":
+    "a. Define Amputation and disarticulation\nb. Enumerate various indications for amputation\nc. Mention 2 named amputations in the foot\nd. Mention 6 complications of amputation",
+  "Q5, October 2026 (Surgery)":
+    "a. Define Amputation and disarticulation\nb. Enumerate various indications for amputation\nc. Mention 2 named amputations in the foot\nd. Mention 6 complications of amputation",
+
+  "SAQ 6, October 2026":
+    "A 55-year-old man with haematuria developed acute urinary retention following prostatic biopsy. Attempt at catheterization failed.\n\nA. What will be your next line of treatment to relieve the patient of his urinary retention?\nB. List 3 other specific investigations required in this patient\nC. If the histology of the biopsy shows prostate cancer, outline the treatment options.",
+  "SAQ 6, October 2026 (Surgery)":
+    "A 55-year-old man with haematuria developed acute urinary retention following prostatic biopsy. Attempt at catheterization failed.\n\nA. What will be your next line of treatment to relieve the patient of his urinary retention?\nB. List 3 other specific investigations required in this patient\nC. If the histology of the biopsy shows prostate cancer, outline the treatment options.",
+  "SAQ 6, October 2026 Mock (Surgery)":
+    "A 55-year-old man with haematuria developed acute urinary retention following prostatic biopsy. Attempt at catheterization failed.\n\nA. What will be your next line of treatment to relieve the patient of his urinary retention?\nB. List 3 other specific investigations required in this patient\nC. If the histology of the biopsy shows prostate cancer, outline the treatment options.",
+  "SAQ 6, October 2026 (Mock Surgery)":
+    "A 55-year-old man with haematuria developed acute urinary retention following prostatic biopsy. Attempt at catheterization failed.\n\nA. What will be your next line of treatment to relieve the patient of his urinary retention?\nB. List 3 other specific investigations required in this patient\nC. If the histology of the biopsy shows prostate cancer, outline the treatment options.",
+  "SAQ 6, October 2026 (Mock Exam)":
+    "A 55-year-old man with haematuria developed acute urinary retention following prostatic biopsy. Attempt at catheterization failed.\n\nA. What will be your next line of treatment to relieve the patient of his urinary retention?\nB. List 3 other specific investigations required in this patient\nC. If the histology of the biopsy shows prostate cancer, outline the treatment options.",
+  "Q6, October 2026 (Surgery)":
+    "A 55-year-old man with haematuria developed acute urinary retention following prostatic biopsy. Attempt at catheterization failed.\n\nA. What will be your next line of treatment to relieve the patient of his urinary retention?\nB. List 3 other specific investigations required in this patient\nC. If the histology of the biopsy shows prostate cancer, outline the treatment options.",
+
+  "SAQ 7, October 2026":
+    "A 27-year-old final year medical student ran into A & E Department at 2.00 am in distress claiming that an insect entered into his ear while he was reading for his final surgery exam.\n\na.) What could he have done himself that would have saved him the night visit.\nb) State your definitive treatment\nc) List 4 Instruments/ materials that you would need in his treatment\nd) List 2 possible complications of the procedure",
+  "SAQ 7, October 2026 (Surgery)":
+    "A 27-year-old final year medical student ran into A & E Department at 2.00 am in distress claiming that an insect entered into his ear while he was reading for his final surgery exam.\n\na.) What could he have done himself that would have saved him the night visit.\nb) State your definitive treatment\nc) List 4 Instruments/ materials that you would need in his treatment\nd) List 2 possible complications of the procedure",
+  "SAQ 7, October 2026 Mock (Surgery)":
+    "A 27-year-old final year medical student ran into A & E Department at 2.00 am in distress claiming that an insect entered into his ear while he was reading for his final surgery exam.\n\na.) What could he have done himself that would have saved him the night visit.\nb) State your definitive treatment\nc) List 4 Instruments/ materials that you would need in his treatment\nd) List 2 possible complications of the procedure",
+  "SAQ 7, October 2026 (Mock Surgery)":
+    "A 27-year-old final year medical student ran into A & E Department at 2.00 am in distress claiming that an insect entered into his ear while he was reading for his final surgery exam.\n\na.) What could he have done himself that would have saved him the night visit.\nb) State your definitive treatment\nc) List 4 Instruments/ materials that you would need in his treatment\nd) List 2 possible complications of the procedure",
+  "SAQ 7, October 2026 (Mock Exam)":
+    "A 27-year-old final year medical student ran into A & E Department at 2.00 am in distress claiming that an insect entered into his ear while he was reading for his final surgery exam.\n\na.) What could he have done himself that would have saved him the night visit.\nb) State your definitive treatment\nc) List 4 Instruments/ materials that you would need in his treatment\nd) List 2 possible complications of the procedure",
+  "Q7, October 2026 (Surgery)":
+    "A 27-year-old final year medical student ran into A & E Department at 2.00 am in distress claiming that an insect entered into his ear while he was reading for his final surgery exam.\n\na.) What could he have done himself that would have saved him the night visit.\nb) State your definitive treatment\nc) List 4 Instruments/ materials that you would need in his treatment\nd) List 2 possible complications of the procedure",
+
+  "SAQ 8, October 2026":
+    "A 23-year-old female medical student noticed a lump in her right breast.\n\nA. What single radiological investigation would you ask her to do.\nB. Mention three (3) features of a simple breast cyst in the mentioned radiological modality\nC. List 3 features of malignant masses on Mammography.",
+  "SAQ 8, October 2026 (Surgery)":
+    "A 23-year-old female medical student noticed a lump in her right breast.\n\nA. What single radiological investigation would you ask her to do.\nB. Mention three (3) features of a simple breast cyst in the mentioned radiological modality\nC. List 3 features of malignant masses on Mammography.",
+  "SAQ 8, October 2026 Mock (Surgery)":
+    "A 23-year-old female medical student noticed a lump in her right breast.\n\nA. What single radiological investigation would you ask her to do.\nB. Mention three (3) features of a simple breast cyst in the mentioned radiological modality\nC. List 3 features of malignant masses on Mammography.",
+  "SAQ 8, October 2026 (Mock Surgery)":
+    "A 23-year-old female medical student noticed a lump in her right breast.\n\nA. What single radiological investigation would you ask her to do.\nB. Mention three (3) features of a simple breast cyst in the mentioned radiological modality\nC. List 3 features of malignant masses on Mammography.",
+  "SAQ 8, October 2026 (Mock Exam)":
+    "A 23-year-old female medical student noticed a lump in her right breast.\n\nA. What single radiological investigation would you ask her to do.\nB. Mention three (3) features of a simple breast cyst in the mentioned radiological modality\nC. List 3 features of malignant masses on Mammography.",
+  "Q8, October 2026 (Surgery)":
+    "A 23-year-old female medical student noticed a lump in her right breast.\n\nA. What single radiological investigation would you ask her to do.\nB. Mention three (3) features of a simple breast cyst in the mentioned radiological modality\nC. List 3 features of malignant masses on Mammography.",
+
+  "SAQ 9, October 2026":
+    "Write a short essay on Glaucoma",
+  "SAQ 9, October 2026 (Surgery)":
+    "Write a short essay on Glaucoma",
+  "SAQ 9, October 2026 Mock (Surgery)":
+    "Write a short essay on Glaucoma",
+  "SAQ 9, October 2026 (Mock Surgery)":
+    "Write a short essay on Glaucoma",
+  "SAQ 9, October 2026 (Mock Exam)":
+    "Write a short essay on Glaucoma",
+  "Q9, October 2026 (Surgery)":
+    "Write a short essay on Glaucoma",
+
   // December 2024 (Mock Surgery)
   "LAQ 1, December 2024": 
     "A 65-year-old bricklayer presented to the accident and emergency unit with a history of early satiety, and anorexia of about a month duration. Further direct inquiry revealed a history of progressive weight loss and vomiting of stale food 3 months before presentation. Discuss the management of this patient. (20 marks)",
