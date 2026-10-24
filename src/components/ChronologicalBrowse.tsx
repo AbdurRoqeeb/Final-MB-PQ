@@ -42,7 +42,7 @@ export const DEPARTMENTS: DepartmentMeta[] = [
     key: "Surgery",
     label: "Surgery & Surgical Specialties",
     shortLabel: "Surgery",
-    description: "General Surgery, Orthopaedics, Urology, Neurosurgery, ENT, Ophthalmology, Plastics, Anaesthesia",
+    description: "General Surgery, Orthopaedics, Urology, Neurosurgery, ENT, Ophthalmology, Plastic Surgery, Anaesthesia",
     icon: Scissors,
   },
   {

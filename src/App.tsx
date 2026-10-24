@@ -502,6 +502,37 @@ export default function App() {
       };
     }
 
+    if (t.includes("leg ulcer") || t.includes("cutaneous ulcer") || t.includes("marjolin")) {
+      return {
+        keyConcepts: [
+          "Chronic Leg Ulcers Classification & Etiologies: Venous Ulcers (70-80%, located at medial gaiter area, irregular margins, shallow pink base with slough, surrounding lipodermatosclerosis, haemosiderin staining, aching relieved by elevation). Arterial Ulcers (10-15%, pressure points/distal toes/lateral malleolus, deep punched-out base, pale necrotic floor, severe pain worse with elevation, cold limb, diminished pulses, ABPI <0.8). Neuropathic/Diabetic Ulcers (weight-bearing plantar surfaces, painless, punched out with surrounding callus).",
+          "Marjolin's Ulcer: Aggressive squamous cell carcinoma developing in a long-standing chronic non-healing wound, burn scar, or chronic osteomyelitis sinus. Features: everted/rolled edges, foul-smelling exophytic granulation, rapidly enlarging ulcer, regional lymphadenopathy. Diagnostic gold standard: edge wedge incisional biopsy including both ulcer edge and healthy skin.",
+          "Management Strategy (Plastic & Reconstructive Surgery): 1. Investigation: Edge biopsy (exclude malignancy/Marjolin's), wound swab for C&S, plain X-ray (exclude osteomyelitis/periosteal reaction), Doppler ultrasound & ABPI assessment (normal ABPI 0.9-1.2; multi-layer compression strictly contraindicated if ABPI <0.8). 2. Wound Bed Preparation (TIME principle: Tissue debridement, Infection control, Moisture balance, Epithelial edge). 3. Venous ulcer treatment: Graduated 4-layer compression bandaging (40 mmHg at ankle) + limb elevation. 4. Surgical reconstruction: Split-thickness skin grafting (STSG / Thiersch graft), full-thickness skin graft, or local/fasciocutaneous flap coverage after clean granulating bed achieved."
+        ],
+        studyReferences: [
+          "Bailey & Love's Short Practice of Surgery — Plastic and Reconstructive Surgery: Skin Ulcers and Grafts",
+          "Grabb and Smith's Plastic Surgery — Principles of Wound Healing, Skin Grafts and Flaps"
+        ],
+        priority: "HIGH YIELD — Essential Plastic & Reconstructive Surgery essay question repeatedly tested in clinical exams."
+      };
+    }
+
+    if (t.includes("dysphagia") || t.includes("esophageal")) {
+      return {
+        keyConcepts: [
+          "Definitions: Dysphagia is subjective difficulty in swallowing liquids or solids. Odynophagia is painful swallowing, signifying severe mucosal inflammation or ulceration (infectious esophagitis e.g. Candida/CMV, caustic ingestion, or invasive esophageal ulcer/carcinoma).",
+          "Dysphagia Grading: Grade 1 (able to swallow solid foods with difficulty), Grade 2 (able to swallow semi-solids/pureed food only), Grade 3 (able to swallow liquids only), Grade 4 (complete aphagia / unable to swallow saliva). Progressive dysphagia from solids to liquids in an older smoker/drinker is classic for esophageal carcinoma until proven otherwise.",
+          "Diagnostic Workup: 1. Flexible upper GI endoscopy (esophagoscopy) with multiple targeted biopsies (histopathologic confirmation of squamous cell carcinoma vs adenocarcinoma). 2. Contrast barium swallow (pathognomonic rat-tail or apple-core irregular stricture, shoulders, mucosal disruption). 3. Contrast CT scan of neck, chest, and abdomen (TNM staging, locoregional invasion, mediastinal lymphadenopathy, liver metastases). 4. Endoscopic Ultrasound (EUS) for precise T-depth and N-nodal staging.",
+          "Endoscopic & Palliative Procedures (ENT / Upper GI): 1. Endoscopic Self-Expanding Metal Stenting (SEMS) — rapid restoration of luminal patency. 2. Endoscopic balloon dilatation. 3. Laser ablation or Argon Plasma Coagulation (APC) of fungating endoluminal tumor. 4. Palliative enteral access: Percutaneous Endoscopic Gastrostomy (PEG) or feeding jejunostomy. 5. Palliative external beam radiotherapy / brachytherapy to reduce tumor bulk."
+        ],
+        studyReferences: [
+          "Scott-Brown's Otorhinolaryngology, Head & Neck Surgery — The Oesophagus & Dysphagia",
+          "Bailey & Love's Short Practice of Surgery — Oesophagus: Malignant Tumours and Endoscopic Interventions"
+        ],
+        priority: "HIGH YIELD — Direct 3-time consecutive repeat question (April 2024, December 2024, January 2025)."
+      };
+    }
+
     if (t.includes("papilloedema") || t.includes("papillitis")) {
       return {
         keyConcepts: [

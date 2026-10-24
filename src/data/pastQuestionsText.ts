@@ -1311,9 +1311,33 @@ export const pastQuestionsText: { [occurrence: string]: string } = {
   // End of database entries
 };
 
+function getCustomTextLookup(key: string): string | undefined {
+  if (typeof window === "undefined" || !window.localStorage) return undefined;
+  try {
+    const raw = localStorage.getItem("final_mb_custom_questions_text");
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object" && parsed[key]) {
+        return parsed[key];
+      }
+    }
+  } catch {
+    // silent
+  }
+  return undefined;
+}
+
 export function getQuestionText(occurrence: string, topicName: string, specialty?: string): string | undefined {
   const sanitizedOcc = occurrence.trim();
   
+  // Custom uploaded question check
+  const customDirect = getCustomTextLookup(sanitizedOcc) ||
+    getCustomTextLookup(occurrence) ||
+    getCustomTextLookup(sanitizedOcc.replace(/\s*\([^)]*\)/g, "").trim());
+  if (customDirect) {
+    return customDirect;
+  }
+
   // Specific collision resolution for Q6, September 2022 / January 2025
   if (sanitizedOcc === "Q6, September 2022" && topicName.toLowerCase().includes("addison")) {
     return pastQuestionsText["Q6, January 2025"];
