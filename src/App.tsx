@@ -533,6 +533,23 @@ export default function App() {
       };
     }
 
+    if (t.includes("rheumatic") || t.includes("valvular")) {
+      return {
+        keyConcepts: [
+          "Primary Diagnosis: Chronic Rheumatic Heart Disease (RHD) with predominant Mitral Stenosis / mixed mitral valve disease, in acute decompensated heart failure with cardioembolic ischemic stroke.",
+          "Complications in this vignette: 1. Biventricular / Left-sided Congestive Heart Failure with pulmonary congestion (paroxysmal cough/PND, bibasal crepitations, Kerley B lines on CXR, pedal edema). 2. Atrial Fibrillation with rapid ventricular response and significant pulse deficit (HR 116 bpm vs PR 96/min; pulse deficit = 20 bpm). 3. Acute Cardioembolic Ischemic Stroke / Left Hemiparesis (mural thrombus from a dilated left atrium/appendage embolizing to the right middle cerebral artery territory). 4. Risk of secondary Infective Endocarditis.",
+          "Principles of Management: 1. Resuscitation & Decongestion: Propped up at 45–90°, high-flow humidified oxygen, IV Loop diuretic (Furosemide 40-80 mg IV bolus) to relieve pulmonary venous hypertension. 2. Heart rate control for AF: Digoxin (preferred in acute decompensated HF with hypotension BP 100/60) or cardioselective beta-blocker/non-DHP calcium channel blocker once stable. 3. Anticoagulation: Therapeutic anticoagulation with unfractionated/LMW heparin bridging to Warfarin (target INR 2.0–3.0; DOACs currently not approved for moderate-to-severe rheumatic mitral stenosis). 4. Stroke care: Neurological monitoring, head elevation, glycemic and temperature control, early neuro-rehabilitation and secondary neurovascular protection. 5. Definitive Valvular Evaluation & Intervention: Transthoracic and transesophageal echocardiography (assess Wilkins score, valve area, LA thrombus); evaluate for Percutaneous Mitral Balloon Valvotomy (PMBV) or surgical Mitral Valve Replacement (MVR).",
+          "Preventive Strategies: 1. Primary Prevention: Prompt diagnosis and treatment of Group A Beta-Hemolytic Streptococcal (GABHS) pharyngitis with a single dose of IM Benzathine Penicillin G (1.2 million units) or oral Penicillin V / Amoxicillin for 10 days to abort acute rheumatic fever. 2. Secondary Prevention: Continuous long-term antibiotic prophylaxis to prevent recurrent streptococcal infections and worsening valvular lesions using IM Benzathine Penicillin G 1.2 million units every 3 to 4 weeks (or oral penicillin/erythromycin daily) for at least 10 years or until age 21/40 (lifelong in patients with severe valvular disease or prosthetic valves). 3. Tertiary Prevention: Regular echocardiographic surveillance, medical optimization of heart failure, infective endocarditis education, and pre-pregnancy cardiac counseling. 4. Primordial Prevention: Alleviating socioeconomic deprivation, reducing household overcrowding, and expanding access to primary healthcare."
+        ],
+        studyReferences: [
+          "Davidson's Principles and Practice of Medicine — Cardiovascular Disease: Rheumatic Fever & Valvular Heart Disease",
+          "WHO Technical Report Series — Rheumatic Fever and Rheumatic Heart Disease Guidelines",
+          "AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease"
+        ],
+        priority: "CRITICAL HIGH YIELD — Core cardiology essay linking acute rheumatic history, valvular failure, atrial fibrillation, and embolic stroke."
+      };
+    }
+
     if (t.includes("papilloedema") || t.includes("papillitis")) {
       return {
         keyConcepts: [
