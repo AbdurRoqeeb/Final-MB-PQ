@@ -461,6 +461,37 @@ export const pastQuestionsText: { [occurrence: string]: string } = {
   "Q5, June 2025 (Psychiatry)":
     "A 48-year-old farmer presents with a history of fluctuating moods over the past 15 years. These episodes are characterized by periods of intense elation, hyperactivity, decreased need for sleep, pressured speech, and impulsive spending, often involving extravagant purchases of land or expensive cars. These periods are followed by profound sadness, loss of interest in his farming activities, fatigue, and feelings of worthlessness. There's a positive history of Hypertension diagnosed 10 years ago, poorly controlled despite medication. He often forgets to take his medications, citing the 'bitter taste' and 'too many pills'. Also, there's positive history of Type 2 Diabetes Mellitus diagnosed 5 years ago, with poor glycemic control. He has difficulty adhering to his dietary restrictions, often indulging in large meals of pounded yam and egusi soup, and rarely checks his blood sugar. Mother suffered from recurrent bouts of sadness, often withdrawing from social interactions and neglecting household chores. Father was an alcoholic, frequently returning home drunk and engaging in verbal and physical abuse towards his mother. Patient witnessed frequent and severe domestic violence between his parents during childhood. He is currently unemployed and lost significant investments in his cocoa farm and his ancestral land to a fraudulent land deal 5 years ago, coinciding with the onset of more severe mood episodes. There's a positive history of poor medication adherence due to concerns about side effects and perceived lack of efficacy. He smokes heavily and occasionally drinks palm wine.\n\na. Make the appropriate diagnosis from the vignette above\nb. List the predisposing, precipitating and perpetuating factors using the biopsychosocial model\nc. Outline the management for the above case.",
 
+  // April 2024 (MBBS Part IV Final Examination - Psychiatry Paper 2)
+  "Q1, April 2024 (Psychiatry)":
+    "A 35 year old male chronic alcoholic was admitted into the male surgical ward of LAUTECH Teaching Hospital on account of left femoral fracture. Two days into admission, he was noticed to be tremulous, restless, agitated and having difficulty sleeping. Some hours later he was seeing snakes and scorpion on the floor and was reported to have had an episode of seizure. The vital signs were essentially normal.\n\na. What is the most likely diagnosis?\nb. Highlight the management of this patient.\nc. Mention 5 neurological complications of this phenomenon.",
+
+  "Q2, April 2024 (Psychiatry)":
+    "A 25-year old female undergraduate being managed for first episode psychosis was placed on oral haloperidol 5mg nocte. On the 10th day of admission, she was observed by the ward nurse to be having fever (39°C), muscle rigidity and altered mental status. There was associated tachycardia and fluctuating blood pressure.\n\na. What is the possible diagnosis?\nb. Outline the management of this patient\nc. List 2 likely laboratory findings.\nd. Mention 5 differential diagnoses.",
+
+  "Q3, April 2024 (Psychiatry)":
+    "a. What is personality disorder?\nb. List the 3 clusters and give 3 examples in each.\nc. Give 4 examples of a projective personality assessment test.",
+
+  "Q4, April 2024 (Psychiatry)":
+    "Write short notes on any 4 of the following:\na. Fitness to plead\nb. Risk factors for suicide\nc. Clozapine\nd. Classification of psychoactive substances.\ne. Psychiatric emergencies.",
+
+  "Q4a, April 2024 (Psychiatry)":
+    "Write short notes on: Fitness to plead\n\n(From Q4: Write short notes on any 4 of the following: a. Fitness to plead, b. Risk factors for suicide, c. Clozapine, d. Classification of psychoactive substances, e. Psychiatric emergencies.)",
+
+  "Q4b, April 2024 (Psychiatry)":
+    "Write short notes on: Risk factors for suicide\n\n(From Q4: Write short notes on any 4 of the following: a. Fitness to plead, b. Risk factors for suicide, c. Clozapine, d. Classification of psychoactive substances, e. Psychiatric emergencies.)",
+
+  "Q4c, April 2024 (Psychiatry)":
+    "Write short notes on: Clozapine\n\n(From Q4: Write short notes on any 4 of the following: a. Fitness to plead, b. Risk factors for suicide, c. Clozapine, d. Classification of psychoactive substances, e. Psychiatric emergencies.)",
+
+  "Q4d, April 2024 (Psychiatry)":
+    "Write short notes on: Classification of psychoactive substances\n\n(From Q4: Write short notes on any 4 of the following: a. Fitness to plead, b. Risk factors for suicide, c. Clozapine, d. Classification of psychoactive substances, e. Psychiatric emergencies.)",
+
+  "Q4e, April 2024 (Psychiatry)":
+    "Write short notes on: Psychiatric emergencies\n\n(From Q4: Write short notes on any 4 of the following: a. Fitness to plead, b. Risk factors for suicide, c. Clozapine, d. Classification of psychoactive substances, e. Psychiatric emergencies.)",
+
+  "Q5, April 2024 (Psychiatry)":
+    "a. Mention 5 theoretical approaches to Psychology and list one major thinker in each.\nb. List Sigmund Freud Psychosexual stages.\nc. Mention two examples each of Classical and Operant conditioning.",
+
 
   // January 2025 (Final Community Medicine)
   "SAQ 1, January 2025 (Comm. Med)":
@@ -1518,7 +1549,7 @@ export function getQuestionText(occurrence: string, topicName: string, specialty
   }
 
   // Specific collision resolution for Q6, September 2022 / January 2025
-  if (sanitizedOcc === "Q6, September 2022" && topicName.toLowerCase().includes("addison")) {
+  if (sanitizedOcc === "Q6, September 2022" && topicName?.toLowerCase().includes("addison")) {
     return pastQuestionsText["Q6, January 2025"];
   }
 

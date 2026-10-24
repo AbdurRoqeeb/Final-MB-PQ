@@ -889,6 +889,136 @@ export default function App() {
       };
     }
 
+    if (t.includes("delirium tremens") || t.includes("alcohol withdrawal") || (t.includes("alcohol") && t.includes("complication"))) {
+      return {
+        keyConcepts: [
+          "Diagnosis & Onset: Delirium Tremens (DTs) — the most severe manifestation of alcohol withdrawal, developing 48–96 hours after cessation or significant reduction of chronic heavy alcohol intake. Characterized by gross tremor, severe agitation, vivid visual/tactile hallucinations (zoopsia e.g. snakes, scorpions, insects crawling), disorientation, fluctuating consciousness, autonomic hyperactivity (sweating, tachycardia, hypertension, fever), and withdrawal seizures ('rum fits').",
+          "Comprehensive Management Protocol: 1. Environment: Quiet, well-lit single room to minimize sensory illusions/hallucinations and prevent accidental injury (fracture care and splinting). 2. Benzodiazepine Regimen: Cornerstone of therapy. Diazepam (10–20 mg PO/IV titrated every 1–2 hours using symptom-triggered CIWA-Ar protocol) or Chlordiazepoxide; use Lorazepam (1–2 mg) in severe hepatic impairment or elderly patients. 3. High-dose Parenteral Thiamine (Vitamin B1): 200–500 mg IV/IM TDS (e.g., IV Pabrinex) administered BEFORE any intravenous glucose or carbohydrate infusion to prevent precipitating acute Wernicke's Encephalopathy. 4. Supportive: Fluid and electrolyte repletion (correct hypokalemia, hypomagnesemia, and hypoglycemia), multivitamin supplementation, adequate analgesia and orthopedic immobilization for femoral fracture.",
+          "5 Neurological Complications of Chronic Alcoholism: 1. Wernicke's Encephalopathy (classic triad: global confusion/delirium, ophthalmoplegia/nystagmus, and cerebellar ataxia). 2. Korsakoff's Amnestic Syndrome (severe anterograde and retrograde amnesia with confabulation and lack of insight). 3. Alcohol Withdrawal Seizures (generalized tonic-clonic 'rum fits' occurring 6–48 hours post-cessation). 4. Alcoholic Peripheral Neuropathy (distal symmetric 'glove-and-stocking' sensorimotor polyneuropathy, burning feet). 5. Alcoholic Cerebellar Degeneration (progressive truncal ataxia, broad-based dyspraxic gait, intention tremor). (Also: Marchiafava-Bignami disease, Central Pontine Myelinolysis, and Alcoholic Dementia)."
+        ],
+        studyReferences: [
+          "Gelder, Cowen & Harrison — Oxford Textbook of Psychiatry: Substance Use and Alcohol-Related Disorders",
+          "Kaplan & Sadock's Synopsis of Psychiatry — Alcohol-Induced Disorders: Delirium Tremens",
+          "NICE Clinical Guideline [CG115] — Alcohol-Use Disorders: Diagnosis and Management of Physical Complications"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct Q1 on April 2024 Psychiatry paper; clinical emergency uniting surgical admission, alcohol withdrawal delirium, and neurological pathology."
+      };
+    }
+
+    if (t.includes("neuroleptic malignant") || t.includes("nms")) {
+      return {
+        keyConcepts: [
+          "Diagnosis: Neuroleptic Malignant Syndrome (NMS) — life-threatening idiosyncratic reaction to dopamine receptor antagonists (especially high-potency first-generation antipsychotics like Haloperidol, Fluphenazine). Cardinal Tetrad: 1. Hyperthermia (severe fever ≥38–40°C). 2. Severe Generalized Muscle Rigidity ('lead-pipe' rigidity, akinesia). 3. Altered Mental Status (delirium, agitation, catatonic stupor, coma). 4. Autonomic Instability (tachycardia, labile/fluctuating blood pressure, diaphoresis, tachypnea, sialorrhea).",
+          "2 Key Laboratory Findings: 1. Markedly Elevated Serum Creatine Kinase (CK / CPK, often >1,000 to >100,000 IU/L) due to extensive skeletal muscle rhabdomyolysis. 2. Leukocytosis (WBC count 10,000–40,000/mm³ with left shift). (Also: elevated serum creatinine/urea from acute tubular necrosis, metabolic acidosis, myoglobinuria, and hyperkalemia).",
+          "5 Differential Diagnoses: 1. Serotonin Syndrome (hyperreflexia, clonus, shivering, tremor, gastrointestinal hypermotility/diarrhea rather than lead-pipe rigidity; caused by serotonergic agents). 2. Malignant Hyperthermia (triggered by volatile halogenated anesthetics and succinylcholine; Ryanodine receptor RYR1 mutation). 3. Lethal / Malignant Catatonia (prominent past affective history, waxy flexibility, mutism, responsive to lorazepam). 4. Central Nervous System Infection (meningitis, viral encephalitis, brain abscess). 5. Anticholinergic Toxicity / Toxidrome ('hot as a hare, blind as a bat, dry as a bone, red as a beet, mad as a hatter' — marked anhidrosis/dry skin and dilated sluggish pupils). (Also: Sepsis, Heat stroke, Thyroid storm).",
+          "Management Strategy: 1. Immediate cessation: Discontinue Haloperidol and all antipsychotic/dopamine-blocking agents immediately. 2. Medical ICU care: Aggressive external and internal cooling (cooling blankets, ice packs to axillae/groin, cold IV saline infusions); vigorous IV hydration (0.9% normal saline at 200–300 mL/hr to maintain high urinary output and prevent pigment nephropathy/renal shutdown); correct acidosis and electrolyte derangements. 3. Specific Pharmacotherapy: Dopamine agonists (Bromocriptine 2.5–5 mg PO/NG 3–4 times daily, or Amantadine 100–200 mg BD) to overcome central D2 blockade; Direct skeletal muscle relaxant (IV Dantrolene sodium 1–2.5 mg/kg bolus, up to 10 mg/kg/day) to inhibit sarcoplasmic calcium release. 4. Refractory cases: Electroconvulsive Therapy (ECT). 5. Re-challenge rule: Wait at least 2 weeks after full clinical resolution before restarting antipsychotics; choose a low-potency atypical agent with low D2 affinity (e.g. Quetiapine) with slow, careful titration."
+        ],
+        studyReferences: [
+          "Kaplan & Sadock's Synopsis of Psychiatry — Psychopharmacology: Adverse Effects of Antipsychotics",
+          "Stahl's Essential Psychopharmacology — Antipsychotic Agents & Neuroleptic Malignant Syndrome",
+          "American Psychiatric Association (APA) Practice Guidelines for the Treatment of Patients With Schizophrenia"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct Q2 on April 2024 and Q1 on January 2025 Psychiatry papers."
+      };
+    }
+
+    if (t.includes("personality disorder") || t.includes("projective")) {
+      return {
+        keyConcepts: [
+          "Definition: An enduring, rigid, and pervasive pattern of inner experience and behavior that deviates markedly from the expectations of the individual's culture, manifests across cognitive, affective, interpersonal, and impulse control domains, is inflexible and stable over time, has an onset during adolescence or early adulthood, and leads to significant distress or socio-occupational impairment.",
+          "DSM-5 / ICD Personality Clusters & Examples: 1. Cluster A ('Odd / Eccentric'): Paranoid (distrust, suspiciousness), Schizoid (detachment from social relationships, restricted affect), Schizotypal (eccentric behavior, magical thinking, cognitive distortions). 2. Cluster B ('Dramatic / Emotional / Erratic'): Antisocial (disregard for rights of others, deceit, lack of remorse), Borderline / Emotionally Unstable (instability in relationships, self-image, affect, marked impulsivity and suicidal gestures), Histrionic (excessive emotionality and attention seeking), Narcissistic (grandiosity, need for admiration, lack of empathy). 3. Cluster C ('Anxious / Fearful'): Avoidant (social inhibition, feelings of inadequacy, hypersensitivity to negative evaluation), Dependent (submissive and clinging behavior, need to be taken care of), Obsessive-Compulsive / Anankastic (preoccupation with orderliness, perfectionism, mental/interpersonal control).",
+          "4 Examples of Projective Personality Assessment Tests: 1. Rorschach Inkblot Test (10 standardized symmetrical inkblots interpreted by subject; assesses unconscious personality dynamics, perception, and emotional functioning). 2. Thematic Apperception Test (TAT) (series of ambiguous pictures depicting interpersonal situations; subject creates stories revealing underlying motives, conflicts, and needs). 3. Rotter Incomplete Sentence Blank (Sentence Completion Test) (subject completes unfinished sentence stems revealing attitudes and inner conflicts). 4. Draw-A-Person Test (DAP) / House-Tree-Person (HTP) projective drawing tests. (Also: Children's Apperception Test [CAT] and Rosenzweig Picture-Frustration Study)."
+        ],
+        studyReferences: [
+          "Kaplan & Sadock's Synopsis of Psychiatry — Personality Disorders & Psychological Assessment",
+          "DSM-5-TR — Personality Disorders Classification",
+          "Anastasi & Urbina — Psychological Testing: Projective Techniques"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct Q3 on April 2024 Psychiatry paper."
+      };
+    }
+
+    if (t.includes("clozapine") || t.includes("atypical antipsychotic")) {
+      return {
+        keyConcepts: [
+          "Pharmacological Profile & Unique Indications: Prototype atypical second-generation antipsychotic with potent 5-HT2A antagonism, high D4 and alpha-adrenergic affinity, but weak D2 striatal blockade (negligible extrapyramidal symptoms and no tardive dyskinesia). Indications: 1. Treatment-resistant schizophrenia (failure to respond to adequate trials of at least two different antipsychotics, including at least one atypical, each for ≥6–8 weeks at therapeutic doses). 2. Persistent suicidality or aggressive behavior in schizophrenia / schizoaffective disorder.",
+          "Black Box Warnings & Critical Monitoring: 1. Agranulocytosis (1–2% risk): Mandatory regular monitoring of Full Blood Count (WBC ≥3,500/mm³ and Absolute Neutrophil Count ANC ≥2,000/mm³; monitored weekly for first 18 weeks, every 2 weeks for weeks 19–52, then monthly indefinitely). Clozapine must be withheld immediately if ANC drops <1,500/mm³ and stopped permanently if ANC <1,000/mm³. 2. Myocarditis and Cardiomyopathy: Baseline and serial monitoring of troponin, CRP, and 12-lead ECG; monitor for tachycardia, chest pain, and heart failure signs. 3. Dose-dependent Seizures: Significant reduction in seizure threshold at doses >450–600 mg/day (add prophylactic Sodium Valproate if needed). 4. Severe Constipation & Gastrointestinal Hypomotility: Can progress to fatal paralytic ileus / toxic megacolon; prophylactic stool softeners/laxatives are standard. 5. Severe Metabolic Derangement: Marked weight gain, dyslipidemia, and new-onset Type 2 diabetes mellitus.",
+          "Distinguishing Side Effects: Nocturnal hypersalivation (sialorrhea, managed with sublingual ipratropium spray or hyoscine), orthostatic hypotension, sedation, and absence of hyperprolactinemia."
+        ],
+        studyReferences: [
+          "Kaplan & Sadock's Synopsis of Psychiatry — Clozapine & Second-Generation Antipsychotics",
+          "Stahl's Essential Psychopharmacology — Clozapine: Efficacy and Risk Management",
+          "Maudsley Prescribing Guidelines in Psychiatry — Clozapine Treatment and Monitoring"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct Q4c short note on April 2024 Psychiatry paper."
+      };
+    }
+
+    if (t.includes("fitness to plead") || (t.includes("criminal responsibility") && t.includes("capacity"))) {
+      return {
+        keyConcepts: [
+          "Legal Definition & Doctrine: A fundamental common law doctrine determining whether an accused person undergoing criminal trial possesses the present mental capacity to comprehend the trial proceedings, instruct defense counsel, and make a proper legal defense. Governed by the **Pritchard Criteria (R v Pritchard, 1836)**.",
+          "Core Pritchard Criteria (6 Key Components): 1. Capacity to understand the nature of the charge/indictment. 2. Capacity to plead to the indictment (guilty or not guilty). 3. Capacity to challenge a juror without cause. 4. Capacity to comprehend the evidence presented in court. 5. Capacity to follow and understand the course of courtroom proceedings. 6. Capacity to properly instruct legal counsel for defense.",
+          "Difference from Criminal Responsibility (Insanity Defense / M'Naghten Rules): Fitness to plead evaluates mental state AT THE TIME OF TRIAL (present capacity), whereas criminal responsibility / insanity assesses the accused's mental state AT THE TIME OF THE ALLEGED OFFENSE.",
+          "Legal Consequence of Unfitness: If determined unfit to plead by the court (usually following forensic psychiatric evaluation and testimony by two medical practitioners), the trial is adjourned, and the accused is remanded to a secure forensic psychiatric hospital (under the Criminal Procedure Act / Mental Health Act) for inpatient treatment until mental fitness is restored."
+        ],
+        studyReferences: [
+          "Bluglass & Bowden — Principles and Practice of Forensic Psychiatry: Fitness to Plead",
+          "Kaplan & Sadock's Synopsis of Psychiatry — Forensic Psychiatry & Legal Competency",
+          "R v Pritchard (1836) 7 C & P 303 & Modern Criminal Procedure Guidelines"
+        ],
+        priority: "HIGH YIELD — Direct Q4a short note on April 2024 and recurring forensic psychiatry topic."
+      };
+    }
+
+    if (t.includes("psychoactive substance") || (t.includes("classification") && t.includes("substance"))) {
+      return {
+        keyConcepts: [
+          "Definition: Chemical substances that, when taken into the body, cross the blood-brain barrier to alter mental processes, cognition, mood, perception, consciousness, and behavior.",
+          "Pharmacological Classification (by Major CNS Effects): 1. CNS Depressants: Suppress central neural activity, enhance GABA transmission (Alcohol, Benzodiazepines, Barbiturates, GHB). Effects: sedation, anxiolysis, muscle relaxation, respiratory depression in overdose. 2. CNS Stimulants: Increase dopaminergic/noradrenergic activity, block reuptake or stimulate release (Amphetamines, Methamphetamine, Cocaine, MDMA/Ecstasy, Nicotine, Caffeine, Khat). Effects: euphoria, increased arousal, alertness, anorexia, tachycardia, paranoid psychosis. 3. Opioids / Narcotics: Bind mu-opioid receptors, analgesia and euphoria (Morphine, Heroin, Codeine, Tramadol, Methadone, Fentanyl, Pentazocine, Pethidine). Triad of toxicity: pinpoint pupils (miosis), respiratory depression, unconsciousness. 4. Hallucinogens / Psychedelics: 5-HT2A receptor agonists causing profound distortions in sensory perception (LSD, Psilocybin, Mescaline, DMT). 5. Cannabinoids: Agonists at CB1 and CB2 cannabinoid receptors (Cannabis / Marijuana, Hashish, synthetic cannabinoids / Spice). 6. Dissociative Anesthetics: NMDA receptor antagonists (Ketamine, Phencyclidine [PCP]). 7. Volatile Inhalants: Rapid CNS absorption (Glue, Toluene, Gasoline/Petrol, Nitrous Oxide).",
+          "Dependence Syndrome Criteria (ICD-10): Diagnosed if ≥3 of the following occur together over the past year: Strong desire/compulsion to use ('craving'); Difficulties in controlling substance-taking behavior; Physiological withdrawal state upon reduction; Evidence of tolerance (requiring increased doses); Progressive neglect of alternative pleasures/interests; Persistent use despite clear evidence of harmful consequences."
+        ],
+        studyReferences: [
+          "WHO Lexicon of Alcohol and Drug Terms & ICD-10 Classification of Mental Disorders",
+          "Kaplan & Sadock's Synopsis of Psychiatry — Substance Use Disorders",
+          "Stahl's Essential Psychopharmacology — Disorders of Reward and Drugs of Abuse"
+        ],
+        priority: "HIGH YIELD — Direct Q4d short note on April 2024 Psychiatry paper."
+      };
+    }
+
+    if (t.includes("psychiatric emergenc") || (t.includes("agitation") && t.includes("violence"))) {
+      return {
+        keyConcepts: [
+          "Definition: Acute behavioral, cognitive, or affective disturbances requiring immediate medical and psychiatric assessment and intervention to prevent imminent death, serious bodily injury, or irreversible harm to the patient or others.",
+          "Major Examples: 1. Acute Agitation and Violent Behavior (psychotic excitement, mania, intoxication). 2. Acute Suicidal Crisis / Severe Intentional Self-Harm. 3. Neuroleptic Malignant Syndrome (NMS) & Malignant Catatonia. 4. Delirium / Acute Confusional State with underlying organic etiology. 5. Severe Alcohol Withdrawal (Delirium Tremens) and acute substance intoxications/overdoses. 6. Acute Dystonic Reaction (laryngospasm, oculogyric crisis). 7. Severe Panic Attack.",
+          "Management Principles & De-escalation Protocol: 1. Safety & Environment: Ensure safety of staff and patient; remove dangerous objects, maintain clear unhindered exit, do not corner the patient, call security if armed. 2. Verbal De-escalation: Calm, respectful, non-confrontational communication; listen actively, validate distress, maintain comfortable personal space. 3. Rapid Tranquilization (when verbal de-escalation fails): Oral route preferred (Lorazepam 1–2 mg PO + Haloperidol 2.5–5 mg PO). If uncooperative/parenteral required: IM Lorazepam (1–2 mg) and/or IM Haloperidol (2.5–5 mg) or IM Olanzapine (5–10 mg). (Warning: Never administer IM Olanzapine and IM Lorazepam concomitantly due to fatal cardiorespiratory collapse and hypotension!). 4. Physical Restraint: Extreme measure of last resort; requires multi-person trained team, supine positioning with 30° head elevation (never prone, risk of positional asphyxia), continuous 15-minute nursing checks (vitals, circulation, hydration), and immediate release once calm."
+        ],
+        studyReferences: [
+          "Oxford Handbook of Psychiatry — Psychiatric Emergencies",
+          "NICE Clinical Guideline [NG10] — Violence and Aggression: Short-Term Management in Mental Health",
+          "Kaplan & Sadock's Synopsis of Psychiatry — Psychiatric Emergencies"
+        ],
+        priority: "HIGH YIELD — Direct Q4e short note on April 2024 Psychiatry paper."
+      };
+    }
+
+    if (t.includes("psychology") || t.includes("freud") || t.includes("conditioning") || t.includes("theoretical approaches")) {
+      return {
+        keyConcepts: [
+          "5 Theoretical Approaches to Psychology & Major Thinkers: 1. Psychodynamic Approach (Sigmund Freud, Carl Jung) — Emphasizes unconscious mental processes, childhood experiences, internal psychic conflict (id, ego, superego), and defense mechanisms. 2. Behavioral Approach (John B. Watson, B.F. Skinner, Ivan Pavlov) — Focuses on observable, measurable behavior learned via environmental stimulus-response contingencies, classical conditioning, and operant reinforcement. 3. Cognitive Approach (Jean Piaget, Aaron Beck, Ulric Neisser) — Focuses on internal mental operations: perception, memory, thinking, schemas, and cognitive appraisals. 4. Humanistic Approach (Carl Rogers, Abraham Maslow) — Emphasizes human agency, free will, innate potential for self-actualization, and unconditional positive regard in person-centered counseling. 5. Biological / Neuropsychological Approach (Donald Hebb, Alexander Luria) — Focuses on physiological substrates: brain neuroanatomy, neurochemical transmission, genetic predispositions, and endocrine functions.",
+          "Sigmund Freud's Psychosexual Stages of Development (OAPLG): 1. Oral Stage (Birth to 18 months): Erogenous zone is the mouth (sucking, biting, feeding). Fixation causes oral dependency, overeating, smoking, or nail-biting. 2. Anal Stage (18 months to 3 years): Erogenous zone is the anus (toilet training, bowel control). Fixation causes anal-retentive (excessive cleanliness, rigidity, stinginess) or anal-expulsive (messiness, disorganization). 3. Phallic Stage (3 to 6 years): Erogenous zone is the genitals. Key conflicts: Oedipus complex (boys) and Electra complex (girls); resolved by identification with the same-sex parent and internalization of moral standards (superego). 4. Latency Stage (6 years to puberty): Sexual drives become dormant; energy sublimated into academic learning, peer social interactions, and sports. 5. Genital Stage (Puberty through adulthood): Erogenous zone is adult mature genitals; focus on establishing mature romantic relationships, emotional intimacy, and creative productivity.",
+          "Classical vs Operant Conditioning (2 Examples Each): Classical Conditioning (Pavlovian stimulus-stimulus association): Example 1: Pavlov's Dog Experiment — pairing a ringing bell (conditioned stimulus) with meat powder (unconditioned stimulus) until the bell alone evokes salivation (conditioned response). Example 2: Chemotherapy Anticipatory Nausea — pairing the sight/smell of an oncology clinic with nausea-inducing cytotoxic drugs, leading the hospital environment alone to trigger severe nausea. Operant Conditioning (Skinnerian response-consequence learning): Example 1: Token Economy in Psychiatric Rehabilitation (Positive Reinforcement) — patients earn tokens for performing self-care (bathing, bed-making), redeemable for telephone calls or recreational privileges. Example 2: Time-Out in Child Behavioral Therapy (Negative Punishment) — briefly removing a child from an enjoyable social activity following aggressive behavior to decrease tantrums. (Also: Skinner Box lever pressing to avoid electric shocks [negative reinforcement])."
+        ],
+        studyReferences: [
+          "Passer & Smith — Psychology: The Science of Mind and Behavior",
+          "Kaplan & Sadock's Synopsis of Psychiatry — Theories of Personality & Psychopathology",
+          "Freud, Sigmund — Three Essays on the Theory of Sexuality & Introductory Lectures on Psychoanalysis"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct Q5 on April 2024 Psychiatry paper."
+      };
+    }
+
     // Generic Clinical Study Guide
     return {
       keyConcepts: [

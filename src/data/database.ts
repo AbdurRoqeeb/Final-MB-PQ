@@ -81,31 +81,34 @@ export const database: FullDatabase = {
     "Clinical Psychiatry": [
       { topic: "Clinical Syndromes: Depression Variants, Schizophrenia & Affective Disorders", occurrences: ["Q1, February 2020 (Psychiatry)"] },
       { topic: "Anxiety Disorders, PTSD, Coping Mechanisms & Grief Reactions", occurrences: ["Q2, February 2020 (Psychiatry)"] },
-      { topic: "Suicide Risk Assessment, Sociological Types & CSF Bio-markers", occurrences: ["Q3, February 2020 (Psychiatry)", "Q3b, January 2025 (Psychiatry)", "Q4b, June 2025 (Psychiatry)"] },
+      { topic: "Suicide Risk Assessment, Sociological Types & CSF Bio-markers", occurrences: ["Q3, February 2020 (Psychiatry)", "Q3b, January 2025 (Psychiatry)", "Q4b, June 2025 (Psychiatry)", "Q4b, April 2024 (Psychiatry)"] },
       { topic: "Suicide Attempt Evaluation, Associated Disorders & Intent High-Yield Features", occurrences: ["Q1, September 2022 (Psychiatry)", "Q3b, January 2025 (Psychiatry)"] },
-      { topic: "Personality Disorders: DSM Classification Clusters & Clinical Features", occurrences: ["Q4, September 2022 (Psychiatry)"] },
+      { topic: "Personality Disorders: DSM Classification Clusters & Projective Assessment Tests", occurrences: ["Q4, September 2022 (Psychiatry)", "Q3, April 2024 (Psychiatry)"] },
       { topic: "Biopsychosocial Formulation of Bipolar/Depressive Illness & Co-morbidities", occurrences: ["Q5, January 2025 (Psychiatry)", "Q5, June 2025 (Psychiatry)"] },
       { topic: "Catatonia Subtypes, Bush-Francis Rating & Benzodiazepine/ECT Management", occurrences: ["Q4d, June 2025 (Psychiatry)"] },
-      { topic: "Child & Adolescent Psychiatry: Nocturnal Enuresis Evaluation & Management", occurrences: ["Q4c, June 2025 (Psychiatry)"] }
+      { topic: "Child & Adolescent Psychiatry: Nocturnal Enuresis Evaluation & Management", occurrences: ["Q4c, June 2025 (Psychiatry)"] },
+      { topic: "Psychiatric Emergencies: Acute Agitation, Violence, Suicidality & Catatonia Management", occurrences: ["Q4e, April 2024 (Psychiatry)"] }
     ],
     "Psychopharmacology": [
       { topic: "Mood Stabilizers, Pre-Lithium Workup & Ebstein's Anomaly Teratogenicity", occurrences: ["Q1, June 2025 (Psychiatry)"] },
-      { topic: "Neuroleptic Malignant Syndrome (NMS) Diagnosis & Therapeutic Management", occurrences: ["Q1, January 2025 (Psychiatry)"] },
+      { topic: "Neuroleptic Malignant Syndrome (NMS) Diagnosis & Therapeutic Management", occurrences: ["Q1, January 2025 (Psychiatry)", "Q2, April 2024 (Psychiatry)"] },
       { topic: "Acute Dystonic Reaction, Extrapyramidal Side Effects & Antidotes", occurrences: ["Q2, September 2022 (Psychiatry)", "Q3e, January 2025 (Psychiatry)", "Q4e, June 2025 (Psychiatry)"] },
       { topic: "Antidepressant Classification & Serotonin Syndrome Differentials", occurrences: ["Q5, September 2022 (Psychiatry)", "Q3d, January 2025 (Psychiatry)"] },
-      { topic: "Consultation-Liaison Psychiatry & Lithium Monitoring/Toxicity Guidelines", occurrences: ["Q3, January 2025 (Psychiatry)", "Q4a, June 2025 (Psychiatry)"] }
+      { topic: "Consultation-Liaison Psychiatry & Lithium Monitoring/Toxicity Guidelines", occurrences: ["Q3, January 2025 (Psychiatry)", "Q4a, June 2025 (Psychiatry)"] },
+      { topic: "Atypical Antipsychotics: Clozapine Efficacy, Agranulocytosis Monitoring & Adverse Effects", occurrences: ["Q4c, April 2024 (Psychiatry)"] }
     ],
     "Forensic Psychiatry": [
-      { topic: "Forensic Psychiatry: Criminal Responsibility, Capacity & Fitness to Plead", occurrences: ["Q5, February 2020 (Psychiatry)"] },
+      { topic: "Forensic Psychiatry: Criminal Responsibility, Capacity & Fitness to Plead", occurrences: ["Q5, February 2020 (Psychiatry)", "Q4a, April 2024 (Psychiatry)"] },
       { topic: "Forensic Duty to Protect (Tarasoff), Risk of Violence & Competency Assessment", occurrences: ["Q2, January 2025 (Psychiatry)", "Q2, June 2025 (Psychiatry)"] }
     ],
     "Psychological Interventions": [
       { topic: "De-escalation Techniques & Physical Restraints in Acute Psychosis", occurrences: ["Q4, February 2020 (Psychiatry)"] },
-      { topic: "Psychotherapy: Operant Conditioning, CBT & Psychological Modalities", occurrences: ["Q4, January 2025 (Psychiatry)"] },
+      { topic: "Psychology & Psychotherapy: Theoretical Approaches, Freud's Stages, Conditioning & CBT", occurrences: ["Q4, January 2025 (Psychiatry)", "Q5, April 2024 (Psychiatry)"] },
       { topic: "Electroconvulsive Therapy (ECT): Procedure, Indications, Monitoring & Complications", occurrences: ["Q3, June 2025 (Psychiatry)"] }
     ],
     "Addiction Medicine": [
-      { topic: "Alcohol Dependence: Stages of Change & Neurological Complications", occurrences: ["Q3, September 2022 (Psychiatry)"] }
+      { topic: "Alcohol Withdrawal Syndrome, Delirium Tremens & Neurological Complications", occurrences: ["Q1, April 2024 (Psychiatry)", "Q3, September 2022 (Psychiatry)"] },
+      { topic: "Psychoactive Substances: Pharmacological Classification, Mechanisms & Dependence", occurrences: ["Q4d, April 2024 (Psychiatry)"] }
     ]
   },
   "Surgery": {
