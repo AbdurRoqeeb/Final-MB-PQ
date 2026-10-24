@@ -19,12 +19,15 @@ export const database: FullDatabase = {
       { topic: "Diabetes Cutaneous Manifestations, Ulcers & Necrobiosis Lipoidica", occurrences: ["Q2A, January 2025"] },
       { topic: "Type 1 Diabetes Mellitus Clinical Presentation, Diagnostic Criteria & Supportive Investigations", occurrences: ["Q2A, April 2024"] },
       { topic: "Primary Hypothyroidism Thyroid Function Interpretation, Etiologies & Cardiovascular Signs", occurrences: ["Q2B, April 2024"] },
-      { topic: "Addison's Disease (Adrenal Insufficiency) & Postural Hypotension", occurrences: ["Q6, January 2025", "Q2C, April 2024"] }
+      { topic: "Addison's Disease (Adrenal Insufficiency) & Postural Hypotension", occurrences: ["Q6, January 2025", "Q2C, April 2024"] },
+      { topic: "Graves' Disease, Hyperthyroidism Cardiovascular Signs & Treatment Modalities", occurrences: ["Q3, June 2018 (Medicine)"] },
+      { topic: "Hypoparathyroidism, Post-Thyroidectomy Hypocalcemia & Calcium Metabolism Regulation", occurrences: ["Q3, March 2019 (Medicine)"] }
     ],
     "Nephrology": [
       { topic: "Acute Kidney Injury (AKI) secondary to Herbal Remedies & NSAIDs (ATN)", occurrences: ["Q1, February 2020"] },
-      { topic: "Chronic Kidney Disease & Hypertensive Nephrosclerosis", occurrences: ["Q3, April 2016", "Q4B, April 2024"] },
-      { topic: "Urinary Tract Infections: Acute Cystitis & Pyelonephritis Pathogenesis & Management", occurrences: ["Q3B, January 2025"] }
+      { topic: "Chronic Kidney Disease & Hypertensive Nephrosclerosis", occurrences: ["Q3, April 2016", "Q4B, April 2024", "Q2, March 2019 (Medicine)"] },
+      { topic: "Urinary Tract Infections: Acute Cystitis & Pyelonephritis Pathogenesis & Management", occurrences: ["Q3B, January 2025"] },
+      { topic: "Autosomal Dominant Polycystic Kidney Disease (ADPKD) Genetics, Complications & Management", occurrences: ["Q5, June 2018 (Medicine)"] }
     ],
     "Neurology": [
       { topic: "Parkinson's Disease Presentation, Risk Factors & Treatment", occurrences: ["Q1, April 2016"] },
@@ -35,7 +38,8 @@ export const database: FullDatabase = {
       { topic: "Acute Decompensated Heart Failure & Pulmonary Embolism Co-existence", occurrences: ["Q2, September 2022"] },
       { topic: "Congestive Heart Failure (CHF) Etiology & Pharmacotherapy", occurrences: ["Q2, February 2020", "Q4, January 2025", "Q6, April 2024"] },
       { topic: "Rheumatic Heart Disease (Valvular Heart Disease), Atrial Fibrillation & Embolic Stroke", occurrences: ["Q6, April 2024"] },
-      { topic: "Hypertensive Emergency, Malignant Hypertension & Organ Damage", occurrences: ["Q3, September 2022"] },
+      { topic: "Hypertensive Emergency, Malignant Hypertension & Organ Damage", occurrences: ["Q2, June 2018 (Medicine)", "Q3, September 2022"] },
+      { topic: "Acute Aortic Dissection vs Acute Coronary Syndrome & Cardiogenic Shock", occurrences: ["Q4, March 2019 (Medicine)"] },
       { topic: "Ischemic Heart Disease & Diabetic Cardiomyopathy", occurrences: ["Q2, April 2016"] },
       { topic: "Deep Vein Thrombosis (DVT) Diagnosis & Therapeutic Management", occurrences: ["Q5, January 2025"] }
     ],
@@ -43,7 +47,8 @@ export const database: FullDatabase = {
       { topic: "Stevens-Johnson Syndrome (SJS) & Toxic Epidermal Necrolysis (TEN)", occurrences: ["Q4, September 2022"] },
       { topic: "Lichen Planus Variants, Oral Wickham's Striae & Management", occurrences: ["Q3, February 2020", "Q3A, April 2024"] },
       { topic: "HIV Associated Pruritic Papular Eruption & Oral Hairy Leukoplakia", occurrences: ["Q2B, January 2025"] },
-      { topic: "Molluscum Contagiosum in HIV/AIDS, STI Management & Opportunistic Genital Dermatoses", occurrences: ["Q3B, April 2024"] }
+      { topic: "Molluscum Contagiosum in HIV/AIDS, STI Management & Opportunistic Genital Dermatoses", occurrences: ["Q3B, April 2024"] },
+      { topic: "Leprosy (Hansen's Disease) & Type 2 Reaction (Erythema Nodosum Leprosum - ENL)", occurrences: ["Q5, March 2019 (Medicine)"] }
     ],
     "Gastroenterology": [
       { topic: "Paracetamol Poisoning, Drug-Induced Acute Liver Failure & NAC Protocol", occurrences: ["Q6, September 2022"] },
@@ -52,13 +57,21 @@ export const database: FullDatabase = {
       { topic: "Hepatic Encephalopathy Precipitants, Paracentesis Complications & Protocolized Therapy", occurrences: ["Q5, April 2024"] }
     ],
     "Pulmonology": [
-      { topic: "Community-Acquired & Atypical Pneumonia Pathogens, Diagnostic Confirmation & Antibiotic Duration", occurrences: ["Q1, April 2024"] },
+      { topic: "Community-Acquired & Atypical Pneumonia Pathogens, Diagnostic Confirmation & Antibiotic Duration", occurrences: ["Q1, June 2018 (Medicine)", "Q1, April 2024"] },
       { topic: "Silicotuberculosis, Occupational Dust Exposure & Restrictive Spirometry", occurrences: ["Q4, February 2020"] },
       { topic: "Asbestosis, Mesothelioma & Pulmonary Fibrosis", occurrences: ["Q5, April 2016"] },
       { topic: "Miliary Tuberculosis vs Metastatic Lung Disease Evaluation", occurrences: ["Q5, September 2022"] }
     ],
+    "Rheumatology": [
+      { topic: "Systemic Sclerosis (Scleroderma) & Scleroderma Renal Crisis", occurrences: ["Q4A, June 2018 (Medicine)"] }
+    ],
+    "Infectious Diseases & Toxicology": [
+      { topic: "Advanced HIV/AIDS Stage 4, Opportunistic Infections (Cryptococcal Meningitis, PCP) & HAART Protocol", occurrences: ["Q4B, June 2018 (Medicine)", "Q2B, January 2025"] },
+      { topic: "Snakebite Envenomation (Elapidae/Cobra Neurotoxicity) & Anti-Snake Venom Therapy", occurrences: ["Q1, March 2019 (Medicine)"] }
+    ],
     "Medical Ethics": [
-      { topic: "Informed Consent, Medical Malpractice & Professional Negligence Elements", occurrences: ["Q7, September 2022"] }
+      { topic: "Informed Consent, Medical Malpractice & Professional Negligence Elements", occurrences: ["Q7, September 2022"] },
+      { topic: "Interprofessional Collaboration Core Competencies & Good Medical Practice Domains", occurrences: ["Q7, April 2024"] }
     ],
     "Oncology": [
       { topic: "Primary Prevention of Cancer & Global Cancer Burden", occurrences: ["Q7, January 2025"] }
@@ -68,24 +81,28 @@ export const database: FullDatabase = {
     "Clinical Psychiatry": [
       { topic: "Clinical Syndromes: Depression Variants, Schizophrenia & Affective Disorders", occurrences: ["Q1, February 2020 (Psychiatry)"] },
       { topic: "Anxiety Disorders, PTSD, Coping Mechanisms & Grief Reactions", occurrences: ["Q2, February 2020 (Psychiatry)"] },
-      { topic: "Suicide Risk Assessment, Sociological Types & CSF Bio-markers", occurrences: ["Q3, February 2020 (Psychiatry)", "Q3b, January 2025 (Psychiatry)"] },
+      { topic: "Suicide Risk Assessment, Sociological Types & CSF Bio-markers", occurrences: ["Q3, February 2020 (Psychiatry)", "Q3b, January 2025 (Psychiatry)", "Q4b, June 2025 (Psychiatry)"] },
       { topic: "Suicide Attempt Evaluation, Associated Disorders & Intent High-Yield Features", occurrences: ["Q1, September 2022 (Psychiatry)", "Q3b, January 2025 (Psychiatry)"] },
       { topic: "Personality Disorders: DSM Classification Clusters & Clinical Features", occurrences: ["Q4, September 2022 (Psychiatry)"] },
-      { topic: "Biopsychosocial Formulation of Bipolar/Depressive Illness & Co-morbidities", occurrences: ["Q5, January 2025 (Psychiatry)"] }
+      { topic: "Biopsychosocial Formulation of Bipolar/Depressive Illness & Co-morbidities", occurrences: ["Q5, January 2025 (Psychiatry)", "Q5, June 2025 (Psychiatry)"] },
+      { topic: "Catatonia Subtypes, Bush-Francis Rating & Benzodiazepine/ECT Management", occurrences: ["Q4d, June 2025 (Psychiatry)"] },
+      { topic: "Child & Adolescent Psychiatry: Nocturnal Enuresis Evaluation & Management", occurrences: ["Q4c, June 2025 (Psychiatry)"] }
     ],
     "Psychopharmacology": [
+      { topic: "Mood Stabilizers, Pre-Lithium Workup & Ebstein's Anomaly Teratogenicity", occurrences: ["Q1, June 2025 (Psychiatry)"] },
       { topic: "Neuroleptic Malignant Syndrome (NMS) Diagnosis & Therapeutic Management", occurrences: ["Q1, January 2025 (Psychiatry)"] },
-      { topic: "Acute Dystonic Reaction, Extrapyramidal Side Effects & Antidotes", occurrences: ["Q2, September 2022 (Psychiatry)", "Q3e, January 2025 (Psychiatry)"] },
+      { topic: "Acute Dystonic Reaction, Extrapyramidal Side Effects & Antidotes", occurrences: ["Q2, September 2022 (Psychiatry)", "Q3e, January 2025 (Psychiatry)", "Q4e, June 2025 (Psychiatry)"] },
       { topic: "Antidepressant Classification & Serotonin Syndrome Differentials", occurrences: ["Q5, September 2022 (Psychiatry)", "Q3d, January 2025 (Psychiatry)"] },
-      { topic: "Consultation-Liaison Psychiatry & Lithium Monitoring/Toxicity Guidelines", occurrences: ["Q3, January 2025 (Psychiatry)"] }
+      { topic: "Consultation-Liaison Psychiatry & Lithium Monitoring/Toxicity Guidelines", occurrences: ["Q3, January 2025 (Psychiatry)", "Q4a, June 2025 (Psychiatry)"] }
     ],
     "Forensic Psychiatry": [
       { topic: "Forensic Psychiatry: Criminal Responsibility, Capacity & Fitness to Plead", occurrences: ["Q5, February 2020 (Psychiatry)"] },
-      { topic: "Forensic Duty to Protect (Tarasoff), Risk of Violence & Competency Assessment", occurrences: ["Q2, January 2025 (Psychiatry)"] }
+      { topic: "Forensic Duty to Protect (Tarasoff), Risk of Violence & Competency Assessment", occurrences: ["Q2, January 2025 (Psychiatry)", "Q2, June 2025 (Psychiatry)"] }
     ],
     "Psychological Interventions": [
       { topic: "De-escalation Techniques & Physical Restraints in Acute Psychosis", occurrences: ["Q4, February 2020 (Psychiatry)"] },
-      { topic: "Psychotherapy: Operant Conditioning, CBT & Psychological Modalities", occurrences: ["Q4, January 2025 (Psychiatry)"] }
+      { topic: "Psychotherapy: Operant Conditioning, CBT & Psychological Modalities", occurrences: ["Q4, January 2025 (Psychiatry)"] },
+      { topic: "Electroconvulsive Therapy (ECT): Procedure, Indications, Monitoring & Complications", occurrences: ["Q3, June 2025 (Psychiatry)"] }
     ],
     "Addiction Medicine": [
       { topic: "Alcohol Dependence: Stages of Change & Neurological Complications", occurrences: ["Q3, September 2022 (Psychiatry)"] }

@@ -35,7 +35,7 @@ export const DEPARTMENTS: DepartmentMeta[] = [
     key: "Internal Medicine",
     label: "Internal Medicine",
     shortLabel: "Medicine",
-    description: "Cardiology, Endocrinology, Nephrology, Pulmonology, Neurology, Gastroenterology, Dermatology",
+    description: "Cardiology, Endocrinology, Nephrology, Pulmonology, Neurology, Gastroenterology, Dermatology, Rheumatology, Infectious Diseases",
     icon: Activity,
   },
   {
@@ -183,7 +183,7 @@ export default function ChronologicalBrowse({
 
             // Clean session name by removing redundant department tags
             let cleanSession = rawSession
-              .replace(/\s*\((Surgery|Comm\.?\s*Med\.?|Psychiatry)\)/gi, "")
+              .replace(/\s*\((Medicine|Internal\s*Medicine|Surgery|Comm\.?\s*Med\.?|Psychiatry)\)/gi, "")
               .trim();
 
             if (cleanSession.toLowerCase().includes("october 2026")) {

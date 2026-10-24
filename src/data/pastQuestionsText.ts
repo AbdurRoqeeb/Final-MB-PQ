@@ -263,7 +263,54 @@ export const pastQuestionsText: { [occurrence: string]: string } = {
     "A 45-year-old male carpenter presented with a 4-month history of progressive abdominal swelling and generalized body weakness. He has been unable to go to his workplace. There is no significant weight loss. He has a history of sharing sharps and multiple unprotected sexual exposures. Examination revealed a chronically ill-looking man with fluffy hair and parotid fullness, with pedal swelling. Abdominal examination was significant for a distended abdomen with visible anterior abdominal wall veins, shrunken liver, and ascites demonstrable by fluid thrill. Ascitic tap yielded straw-coloured fluid. HBsAg was positive, and the HBV viral load was 20,000 IU/ml. Abdominal ultrasound revealed a liver with a wavy outline and coarse parenchyma echotexture.\n\ni. What is the most likely diagnosis for this patient? (1 mark)\nii. List three (3) other signs that may be present in this patient (3 marks)\niii. List five (5) investigations you would carry out on this patient and the likely findings (5 marks)\n\nHe was started on diuretics (frusemide, Spironolactone) and other medications. He subsequently had large-volume paracentesis done on account of tense ascites causing respiratory distress. Forty-eight hours later, he was noticed to be sleeping excessively and later became drowsy.\n\niv. What is the likely diagnosis of this second presentation and the precipitant? (2 marks)\nv. List 4 other precipitants of the second presentation. (4 marks)\nvi. Outline the management of the patient. (5 marks)",
 
   "Q6, April 2024":
-    "A 27-year-old lady was brought to the emergency ward with a history of paroxysmal cough, easy fatiguability, and leg swelling for two months duration. She has had a history of recurrent sore throat in the past and skin rashes. There was also history of palpitations and chest pain. Examination revealed cardiomegaly, blood pressure was 100/60 mmHg, pulse rate was 96/min, and heart rate was 116 beats per minute. There were bibasal crepitations on chest examination and Kerley B lines on Chest X-ray. She also had a history of recent weakness of the left upper and lower limbs, which occurred suddenly while she was having her bath a few days ago.\n\na. What is the primary diagnosis? (1 mark)\nb. List two complications that have occurred in this patient (2 marks)\nc. List the principles of management of this patient\nd. Discuss the preventive strategy for this disease condition",
+    "A 27-year-old lady was brought to the emergency ward with a history of paroxysmal cough, easy fatiguability, and leg swelling for two months duration. She has had a history of recurrent sore throat in the past and skin rashes. There was also history of palpitations and chest pain. Examination revealed cardiomegaly, blood pressure was 100/60 mmHg, pulse rate was 96/min, and heart rate was 116 beats per minute. There were bibasal crepitations on chest examination and Kerley B lines on Chest X-ray. She also had a history of recent weakness of the left upper and lower limbs, which occurred suddenly while she was having her bath a few days ago.\n\na. What is the primary diagnosis? (1 mark)\nb. List two complications that have occurred in this patient (2 marks)\nc. List six (6) relevant investigations that should be done on this patient and the likely findings. (6 marks)\nd. List the principles of management of this patient (7 marks).\ne. Discuss the preventive strategy for this disease condition (4 marks).",
+
+  "Q7, April 2024":
+    "QUESTION 7 (April 2024):\n\na. Write a short essay on interprofessional collaboration and its core competencies. (10 marks)\nb. Write a short essay on good medical practice and the domains of good medical practice. (10 marks)",
+
+  // ==========================================
+  // JUNE 2018 (Internal Medicine MBBS Part IV Paper 2 - June 5, 2018)
+  // Faculty of Clinical Sciences, Department of Medicine
+  // ==========================================
+  "Q1, June 2018 (Medicine)":
+    "A 22-year old male undergraduate complained of fever, cough and right-sided pleuritic chest pain all of 5 days duration.\n\na. Ask him further questions (3 marks)\n\nOn examination, he was found to be febrile (Temperature-38.8°C), dyspnoeic, and centrally cyanosed. He had a chest x-ray film from a Private Hospital, which showed consolidation of the right upper zone.\n\nb. What signs may you find in him? (1 mark)\nc. List five (5) relevant investigations (2 marks)\nd. What is your diagnosis? (1 mark)\ne. What is the most likely aetiological agent? (1 mark)\nf. Outline the management (1 1/2 marks)",
+
+  "Q2, June 2018 (Medicine)":
+    "A 40-year-old banker was rushed to the emergency ward of your hospital in the early hours of the morning. He was a known hypertensive of 5 years duration with poor drug compliance. He was said to have woken up with a severe headache and subsequently became confused and speaking irrationally. Blood pressure on admission was 190/120mmHg on admission.\n\na. List four (4) differential diagnosis\nb. What is the most accurate diagnosis?\nc. How will you investigate this patient?\nd. How will you manage the index patient?\ne. List four (4) drugs indicated in the management of this patient.\nf. List four (4) complications of this condition.",
+
+  "Q3, June 2018 (Medicine)":
+    "A 55-year old female trader presents at Endocrinology clinic of LAUTECH Teaching Hospital with a 4-month history of tremor with intermittent anxiety and sweating. She has also lost some 12kg over this same period. She had intermittent increased defecation two months earlier. There is no neck swelling or pain and no palpitations. She has no visual disturbance. She has a history of hypertension, and she is a non-smoker. Mother had a thyroidectomy before she died of breast cancer at the age of 85years. There is no history of recent domestic, financial or work stresses. She is on Lisinopril for hypertension.\n\na. List 3 possible diagnosis (differential diagnosis) in this patient\n\nExamination of the patient reveals \"staring\" gaze, fine tremor of out-stretched hand and palmar erythema.\n\nb. What is the most likely diagnosis\nc. Mention eight (8) possible cardiovascular signs that may be present in this patient\nd. List four (4) relevant investigations and two (2) possible findings from each of the investigation\ne. List three (3) modalities of treatment\nf. Outline three (3) common adverse effect of one of the modalities",
+
+  "Q4A, June 2018 (Medicine)":
+    "A 35-year old female Nigerian was referred to the clinic because of increased skin pigmentation, progressive difficulty in straightening her fingers, digital ulcers, problem with mouth opening and paraesthesia of fingertips, and toes in the last two (2) years. She also had dysphagia, repeated history of heartburn, nausea, and vomiting with diarrhea since six (6) months before presentation. There was no history of joint pain or oliguria, and blood pressure on initial consultation was 90/60 mmHg.\n\na. What is your diagnosis?\nb. Name four (4) possible cutaneous findings\n\nThe patient returned to the emergency department three months after the initial consultation with sudden onset of breathlessness and reduction in urine output. Her blood pressure (BP) was 190/120mmHg, and the medical officer on call stabilized her.\n\nc. What is your diagnosis at this point? (1 mark)\nd. List four (4) relevant investigations to make this diagnosis (2 marks)\ne. List two (2) medications useful in the management with one example each (2 marks)",
+
+  "Q4B, June 2018 (Medicine)":
+    "A 37year-old laboratory worker sustained needle injury while drawing blood from an Human Immunodeficiency Virus (HIV) positive client about two (2) years ago. She did not declare her injury or received any form of treatment. She presented to your clinic with a recurrent history of a headache, progressive weight loss, diarrhea, cough, and fever. Physical examination showed patient was pale, febrile, had oral thrush (Temperature 39°C), neck stiffness and kernig's was positive. A chest x-ray confirmed apical sparing, bilateral and diffuse opacity on the lungs fields. After counseling, the two antibody screening test using serial algorithm were positive for HIV.\n\na. She asked you to do a confirmatory test, what test would you order? (1 mark)\nb. What WHO clinical stage is this patient? (1 mark)\nc. List four (4) agents that might be responsible for her chronic diarrhea (2 marks)\nd. List four (4) bacterial/ parasitic/ fungal agents that could be responsible for her neurological presentation (2 marks)\ne. Write your prescription for a first-line highly active antiretroviral therapy and other opportunistic infections (OI) here present. (4 marks)",
+
+  "Q4, June 2018 (Medicine)":
+    "QUESTION 4 (June 2018):\n\n[4A] A 35-year old female Nigerian was referred to the clinic because of increased skin pigmentation, progressive difficulty in straightening her fingers, digital ulcers, problem with mouth opening and paraesthesia of fingertips, and toes in the last two (2) years. She also had dysphagia, repeated history of heartburn, nausea, and vomiting with diarrhea since six (6) months before presentation. There was no history of joint pain or oliguria, and blood pressure on initial consultation was 90/60 mmHg.\na. What is your diagnosis?\nb. Name four (4) possible cutaneous findings\nThe patient returned to the emergency department three months after the initial consultation with sudden onset of breathlessness and reduction in urine output. Her blood pressure (BP) was 190/120mmHg, and the medical officer on call stabilized her.\nc. What is your diagnosis at this point? (1 mark)\nd. List four (4) relevant investigations to make this diagnosis (2 marks)\ne. List two (2) medications useful in the management with one example each (2 marks)\n\n[4B] A 37year-old laboratory worker sustained needle injury while drawing blood from an Human Immunodeficiency Virus (HIV) positive client about two (2) years ago. She did not declare her injury or received any form of treatment. She presented to your clinic with a recurrent history of a headache, progressive weight loss, diarrhea, cough, and fever. Physical examination showed patient was pale, febrile, had oral thrush (Temperature 39°C), neck stiffness and kernig's was positive. A chest x-ray confirmed apical sparing, bilateral and diffuse opacity on the lungs fields. After counseling, the two antibody screening test using serial algorithm were positive for HIV.\na. She asked you to do a confirmatory test, what test would you order? (1 mark)\nb. What WHO clinical stage is this patient? (1 mark)\nc. List four (4) agents that might be responsible for her chronic diarrhea (2 marks)\nd. List four (4) bacterial/ parasitic/ fungal agents that could be responsible for her neurological presentation (2 marks)\ne. Write your prescription for a first-line highly active antiretroviral therapy and other opportunistic infections (OI) here present. (4 marks)",
+
+  "Q5, June 2018 (Medicine)":
+    "A 33-year-old man presented with a bilateral flank mass of 3 years duration. There is a positive family history of a similar flank mass in the father who died of stroke six (6) years before patient's presentation. On examination, blood pressure (BP) was 162/106mmHg. Ultrasound shows multiple cysts in both kidneys.\n\na. What is the definitive diagnosis of this patient? (1 mark)\nb. What are the genes responsible for this clinical condition? (2 marks)\nc. What are the proteins encoded by these genes? (2 marks)\nd. List four (4) other organs in this patient that cyst may be found (2 marks)\ne. List three (3) other extra-renal manifestations of this condition apart from cysts in other organs and hypertension (3 marks)\n\nThe patient developed sudden onset pain in the right flank.\nf. List four (4) likely causes of this pain (2 marks)\n\nThe estimated glomerular filtration rate of the patient is 72 ml/min, and current BP is 164/102mmHg, ECG shows left ventricular hypertrophy.\ng. How will you manage this patient taking into consideration likely diverse potential manifestations of the disease (8 marks)",
+
+  // ==========================================
+  // MARCH 2019 (Internal Medicine MBBS Part IV Paper 2: Essay - March 12, 2019)
+  // Faculty of Clinical Sciences, Department of Medicine
+  // ==========================================
+  "Q1, March 2019 (Medicine)":
+    "A 35 year old male farmer was bitten on the left foot by a cobra (Elapidae family) 2 days ago while working on his farm. He now has hypoventilation and central cyanosis.\n\na. Define clinical cyanosis\nb. Mention any 3 causes of hypoventilation\nc. What arterial gaseous pattern is expected in this condition?\nd. List 2 complications of snake bite\ne. What will be the difference in the amount of anti-snake venom (if there is envenomation) that would be administered to this 35 year old man and a 3 year old boy who has been bitten by same type of snake\nf. Where should this patient be managed and why?",
+
+  "Q2, March 2019 (Medicine)":
+    "A 24 year old 4th year undergraduate student presented with tiredness of one month duration. On examination, he was conscious, pale, afebrile and has mild ankle oedema. His pulse rate was 92/min, regular; blood pressure was 162/114 mmHg, with displaced heaving apex beat, and triple heart sounds. Urinalysis revealed 2+ proteinuria, and urine microscopy showed hyaline and red cell casts. The serum creatinine was 288 umol/L, and estimated glomerular filtration rate is 25 ml/min/1.73m².\n\na. List the likely diagnoses from the clinical features in this patient.\n\nThe haemoglobin concentration was 7.3g/dL.\n\nb. List six (6) relevant investigations to determine the cause of anaemia in this patient, stating the rationale for these investigations.\nc. List six (6) other relevant investigations in this patient and the possible findings (do not repeat investigations for anaemia and investigations already mentioned above).\nd. Outline the treatment of the patient giving appropriate rationale for such treatment",
+
+  "Q3, March 2019 (Medicine)":
+    "A 32 year old woman was admitted on account of muscle twitching, spasms, tingling sensation and numbness with associated short-lived self-limiting seizure prior to admission although she was alert on admission. The symptoms started since a thyroidectomy operation 4 weeks previously for a simple goiter. She has not attended endocrinology follow-up and was not taking any medication. There was no family or other personal history of note. Initial blood tests showed: Calcium-1.6mmol/l, Phosphate-1.8mmol/l, albumin-35g/L. Both vitamin D levels and alkaline phosphatase were normal.\n\na. Calculate corrected calcium (2 marks)\nb. What is the definitive diagnosis? (2 marks)\nc. List 4 other causes of this condition (2 marks)\nd. List 2 signs that could be elicited in this patient and their interpretations (4 marks)\ne. How else can this diagnosis be confirmed and list 3 possible features that this investigative procedure would show (4 marks)\nf. List 4 hormones that regulate calcium metabolism and their actions (3 marks)\ng. Outline the principle of managing this condition (3 marks)",
+
+  "Q4, March 2019 (Medicine)":
+    "A 52 years old executive administrator was rushed in from a business luncheon having suffered a severe chest pain which started one hour prior to that time and was described as very severe and referenced 10 on a scale of 10. He described the pain as tearing in nature and radiating to the back and to the jaw. Examination revealed a middle-aged man who was anxious, sweaty, and holding on to the chest. His blood pressure was 90/70 mmHg and pulse rate was 145 beats /min. He had a positive family history of sudden death and had been having previous history of chest pain which he adduced to his work schedule. Electrocardiography at the emergency unit revealed sinus tachycardia, left bundle branch block and left ventricular hypertrophy.\n\na. List two differential diagnosis\nb. List 8 risk factors for this disease\nc. List 6 complications of this disease\nd. How will you investigate this patient?\ne. Highlight the principles of management of this clinical condition\nf. List 4 drugs that are indicated in the management of this condition",
+
+  "Q5, March 2019 (Medicine)":
+    "A 28-year-old female trader complained of progressively increasing raised rash involving the entire face, the nose, the ears and lip margins were not spared in the past 12 months. The upper and lower limbs were also involved. There was a positive history of paraesthesia of the lower limbs but no paralysis of any limb. About seven months after the onset of the rash on the limbs, some of the rash suddenly became painful, red and ulcerated. Examination of the skin showed symmetrically distributed erythematous and painful papules, nodules on the face with infiltration of the lip margins, ears, chin and the nose. There were erythematous painful ulcerated plaques, nodules and multiple fungating ulcers on the legs. There was no obvious limb deformity, or nerve thickening, no fever, lymphadenopathy, hoarseness or stridor, and no pedal edema. Her vision was clear and no eye pain or photophobia.\n\na. List 5 common causes of ulcer in a medical ward (5 marks)\nb. What is the most likely diagnosis? (2 marks)\nc. Name precisely the phenomenon that occurred when the patient experienced sudden pain, redness and ulceration. (2 marks)\nd. List three (3) relevant investigations. (3 marks)\ne. List three (3) drugs of treatment and their dosages. (6 marks)\nf. List two (2) long term complications of this condition. (2 marks)",
 
 
   // January 2025 (Final Psychiatry)
@@ -280,6 +327,37 @@ export const pastQuestionsText: { [occurrence: string]: string } = {
     "a. Explain operant conditioning.\nb. What is cognitive behavioural therapy (CBT)?\nc. List other psychological interventions/therapies",
 
   "Q5, January 2025 (Psychiatry)":
+    "A 48-year-old farmer presents with a history of fluctuating moods over the past 15 years. These episodes are characterized by periods of intense elation, hyperactivity, decreased need for sleep, pressured speech, and impulsive spending, often involving extravagant purchases of land or expensive cars. These periods are followed by profound sadness, loss of interest in his farming activities, fatigue, and feelings of worthlessness. There's a positive history of Hypertension diagnosed 10 years ago, poorly controlled despite medication. He often forgets to take his medications, citing the 'bitter taste' and 'too many pills'. Also, there's positive history of Type 2 Diabetes Mellitus diagnosed 5 years ago, with poor glycemic control. He has difficulty adhering to his dietary restrictions, often indulging in large meals of pounded yam and egusi soup, and rarely checks his blood sugar. Mother suffered from recurrent bouts of sadness, often withdrawing from social interactions and neglecting household chores. Father was an alcoholic, frequently returning home drunk and engaging in verbal and physical abuse towards his mother. Patient witnessed frequent and severe domestic violence between his parents during childhood. He is currently unemployed and lost significant investments in his cocoa farm and his ancestral land to a fraudulent land deal 5 years ago, coinciding with the onset of more severe mood episodes. There's a positive history of poor medication adherence due to concerns about side effects and perceived lack of efficacy. He smokes heavily and occasionally drinks palm wine.\n\na. Make the appropriate diagnosis from the vignette above\nb. List the predisposing, precipitating and perpetuating factors using the biopsychosocial model\nc. Outline the management for the above case.",
+
+  // June 2025 (Final Psychiatry)
+  "Q1, June 2025 (Psychiatry)":
+    "a. List 5 mood stabilizers.\nb. Mention 5 investigations you will like to do before the commencement of lithium.\nc. What is Ebstein anomaly?",
+
+  "Q2, June 2025 (Psychiatry)":
+    "Mr. Festus is a known patient with schizophrenia who has defaulted clinic for the past 1 year. He is in clinic today. During his chat with the doctor, he disclosed that he was going to invade the State Assembly Complex soon and get rid of all the legislative officers that had taken his glory.\n\na. What concept of forensic psychiatry is applicable here?\nb. Mention 2 things you would like to do.\nc. List 2 drawbacks of this concept.\nd. Mention 4 items you would run this patient through if you are asked to assess his capacity/competency.",
+
+  "Q3, June 2025 (Psychiatry)":
+    "Describe a typical session of Electroconvulsive therapy (ECT) you observed during your posting.",
+
+  "Q4, June 2025 (Psychiatry)":
+    "Write short notes on any 4 of the following:\na. Consultation-Liaison\nb. Risk factors for suicide\nc. Enuresis\nd. Catatonia\ne. Acute dystonic reaction",
+
+  "Q4a, June 2025 (Psychiatry)":
+    "Write short notes on any 4 of the following:\na. Consultation-Liaison\nb. Risk factors for suicide\nc. Enuresis\nd. Catatonia\ne. Acute dystonic reaction",
+
+  "Q4b, June 2025 (Psychiatry)":
+    "Write short notes on any 4 of the following:\na. Consultation-Liaison\nb. Risk factors for suicide\nc. Enuresis\nd. Catatonia\ne. Acute dystonic reaction",
+
+  "Q4c, June 2025 (Psychiatry)":
+    "Write short notes on any 4 of the following:\na. Consultation-Liaison\nb. Risk factors for suicide\nc. Enuresis\nd. Catatonia\ne. Acute dystonic reaction",
+
+  "Q4d, June 2025 (Psychiatry)":
+    "Write short notes on any 4 of the following:\na. Consultation-Liaison\nb. Risk factors for suicide\nc. Enuresis\nd. Catatonia\ne. Acute dystonic reaction",
+
+  "Q4e, June 2025 (Psychiatry)":
+    "Write short notes on any 4 of the following:\na. Consultation-Liaison\nb. Risk factors for suicide\nc. Enuresis\nd. Catatonia\ne. Acute dystonic reaction",
+
+  "Q5, June 2025 (Psychiatry)":
     "A 48-year-old farmer presents with a history of fluctuating moods over the past 15 years. These episodes are characterized by periods of intense elation, hyperactivity, decreased need for sleep, pressured speech, and impulsive spending, often involving extravagant purchases of land or expensive cars. These periods are followed by profound sadness, loss of interest in his farming activities, fatigue, and feelings of worthlessness. There's a positive history of Hypertension diagnosed 10 years ago, poorly controlled despite medication. He often forgets to take his medications, citing the 'bitter taste' and 'too many pills'. Also, there's positive history of Type 2 Diabetes Mellitus diagnosed 5 years ago, with poor glycemic control. He has difficulty adhering to his dietary restrictions, often indulging in large meals of pounded yam and egusi soup, and rarely checks his blood sugar. Mother suffered from recurrent bouts of sadness, often withdrawing from social interactions and neglecting household chores. Father was an alcoholic, frequently returning home drunk and engaging in verbal and physical abuse towards his mother. Patient witnessed frequent and severe domestic violence between his parents during childhood. He is currently unemployed and lost significant investments in his cocoa farm and his ancestral land to a fraudulent land deal 5 years ago, coinciding with the onset of more severe mood episodes. There's a positive history of poor medication adherence due to concerns about side effects and perceived lack of efficacy. He smokes heavily and occasionally drinks palm wine.\n\na. Make the appropriate diagnosis from the vignette above\nb. List the predisposing, precipitating and perpetuating factors using the biopsychosocial model\nc. Outline the management for the above case.",
 
 
@@ -1344,6 +1422,7 @@ export function getQuestionText(occurrence: string, topicName: string, specialty
   }
 
   // Pre-compute specialty variants
+  const medKey = sanitizedOcc.includes("(Medicine)") ? sanitizedOcc : `${sanitizedOcc} (Medicine)`;
   const surgeryKey = sanitizedOcc.includes("(Surgery)") ? sanitizedOcc : `${sanitizedOcc} (Surgery)`;
   const commKey = sanitizedOcc.includes("(Comm. Med)") ? sanitizedOcc : `${sanitizedOcc} (Comm. Med)`;
   const psychKey = sanitizedOcc.includes("(Psychiatry)") ? sanitizedOcc : `${sanitizedOcc} (Psychiatry)`;
@@ -1352,8 +1431,13 @@ export function getQuestionText(occurrence: string, topicName: string, specialty
   const strippedBaseSubPart = strippedKey.replace(/^([A-Za-z]+\s*\d+)[a-zA-Z0-9]+(.*)$/, "$1$2");
 
   // PRIORITY 1: When department/specialty is known, ALWAYS check department-specific keys first!
-  // This prevents Community Medicine queries from accidentally grabbing Internal Medicine questions with the same label (e.g. Q2, Q3, Q4, Q5, Q6, Q7).
-  if (specialty === "Community Medicine") {
+  // This prevents queries from grabbing questions from another department with the same label (e.g. Q1, Q2, Q3, etc.).
+  if (specialty === "Internal Medicine") {
+    if (pastQuestionsText[medKey]) return pastQuestionsText[medKey];
+    if (pastQuestionsText[`${sanitizedOcc} (Medicine)`]) return pastQuestionsText[`${sanitizedOcc} (Medicine)`];
+    if (pastQuestionsText[`${strippedKey} (Medicine)`]) return pastQuestionsText[`${strippedKey} (Medicine)`];
+    if (pastQuestionsText[`${strippedBaseSubPart} (Medicine)`]) return pastQuestionsText[`${strippedBaseSubPart} (Medicine)`];
+  } else if (specialty === "Community Medicine") {
     if (pastQuestionsText[commKey]) return pastQuestionsText[commKey];
     if (pastQuestionsText[`${sanitizedOcc} (Comm. Med)`]) return pastQuestionsText[`${sanitizedOcc} (Comm. Med)`];
     if (pastQuestionsText[`${strippedKey} (Comm. Med)`]) return pastQuestionsText[`${strippedKey} (Comm. Med)`];
@@ -1377,21 +1461,25 @@ export function getQuestionText(occurrence: string, topicName: string, specialty
 
   // PRIORITY 3: LAQ / Q normalization
   const laqReplaced = sanitizedOcc.replace(/\bLAQ\s*/i, "Q");
+  if (specialty === "Internal Medicine" && pastQuestionsText[`${laqReplaced} (Medicine)`]) return pastQuestionsText[`${laqReplaced} (Medicine)`];
   if (specialty === "Community Medicine" && pastQuestionsText[`${laqReplaced} (Comm. Med)`]) return pastQuestionsText[`${laqReplaced} (Comm. Med)`];
   if (specialty === "Surgery" && pastQuestionsText[`${laqReplaced} (Surgery)`]) return pastQuestionsText[`${laqReplaced} (Surgery)`];
   if (specialty === "Psychiatry" && pastQuestionsText[`${laqReplaced} (Psychiatry)`]) return pastQuestionsText[`${laqReplaced} (Psychiatry)`];
   if (pastQuestionsText[laqReplaced]) return pastQuestionsText[laqReplaced];
+  if (pastQuestionsText[`${laqReplaced} (Medicine)`]) return pastQuestionsText[`${laqReplaced} (Medicine)`];
   if (pastQuestionsText[`${laqReplaced} (Surgery)`]) return pastQuestionsText[`${laqReplaced} (Surgery)`];
   if (pastQuestionsText[`${laqReplaced} (Comm. Med)`]) return pastQuestionsText[`${laqReplaced} (Comm. Med)`];
 
   // PRIORITY 4: Sub-letter stripping (e.g. Q11a -> Q11)
   const baseSubPart = sanitizedOcc.replace(/^([A-Za-z]+\s*\d+)[a-zA-Z0-9]+(.*)$/, "$1$2");
   if (baseSubPart !== sanitizedOcc) {
+    if (specialty === "Internal Medicine" && pastQuestionsText[`${baseSubPart} (Medicine)`]) return pastQuestionsText[`${baseSubPart} (Medicine)`];
     if (specialty === "Community Medicine" && pastQuestionsText[`${baseSubPart} (Comm. Med)`]) return pastQuestionsText[`${baseSubPart} (Comm. Med)`];
     if (specialty === "Surgery" && pastQuestionsText[`${baseSubPart} (Surgery)`]) return pastQuestionsText[`${baseSubPart} (Surgery)`];
     if (specialty === "Psychiatry" && pastQuestionsText[`${baseSubPart} (Psychiatry)`]) return pastQuestionsText[`${baseSubPart} (Psychiatry)`];
 
     if (pastQuestionsText[baseSubPart]) return pastQuestionsText[baseSubPart];
+    if (pastQuestionsText[`${baseSubPart} (Medicine)`]) return pastQuestionsText[`${baseSubPart} (Medicine)`];
     if (pastQuestionsText[`${baseSubPart} (Comm. Med)`]) return pastQuestionsText[`${baseSubPart} (Comm. Med)`];
     if (pastQuestionsText[`${baseSubPart} (Surgery)`]) return pastQuestionsText[`${baseSubPart} (Surgery)`];
     if (pastQuestionsText[`${baseSubPart} (Psychiatry)`]) return pastQuestionsText[`${baseSubPart} (Psychiatry)`];
@@ -1400,9 +1488,11 @@ export function getQuestionText(occurrence: string, topicName: string, specialty
   // Sub-letter 'a' fallback (e.g. Q1, June 2013 -> Q1a, June 2013)
   const aSubPart = sanitizedOcc.replace(/^([A-Za-z]+\s*\d+)(,\s*.+)$/, "$1a$2");
   if (aSubPart !== sanitizedOcc) {
+    if (specialty === "Internal Medicine" && pastQuestionsText[`${aSubPart} (Medicine)`]) return pastQuestionsText[`${aSubPart} (Medicine)`];
     if (specialty === "Community Medicine" && pastQuestionsText[`${aSubPart} (Comm. Med)`]) return pastQuestionsText[`${aSubPart} (Comm. Med)`];
     if (specialty === "Surgery" && pastQuestionsText[`${aSubPart} (Surgery)`]) return pastQuestionsText[`${aSubPart} (Surgery)`];
     if (pastQuestionsText[aSubPart]) return pastQuestionsText[aSubPart];
+    if (pastQuestionsText[`${aSubPart} (Medicine)`]) return pastQuestionsText[`${aSubPart} (Medicine)`];
     if (pastQuestionsText[`${aSubPart} (Comm. Med)`]) return pastQuestionsText[`${aSubPart} (Comm. Med)`];
     if (pastQuestionsText[`${aSubPart} (Surgery)`]) return pastQuestionsText[`${aSubPart} (Surgery)`];
   }

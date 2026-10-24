@@ -550,6 +550,86 @@ export default function App() {
       };
     }
 
+    if (t.includes("polycystic") || t.includes("adpkd")) {
+      return {
+        keyConcepts: [
+          "Definitive Diagnosis & Genetics: Autosomal Dominant Polycystic Kidney Disease (ADPKD). Caused by mutations in PKD1 (chromosome 16p13.3, encoding Polycystin-1, ~85% of cases, earlier onset and faster progression) and PKD2 (chromosome 4q21, encoding Polycystin-2, ~15% of cases).",
+          "Extra-renal Manifestations: 1. Polycystic liver disease (hepatic cysts, most common extra-renal site), pancreatic cysts, splenic and arachnoid cysts. 2. Intracranial saccular berry aneurysms (circle of Willis, risk of subarachnoid hemorrhage — family history of stroke is a major clue!). 3. Cardiovascular: Mitral valve prolapse (MVP), aortic root dilatation, left ventricular hypertrophy. 4. Colonic diverticular disease and abdominal/inguinal wall hernias.",
+          "Acute Flank Pain Causes: Cyst hemorrhage/rupture, nephrolithiasis (uric acid/calcium oxalate stones in 20-30%), acute cyst infection / pyelonephritis, or renal cell carcinoma.",
+          "Management Strategy: 1. Strict blood pressure control (target BP <120/80 mmHg; ACE inhibitors or ARBs are first-line). 2. High fluid intake (>2.5-3 L/day to suppress endogenous vasopressin). 3. Disease-modifying therapy: Tolvaptan (selective vasopressin V2 receptor antagonist to slow cyst growth and eGFR decline in rapidly progressing ADPKD). 4. Screening: MRA brain for intracranial aneurysms if family history of aneurysm/stroke or high-risk occupations. 5. Renal replacement therapy (hemodialysis, peritoneal dialysis, renal transplantation)."
+        ],
+        studyReferences: [
+          "Davidson's Principles and Practice of Medicine — Kidney and Urinary Tract Diseases: Inherited Cystic Diseases",
+          "KDIGO Clinical Practice Guideline on Autosomal Dominant Polycystic Kidney Disease"
+        ],
+        priority: "CRITICAL HIGH YIELD — Core nephrology genetics and clinical essay (June 2018 Paper 2)."
+      };
+    }
+
+    if (t.includes("sclerosis") || t.includes("scleroderma")) {
+      return {
+        keyConcepts: [
+          "Diagnosis & Clinical Features: Systemic Sclerosis (Scleroderma). Limited cutaneous (CREST: Calcinosis, Raynaud's, Esophageal dysmotility, Sclerodactyly, Telangiectasia) vs Diffuse cutaneous (widespread skin thickening, early visceral fibrosis). Common cutaneous signs: sclerodactyly, microstomia (radial furrowing/pursing), digital pitting scars/ulcers, salt-and-pepper hyper/hypopigmentation, calcinosis cutis, telangiectasia.",
+          "Scleroderma Renal Crisis (SRC): Life-threatening complication characterized by acute onset of severe accelerated/malignant hypertension (often >180/120 mmHg), rapidly progressive oliguric renal failure, microangiopathic hemolytic anemia (MAHA with schistocytes), and elevated plasma renin activity. Triggered or worsened by high-dose corticosteroids!",
+          "Diagnostic Investigations: 1. Autoantibody serologies: Anti-Scl-70 (anti-topoisomerase I, marker for diffuse disease and pulmonary fibrosis), Anti-centromere (marker for limited cutaneous / CREST), Anti-RNA polymerase III (strongly associated with high risk of Scleroderma Renal Crisis). 2. Serum creatinine, urea, electrolytes, urinalysis (mild proteinuria, granular casts). 3. High-resolution chest CT (interstitial lung disease) & Echocardiogram (pulmonary arterial hypertension).",
+          "Management of SRC: Immediate prompt initiation of ACE Inhibitors (Captopril short-acting titrated rapidly to full dose, irrespective of baseline creatinine elevation; lifesaving cornerstone). Additional agents: IV vasodilators (Prostacyclin analogues, Nitroprusside) if needed. Strict avoidance of high-dose corticosteroids."
+        ],
+        studyReferences: [
+          "Davidson's Principles and Practice of Medicine — Rheumatology and Bone Disease: Systemic Sclerosis",
+          "EULAR/ACR Recommendations for the Management of Systemic Sclerosis"
+        ],
+        priority: "HIGH YIELD — Distinctive rheumatology presentation linking cutaneous changes, Raynaud's, and emergency renal crisis."
+      };
+    }
+
+    if (t.includes("snake") || t.includes("envenomation") || t.includes("elapidae")) {
+      return {
+        keyConcepts: [
+          "Clinical Cyanosis & Pathophysiology: Bluish discoloration of the skin and mucous membranes caused by an excess of reduced/deoxygenated hemoglobin (>5 g/dL or >3.1 mmol/L) in capillary blood. Central cyanosis reflects inadequate arterial oxygenation (visible on warm tongue/oral mucosa).",
+          "Hypoventilation Causes in Elapid Snakebite: Post-synaptic neurotoxins (alpha-neurotoxins) bind irreversibly to nicotinic acetylcholine receptors at the neuromuscular junction, causing flaccid paralysis of respiratory muscles (diaphragm and intercostal muscles). Expected arterial blood gas: Type 2 Respiratory Failure (Hypoxemia PaO2 <60 mmHg + Hypercapnia PaCO2 >45-50 mmHg with respiratory acidosis pH <7.35).",
+          "Anti-Snake Venom (ASV) Dosing Rule: Snake venom dose injected is an absolute amount (not dependent on patient body weight). Therefore, a 3-year-old child receives THE SAME INITIAL DOSE of anti-snake venom as an adult (in fact, children suffer greater toxicity due to higher venom concentration per kilogram body weight).",
+          "Complications & ICU Level Care: Complete respiratory arrest/failure, aspiration pneumonia, cardiac arrhythmias, extensive local tissue necrosis/compartment syndrome, acute kidney injury. Mandatory management in the Intensive Care Unit (ICU) for continuous multiparameter monitoring, mechanical ventilation capability, and immediate resuscitation."
+        ],
+        studyReferences: [
+          "Davidson's Principles and Practice of Medicine — Environmental Medicine & Envenomation",
+          "WHO Guidelines for the Management of Snakebites in Africa"
+        ],
+        priority: "CRITICAL HIGH YIELD — Core emergency toxicology question examined in March 2019 Paper 2."
+      };
+    }
+
+    if (t.includes("dissection") || t.includes("aortic")) {
+      return {
+        keyConcepts: [
+          "Acute Aortic Dissection Presentation: Sudden onset, maximally severe 'tearing' or 'ripping' chest pain radiating to the interscapular back and jaw. Marked asymmetry in blood pressures between upper limbs (>20 mmHg), new aortic regurgitation murmur (decrescendo early diastolic), and neurological deficits (syncope, paraplegia, stroke).",
+          "Key Differentials: Acute ST-elevation Myocardial Infarction (ACS), Pulmonary Embolism, Tension Pneumothorax, Acute Pericarditis, Esophageal Rupture (Boerhaave's syndrome).",
+          "Stanford Classification: Type A (involves ascending aorta; emergency surgical replacement of ascending aorta/hemiarch) vs Type B (involves descending aorta distal to left subclavian artery; initial medical therapy with strict BP/rate control, or thoracic endovascular aortic repair TEVAR).",
+          "Emergency Medical Management: 1. Immediate anti-impulse therapy: IV Beta-blockers (Labetalol or Esmolol) targeting heart rate <60 bpm, followed by vasodilators (IV Sodium Nitroprusside or Nicardipine) targeting systolic BP 100-120 mmHg. 2. Urgent diagnostic confirmation: CT Angiography of the aorta (CTA — gold standard/test of choice), Transesophageal Echocardiography (TEE in hemodynamically unstable patients)."
+        ],
+        studyReferences: [
+          "Davidson's Principles and Practice of Medicine — Cardiovascular Disease: Diseases of the Aorta",
+          "ESC Guidelines on the Diagnosis and Treatment of Aortic Diseases"
+        ],
+        priority: "HIGH YIELD — Life-threatening cardiovascular emergency with contrasting management compared to thrombolytic ACS."
+      };
+    }
+
+    if (t.includes("leprosy") || t.includes("hansen") || t.includes("lepromatous")) {
+      return {
+        keyConcepts: [
+          "Diagnosis & Pathogen: Leprosy (Hansen's Disease) caused by Mycobacterium leprae / M. lepromatosis. Ridley-Jopling Spectrum: Tuberculoid (TT), Borderline Tuberculoid (BT), Mid-borderline (BB), Borderline Lepromatous (BL), Lepromatous Leprosy (LL). Symmetric nodules, plaques, facial skin infiltration ('leonine facies'), earlobe thickening, and glove-and-stocking sensory loss are classic for LL.",
+          "Type 2 Lepra Reaction (Erythema Nodosum Leprosum - ENL): Immune-complex mediated (Type III hypersensitivity) reaction seen in BL/LL patients. Sudden appearance of crops of painful, tender erythematous papules, nodules, and ulcerated plaques associated with fever, arthralgia, iritis, dactylitis, and orchitis.",
+          "Common Causes of Medical Ward Ulcers: 1. Diabetic neuropathic foot ulcers. 2. Venous stasis ulcers. 3. Arterial/Ischemic ulcers. 4. Pressure/Decubitus ulcers. 5. Tropical infective ulcers (Buruli ulcer / M. ulcerans, Cutaneous Tuberculosis, Syphilitic gumma, Leprotic trophic ulcers).",
+          "Treatment Regimens: WHO Multi-Drug Therapy (MDT for multibacillary leprosy, 12 months duration): Rifampicin (600 mg once monthly supervised), Clofazimine (300 mg once monthly supervised + 50 mg daily self-administered), Dapsone (100 mg daily self-administered). Treatment for ENL reaction: Thalidomide (drug of choice for severe ENL, strictly contraindicated in pregnancy) or high-dose systemic corticosteroids (Prednisolone) and high-dose Clofazimine."
+        ],
+        studyReferences: [
+          "Davidson's Principles and Practice of Medicine — Tropical Medicine and Infectious Diseases: Leprosy",
+          "WHO Guidelines for the Diagnosis, Treatment and Prevention of Leprosy"
+        ],
+        priority: "HIGH YIELD — Classic dermatology and infectious diseases vignette tested in March 2019."
+      };
+    }
+
     if (t.includes("papilloedema") || t.includes("papillitis")) {
       return {
         keyConcepts: [
@@ -611,6 +691,104 @@ export default function App() {
           "Brain Trauma Foundation Guidelines for the Management of Severe Traumatic Brain Injury"
         ],
         priority: "CRITICAL HIGH YIELD — Core neurosurgical emergency with distinct radiographic and clinical presentation."
+      };
+    }
+
+    if (t.includes("electroconvulsive") || t.includes("ect")) {
+      return {
+        keyConcepts: [
+          "Indications for ECT: Severe life-threatening depression (catatonia, severe psychomotor retardation, acute psychotic depression, acute high suicide risk, refusal to eat or drink with starvation/dehydration), severe treatment-resistant mania, neuroleptic malignant syndrome (NMS), refractory schizophrenia.",
+          "Pre-ECT Medical Workup: Comprehensive pre-anesthetic clearance (cardiorespiratory evaluation), FBC, serum electrolytes, urea, creatinine, 12-lead ECG (screen for arrhythmias/recent MI), chest X-ray, and neuroimaging (CT/MRI brain) if intracranial mass lesion is suspected. (Absolute contraindication: space-occupying cerebral lesions with raised intracranial pressure due to herniation risk).",
+          "Modified ECT Technique (Step-by-Step): 1. Pre-procedure: NPO for 6–8 hours, remove dentures/jewelry, establish IV access. 2. Pre-oxygenation: 100% O2 via bag-valve-mask. 3. Anticholinergic agent: IV Glycopyrrolate or Atropine to prevent vagally mediated severe bradycardia/asystole and reduce bronchial secretions. 4. Anesthetic agent: Short-acting IV hypnotic (Methohexital 0.75-1 mg/kg or Propofol). 5. Muscle relaxant: IV Succinylcholine 0.5-1 mg/kg to mitigate peripheral musculoskeletal trauma and fractures. 6. Airway protection: Insert bite block to protect teeth and tongue.",
+          "Seizure Duration & Monitoring: Cuff technique (blood pressure cuff inflated above systolic pressure on one lower limb before succinylcholine injection to observe motor seizure). Minimum motor seizure duration: 20-25 seconds; minimum EEG seizure duration: 25-30 seconds. Inadequate seizures (<15 seconds) lack clinical therapeutic efficacy; prolonged seizures (>120-180 seconds) should be aborted with IV Diazepam or Midazolam.",
+          "Electrode Placement & Adverse Effects: Bilateral/Bitemporal (faster and more robust response, higher incidence of cognitive side effects) vs Right Unilateral (d'Elia placement, significantly reduced retrograde amnesia). Common adverse effects: retrograde and anterograde amnesia (usually resolves within weeks), post-ictal delirium/confusion, headache, nausea, transient hypertension or bradycardia."
+        ],
+        studyReferences: [
+          "Gelder, Cowen & Harrison — Oxford Textbook of Psychiatry: Somatic and Biological Treatments",
+          "American Psychiatric Association (APA) Task Force Report on Electroconvulsive Therapy"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct question in June 2025 asking for a detailed description of an observed ECT session."
+      };
+    }
+
+    if (t.includes("mood stabilizer") || t.includes("lithium") || t.includes("ebstein")) {
+      return {
+        keyConcepts: [
+          "5 Established Mood Stabilizers: 1. Lithium Carbonate. 2. Sodium Valproate / Divalproex. 3. Carbamazepine. 4. Lamotrigine. 5. Atypical Antipsychotics with mood stabilizing efficacy (e.g., Olanzapine, Quetiapine, Aripiprazole).",
+          "5 Essential Pre-Lithium Investigations: 1. Renal Function Tests (Serum Urea, Creatinine, eGFR) — Lithium is exclusively eliminated by glomerular filtration. 2. Thyroid Function Tests (TSH, Free T4) — Risk of lithium-induced goitre and hypothyroidism. 3. 12-lead ECG — Lithium can suppress sinus node activity causing T-wave flattening/inversion, bradyarrhythmias, or sinus arrest. 4. Pregnancy test (beta-hCG) in women of childbearing potential — Teratogenic risk. 5. Serum Electrolytes (especially Sodium) — Hyponatremia promotes proximal tubular reabsorption of lithium, inducing toxic levels. Also check Serum Calcium (risk of hyperparathyroidism).",
+          "Ebstein's Anomaly Pathophysiology: A congenital cyanotic/acyanotic cardiac defect classically associated with first-trimester in utero maternal lithium exposure (~1 in 1,000 live births vs 1 in 20,000 baseline). Characterized by apical/downward displacement of the tricuspid valve's septal and posterior leaflets into the right ventricle, resulting in an 'atrialized' portion of the right ventricle, severe tricuspid regurgitation, right atrial enlargement, and accessory conduction pathways (Wolff-Parkinson-White syndrome in 20-30%).",
+          "Therapeutic Drug Monitoring (TDM) & Toxicity Management: Target trough level 0.6–1.0 mEq/L (maintenance) or 0.8–1.2 mEq/L (acute mania), drawn exactly 12 hours post-dose. Toxicity signs: Mild (>1.5 mEq/L: coarse tremors, nausea, vomiting, ataxia); Severe (>2.0–2.5 mEq/L: coarse tremor, myoclonus, hyperreflexia, convulsions, stupor, coma). Emergency treatment: aggressive IV 0.9% saline hydration to promote excretion; emergency hemodialysis if levels >4.0 mEq/L (or >2.5 mEq/L with severe neurologic compromise or renal impairment)."
+        ],
+        studyReferences: [
+          "Kaplan & Sadock's Synopsis of Psychiatry — Mood Stabilizers and Lithium",
+          "Stahl's Essential Psychopharmacology — Bipolar Spectrum and Mood Stabilizing Agents"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct Q1 on June 2025 examination paper; mandatory psychopharmacology viva/essay material."
+      };
+    }
+
+    if (t.includes("tarasoff") || t.includes("duty to protect")) {
+      return {
+        keyConcepts: [
+          "Forensic Concept (Tarasoff Principle): Established in Tarasoff v. Regents of the University of California (1976). Dictates that when a mental health clinician determines, or should reasonably determine, that a patient poses a serious, credible threat of imminent physical violence against a specific, identifiable victim, the protective privilege of doctor-patient confidentiality ends. The clinician has an affirmative legal and ethical 'Duty to Protect / Duty to Warn'.",
+          "2 Actions Clinician Must Take: 1. Immediately notify and warn the intended identifiable third party/victim. 2. Notify local law enforcement authorities and arrange emergency involuntary psychiatric assessment/admission under the Mental Health Act to secure the patient.",
+          "2 Drawbacks of the Concept: 1. Destroys the therapeutic alliance and patient confidentiality, causing patients to conceal homicidal or paranoid thoughts or drop out of care. 2. High false-positive rate: psychiatric clinical prediction of future violence has modest statistical sensitivity and specificity, risking unnecessary alarm, civil liberties restriction, and stigmatization.",
+          "4 Core Items in Assessing Mental Capacity / Competency: 1. Understanding: Can the patient understand the relevant nature, purpose, benefits, and risks of the condition and proposed decision? 2. Retaining: Can the patient retain the information long enough to make an effective decision? 3. Weighing / Reasoning: Can the patient weigh and balance the information as part of a rational deliberation? 4. Communicating: Can the patient clearly communicate their chosen decision (by speech, writing, or sign)?"
+        ],
+        studyReferences: [
+          "American Academy of Psychiatry and the Law (AAPL) Practice Guideline for Forensic Psychiatric Evaluation of Violence",
+          "British Medical Association (BMA) & Mental Capacity Act Guidelines: Capacity and Confidentiality"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct repeat question appearing on both January 2025 and June 2025 psychiatry papers."
+      };
+    }
+
+    if (t.includes("catatonia")) {
+      return {
+        keyConcepts: [
+          "Clinical Syndrome & Etiologies: Neuropsychiatric condition characterized by prominent motor, behavioral, and volition disturbances. Etiologies: Affective disorders (bipolar mania/depression, unipolar major depression — most common), Schizophrenia, General medical conditions (anti-NMDA receptor encephalitis, SLE, Wilson's disease, central nervous system infections), Drug-induced / withdrawal.",
+          "Clinical Subtypes: 1. Retarded/Stuporous: Immobility, mutism, staring, stupor, posturing, catalepsy / waxy flexibility, negativism. 2. Excited: Purposeless motor agitation, severe hyperactivity, delirium. 3. Malignant (Lethal) Catatonia: Medical emergency marked by fever, autonomic instability (labile BP, tachycardia, diaphoresis), extreme lead-pipe rigidity, elevated CK, and high risk of rhabdomyolysis / death.",
+          "Bush-Francis Catatonia Rating Scale (BFCRS): 23-item clinical rating scale (first 14 items used for rapid screening). Characteristic signs: Catalepsy (maintaining postures against gravity), Waxy Flexibility (smooth resistance to positioning like bending a wax candle), Gegenhalten (opposition to passive movements with force proportional to strength applied), Ambitendency, Echolalia, Echopraxia.",
+          "Management Protocol: 1. Lorazepam Challenge Test: Administer 1–2 mg IV/IM Lorazepam; marked relief of mutism and immobility within 30 minutes confirms catatonia. 2. High-dose Benzodiazepine regimen: Lorazepam 6–16 mg/day in divided doses. 3. Electroconvulsive Therapy (ECT): First-line therapy for malignant catatonia, acute exhausted state, or cases refractory to high-dose lorazepam after 48–72 hours. 4. Strictly avoid standard antipsychotics (which may aggravate rigidity and precipitate malignant catatonia / NMS)."
+        ],
+        studyReferences: [
+          "Fink & Taylor — Catatonia: A Clinician's Guide to Diagnosis and Treatment",
+          "DSM-5-TR: Catatonia Associated with Another Mental Disorder"
+        ],
+        priority: "HIGH YIELD — Q4 short note topic in June 2025; essential psychiatric emergency management."
+      };
+    }
+
+    if (t.includes("enuresis")) {
+      return {
+        keyConcepts: [
+          "Definition & Diagnostic Threshold: Involuntary voiding of urine into clothes or bed occurring at least twice weekly for a minimum of 3 consecutive months, in a child who is chronologically and developmentally at least 5 years of age, without organic urinary pathology.",
+          "Classification: Primary Enuresis (continence never achieved for ≥6 months; delayed neurological bladder maturation, nocturnal polyuria, high arousal threshold) vs Secondary Enuresis (recurrence after ≥6 months of dry period; often triggered by emotional distress, family disruption, birth of sibling, school stress, sexual abuse, or organic causes like UTI, diabetes mellitus/insipidus). Monosymptomatic (no daytime lower urinary tract symptoms) vs Non-monosymptomatic (daytime urgency, frequency, urge incontinence, encopresis).",
+          "Evaluation: 3-day voiding/fluid diary, physical examination (inspect spine for dysraphism, neurological lower limb reflexes, palpate abdomen for full bladder/fecal loading), and urinalysis (dipstick for glucose, protein, leukocyte esterase, nitrites).",
+          "Management Strategy: 1. First-line behavioral interventions: Demystification, avoid punitive parental reactions, positive reinforcement reward charts, evening fluid restriction (no liquids 2 hours before bed), avoid caffeine-containing beverages, void immediately before sleeping. 2. Enuresis Alarm (Conditioning Therapy): Most effective long-term treatment with lowest relapse rate (~70% cure rate); moisture sensor triggers buzzer, waking child. Requires 2–3 months of consistent use. 3. Pharmacotherapy: Desmopressin (oral lyophilisate / MELT, synthetic ADH analogue; rapid onset, restricts nocturia; must restrict evening fluids to prevent hyponatremia/water intoxication). Second-line: Imipramine (TCA, requires baseline ECG; risk of fatal overdose) or Anticholinergics (Oxybutynin for daytime urge/small capacity bladder)."
+        ],
+        studyReferences: [
+          "NICE Clinical Guideline [CG111] — Bedwetting in Children and Young People",
+          "Nelson Textbook of Pediatrics — Elimination Disorders: Enuresis"
+        ],
+        priority: "HIGH YIELD — Direct question on child & adolescent psychiatry in June 2025 examination paper."
+      };
+    }
+
+    if (t.includes("biopsychosocial") || (t.includes("bipolar") && t.includes("formulation"))) {
+      return {
+        keyConcepts: [
+          "Diagnosis: Bipolar I Disorder, current or recurrent mood episodes (alternating mania with severe depression), with comorbid poorly controlled Hypertension, poorly controlled Type 2 Diabetes Mellitus, and Alcohol/Tobacco Use Disorder.",
+          "Predisposing Factors (4Ps Biopsychosocial Formulation): Biological: Strong genetic vulnerability (mother with recurrent affective disorder/sadness, paternal severe alcohol dependence). Psychological: Adverse childhood experiences, chronic domestic violence exposure, poor coping strategies. Social: Chaotic upbringing, generational trauma.",
+          "Precipitating Factors: Biological: Uncontrolled vascular and metabolic disease (HTN, T2DM) causing cerebrovascular/subcortical white matter ischemia. Psychological: Severe psychological trauma and distress from losing ancestral land and cocoa investments to fraud. Social: Acute financial ruin, unemployment, loss of socioeconomic status.",
+          "Perpetuating (Maintaining) Factors: Biological: Non-adherence to antihypertensive, hypoglycemic, and mood stabilizer medications ('bitter taste', pill burden, lack of perceived efficacy); daily alcohol and heavy tobacco consumption. Psychological: Denial, feelings of worthlessness, demoralization, learned helplessness. Social: Unemployment, economic instability, lack of supportive family infrastructure.",
+          "Holistic Management Plan: 1. Acute psychiatric stabilization: Inpatient admission if severe risk of harm or self-neglect; initiate mood stabilizer (Lithium or Sodium Valproate) + atypical antipsychotic (Olanzapine/Quetiapine) for mood stabilization. 2. Medical co-management: Consult endocrinology/internal medicine to rationalize diabetes (target HbA1c <7.0%) and hypertension (target BP <130/80) with simplified once-daily regimens. 3. Addiction medicine: Alcohol cessation support, thiamine supplementation, smoking cessation program. 4. Psychosocial: Psychoeducation, Cognitive Behavioral Therapy (CBT), Social welfare support, vocational rehabilitation, and family engagement."
+        ],
+        studyReferences: [
+          "Kaplan & Sadock's Synopsis of Psychiatry — Mood Disorders & Biopsychosocial Formulation",
+          "NICE Clinical Guideline [CG185] — Bipolar Disorder: Assessment and Management"
+        ],
+        priority: "CRITICAL HIGH YIELD — Core multi-system clinical vignette repeated across January 2025 and June 2025 papers."
       };
     }
 
