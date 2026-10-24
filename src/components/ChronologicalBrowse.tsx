@@ -116,15 +116,17 @@ const parseYearToScore = (yearStr: string) => {
   return year * 100 + monthIndex;
 };
 
-// Natural question ordering helper: LAQs first, Qs, SAQs, numerical order
-const parseQNumber = (s: string) => {
+// Natural question ordering helper: Department-aware paper structure (SAQ first in Comm Med; LAQ first in Surgery)
+const parseQNumber = (s: string, deptKey?: string) => {
   const isLAQ = /laq/i.test(s);
   const isSAQ = /saq/i.test(s);
   const numMatch = s.match(/\d+/);
   const num = numMatch ? parseInt(numMatch[0], 10) : 999;
   const subMatch = s.match(/[a-zA-Z]$/);
   const sub = subMatch ? subMatch[0].toLowerCase() : "";
-  const typeOrder = isLAQ ? 0 : (isSAQ ? 2 : 1);
+  const typeOrder = deptKey === "Community Medicine"
+    ? (isSAQ ? 0 : (isLAQ ? 2 : 1))
+    : (isLAQ ? 0 : (isSAQ ? 2 : 1));
   return { typeOrder, num, sub };
 };
 
@@ -250,8 +252,8 @@ export default function ChronologicalBrowse({
       // Sort questions inside each session naturally
       for (const session of Object.keys(data[dept.key])) {
         data[dept.key][session].sort((a, b) => {
-          const pa = parseQNumber(a.questionId);
-          const pb = parseQNumber(b.questionId);
+          const pa = parseQNumber(a.questionId, dept.key);
+          const pb = parseQNumber(b.questionId, dept.key);
           if (pa.typeOrder !== pb.typeOrder) return pa.typeOrder - pb.typeOrder;
           if (pa.num !== pb.num) return pa.num - pb.num;
           return pa.sub.localeCompare(pb.sub);

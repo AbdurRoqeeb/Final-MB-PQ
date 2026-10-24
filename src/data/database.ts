@@ -194,7 +194,7 @@ export const database: FullDatabase = {
     "Epidemiology": [
       {
         topic: "Epidemiological Study Designs (Cohort vs Case-Control vs Cross-Sectional)",
-        occurrences: ["Q6, February 2019", "Q11, 600L End of Posting", "Q11a, 600L End of Posting", "Q5, December 2007"]
+        occurrences: ["LAQ 1, October 2026 Mock (Comm. Med)", "Q6, February 2019", "Q11, 600L End of Posting", "Q11a, 600L End of Posting", "Q5, December 2007"]
       },
       {
         topic: "Screening Parameters (Sensitivity, Specificity, PPV & NPV)",
@@ -222,7 +222,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "HIV/AIDS, Tropical Diseases (TDR) & Care of Vulnerable Populations (PLWHA)",
-        occurrences: ["Q3, May 2014", "Q6, May 2014"]
+        occurrences: ["LAQ 3, October 2026 Mock (Comm. Med)", "Q3, May 2014", "Q6, May 2014"]
       },
       {
         topic: "Nosocomial Infections (Hospital Acquired Infections) & Infection Control",
@@ -260,7 +260,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Occupational Hazards: Principles of Control, Factory Inspections & Sawmill Workers",
-        occurrences: ["Q7, December 2017", "Q5, January 2016", "Q5a, January 2016", "SAQ 9b, August 2014"]
+        occurrences: ["SAQ 9, October 2026 Mock (Comm. Med)", "Q7, December 2017", "Q5, January 2016", "Q5a, January 2016", "SAQ 9b, August 2014"]
       },
       {
         topic: "Occupational Deafness, Factory Inspectorate Division & Industrial Rehabilitation",
@@ -290,7 +290,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Air Pollution, Common Contaminants & Health Risks",
-        occurrences: ["Q2i, December 2017", "Q9, January 2016", "SAQ 5, January 2025 (Comm. Med)"]
+        occurrences: ["SAQ 1, October 2026 Mock (Comm. Med)", "Q2i, December 2017", "Q9, January 2016", "SAQ 5, January 2025 (Comm. Med)"]
       },
       {
         topic: "Municipal Solid Waste & Sewage Disposal: Composting, Incineration & Sanitary Landfills",
@@ -320,7 +320,7 @@ export const database: FullDatabase = {
     "Health Management": [
       {
         topic: "Primary Health Care (PHC) Principles, Components & Implementation Challenges in Nigeria",
-        occurrences: ["Q1, January 2016", "Q5a, December 2017", "Q12, February 2019", "Q6, September 2019", "Q5, April 2017", "Q6a, January 2016", "Q6b, February 2015", "Q9, May 2010", "SAQ 9, January 2025 (Comm. Med)"]
+        occurrences: ["SAQ 4, October 2026 Mock (Comm. Med)", "Q1, January 2016", "Q5a, December 2017", "Q12, February 2019", "Q6, September 2019", "Q5, April 2017", "Q6a, January 2016", "Q6b, February 2015", "Q9, May 2010", "SAQ 9, January 2025 (Comm. Med)"]
       },
       {
         topic: "Referral Systems in PHC Structures & Integration",
@@ -348,7 +348,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Supervision, Monitoring & Program Evaluation Techniques",
-        occurrences: ["Q12, March 2019", "Q8, February 2019", "Q4, May 2014", "Q8, 600L End of Posting"]
+        occurrences: ["LAQ 3, October 2026 Mock (Comm. Med)", "Q12, March 2019", "Q8, February 2019", "Q4, May 2014", "Q8, 600L End of Posting"]
       },
       {
         topic: "Modern Health Service Underutilization & Inverse Care Law",
@@ -366,17 +366,17 @@ export const database: FullDatabase = {
     "Health Economics": [
       {
         topic: "Healthcare Financing Mechanisms (Community Insurance, User Fees, Out-of-Pocket)",
-        occurrences: ["Q2, September 2022", "Q6, January 2016", "Q8, December 2017", "Q7, March 2019", "Q4, August 2014", "Q4a, August 2014", "Q4b, August 2014", "Q16a, May 2010", "Q16b, May 2010", "Q8, October 2015", "SAQ 10, August 2014"]
+        occurrences: ["SAQ 6, October 2026 Mock (Comm. Med)", "Q2, September 2022", "Q6, January 2016", "Q8, December 2017", "Q7, March 2019", "Q4, August 2014", "Q4a, August 2014", "Q4b, August 2014", "Q16a, May 2010", "Q16b, May 2010", "Q8, October 2015", "SAQ 10, August 2014"]
       }
     ],
     "International Health": [
       {
         topic: "Global Agencies Promoting Health (Bilateral, Multilateral & NGOs)",
-        occurrences: ["Q1, December 2017", "Q1a, December 2017", "Q3, March 2019", "Q1, May 2010", "Q5, May 2014", "SAQ 8, January 2025 (Comm. Med)"]
+        occurrences: ["SAQ 3, October 2026 Mock (Comm. Med)", "Q1, December 2017", "Q1a, December 2017", "Q3, March 2019", "Q1, May 2010", "Q5, May 2014", "SAQ 8, January 2025 (Comm. Med)"]
       },
       {
         topic: "World Health Organization (WHO) Strategy, Governance & Regional Offices",
-        occurrences: ["Q1, May 2010", "Q3, March 2019", "SAQ 8, January 2025 (Comm. Med)"]
+        occurrences: ["SAQ 3, October 2026 Mock (Comm. Med)", "Q1, May 2010", "Q3, March 2019", "SAQ 8, January 2025 (Comm. Med)"]
       },
       {
         topic: "Internationally Notifiable Diseases, International Health Regulations (IHR) & PHEIC",
@@ -410,7 +410,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Child Survival Interventions & Vulnerable Child Care (GOBI-FFF, Immunization, Motherless Babies)",
-        occurrences: ["Q3, April 2017", "Q13, March 2019", "Q8, June 2013", "Q7a, February 2015"]
+        occurrences: ["SAQ 8, October 2026 Mock (Comm. Med)", "Q3, April 2017", "Q13, March 2019", "Q8, June 2013", "Q7a, February 2015"]
       },
       {
         topic: "Cold Chain System, Vaccine Vial Monitors (VVM) & National Immunization Schedules",
@@ -442,7 +442,7 @@ export const database: FullDatabase = {
     "Public Health Nutrition": [
       {
         topic: "Nutritional Status Assessment: Anthropometry (BMI, Under-Five Surveys & Shakir's Strip)",
-        occurrences: ["Q7, September 2022", "Q2, February 2019", "Q1c, October 2015", "Q3, September 2019"]
+        occurrences: ["SAQ 10, October 2026 Mock (Comm. Med)", "Q7, September 2022", "Q2, February 2019", "Q1c, October 2015", "Q3, September 2019"]
       },
       {
         topic: "Nutritional Vulnerability in Pregnancy, Lactation & Child Weaning",
@@ -472,7 +472,7 @@ export const database: FullDatabase = {
     "Biostatistics": [
       {
         topic: "Statistical Calculations: t-Tests, Chi-Square & Confidence Intervals",
-        occurrences: ["Q11, December 2017", "Q12, January 2016", "Q7, October 2015", "Q8, May 2010", "Q6, February 2019", "Q11, March 2019", "Q11, 600L End of Posting", "Q12, 600L End of Posting", "LAQ 11, August 2014"]
+        occurrences: ["LAQ 2, October 2026 Mock (Comm. Med)", "Q11, December 2017", "Q12, January 2016", "Q7, October 2015", "Q8, May 2010", "Q6, February 2019", "Q11, March 2019", "Q11, 600L End of Posting", "Q12, 600L End of Posting", "LAQ 11, August 2014"]
       },
       {
         topic: "Sampling Methods (Probability & Simple Random Techniques)",
@@ -480,7 +480,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Biostatistical Definitions (p-value, SEM, Type I & II errors, Power)",
-        occurrences: ["Q12, January 2016", "Q11a, August 2014"]
+        occurrences: ["SAQ 2, October 2026 Mock (Comm. Med)", "Q12, January 2016", "Q11a, August 2014"]
       },
       {
         topic: "Biomedical Research Design, Proposals & Methodological Types",
@@ -506,7 +506,7 @@ export const database: FullDatabase = {
       },
       {
         topic: "Population Pyramid Construction & Significance",
-        occurrences: ["Q4, January 2016", "Q3a, February 2015", "Q4, September 2008", "SAQ 8b, August 2014"]
+        occurrences: ["SAQ 5, October 2026 Mock (Comm. Med)", "Q4, January 2016", "Q3a, February 2015", "Q4, September 2008", "SAQ 8b, August 2014"]
       },
       {
         topic: "Population Census Formats & De Facto/De Jure Enumeration",
@@ -538,7 +538,7 @@ export const database: FullDatabase = {
     "Medical Ethics": [
       {
         topic: "Principles of Medical Ethics & Professional Medical Negligence",
-        occurrences: ["Q3a, December 2017", "Q5, September 2022", "Q6, March 2019", "Q9, September 2019", "Q1, 600L End of Posting", "SAQ 2, January 2025 (Comm. Med)", "SAQ 8a, August 2014"]
+        occurrences: ["SAQ 7, October 2026 Mock (Comm. Med)", "Q3a, December 2017", "Q5, September 2022", "Q6, March 2019", "Q9, September 2019", "Q1, 600L End of Posting", "SAQ 2, January 2025 (Comm. Med)", "SAQ 8a, August 2014"]
       },
       {
         topic: "Ethics Codes & Declarations (Nuremberg, Helsinki, Tokyo, Geneva, etc.)",

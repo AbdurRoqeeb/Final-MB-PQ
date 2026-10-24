@@ -792,6 +792,103 @@ export default function App() {
       };
     }
 
+    if (t.includes("hazard control") || t.includes("hierarchy of hazard")) {
+      return {
+        keyConcepts: [
+          "Hierarchy of Hazard Control (5 Levels in Strict Order of Effectiveness):",
+          "1. Elimination: Physically and completely remove the hazard from the workplace (most effective, e.g., stopping manual lifting of heavy loads with overhead cranes, eliminating hazardous toxic chemical solvents).",
+          "2. Substitution: Replace the hazard with a safer, non-toxic alternative (e.g., using water-based paints instead of organic lead-based solvents, using fiberglass instead of asbestos).",
+          "3. Engineering Controls: Isolate workers from the physical hazard (e.g., installing Local Exhaust Ventilation [LEV] at sawmill/chemical workstations, physical machine safety guards, acoustic noise enclosures, interlock switches).",
+          "4. Administrative Controls: Modify the way work is organized and performed (e.g., job rotation to limit daily exposure time, standard operating procedures [SOPs], regular safety training, hazard warning signs, statutory pre-employment and periodic medical examinations).",
+          "5. Personal Protective Equipment (PPE): Protect the individual worker with protective equipment (least effective; dependent on human compliance and fit e.g., respirators, safety goggles, earmuffs, heavy-duty gloves, steel-toed boots)."
+        ],
+        studyReferences: [
+          "Park's Textbook of Preventive and Social Medicine — Occupational Health: Occupational Hazards and Safety Measures",
+          "National Institute for Occupational Safety and Health (NIOSH) — Hierarchy of Controls Framework"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct 10-mark question in October 2026 Mock Community Medicine paper."
+      };
+    }
+
+    if (t.includes("population pyramid") || (t.includes("pyramid") && t.includes("demograph"))) {
+      return {
+        keyConcepts: [
+          "Pyramid Identification: Expansive / Rapidly Growing Population Pyramid (characterized by a broad base, a narrow middle, and a progressively narrowing apex). Represents Stage 1 or early Stage 2 of the Demographic Transition Model.",
+          "Representative Countries: Developing countries in Sub-Saharan Africa and South Asia (e.g., Nigeria, Niger, Uganda, Mali, Afghanistan).",
+          "3 Demographic Characteristics: 1. High Crude Birth Rate (CBR) and high Total Fertility Rate (TFR >5.0 children per woman). 2. High Infant and Under-5 Mortality Rate with low life expectancy at birth. 3. Young age-structure with a very high youth dependency ratio (40% to 45% of total population under 15 years old).",
+          "Health Service Planning Implications: 1. Disproportionate requirement for Maternal, Newborn, and Child Health (MNCH) services, labor wards, pediatric hospital beds, and childhood malnutrition clinics. 2. Heavy resource allocation needed for Expanded Programme on Immunization (EPI) vaccines, cold-chain infrastructure, school health programs, and primary education.",
+          "Major Health Need & Public Health Intervention: High burden of vaccine-preventable diseases and infant undernutrition; intervention is the Comprehensive Child Survival Strategy (GOBI-FFF: Growth monitoring, Oral rehydration therapy, Breastfeeding promotion, Immunization, Female education, Family planning, and Food supplementation)."
+        ],
+        studyReferences: [
+          "Park's Textbook of Preventive and Social Medicine — Demography and Family Planning: Population Pyramids",
+          "Lucas and Gilles — Short Textbook of Public Health Medicine for the Tropics: Demography"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct question on October 2026 Mock paper and core demographic analysis."
+      };
+    }
+
+    if (t.includes("epidemiological study design") || (t.includes("cohort") && t.includes("case-control"))) {
+      return {
+        keyConcepts: [
+          "Scenario 1 (Long-term radiation in 150 radiographers): Cohort Study (Prospective or Retrospective Occupational Cohort). Justification: Defined exposure (ionizing radiation), specific occupational cohort (150 radiographers) followed forward/backward in time to detect multiple disease outcomes (e.g., thyroid cancer, leukemia, cataracts). Direct temporal sequence (exposure precedes outcome); calculates true incidence rates, Relative Risk (RR), and Attributable Risk (AR). Disadvantages: expensive, prolonged follow-up, loss to follow-up (attrition bias).",
+          "Scenario 2 (Outbreak of rare neurological disorder with 50 affected individuals): Case-Control Study. Justification: Rare disease condition with a small, defined case population (50 affected individuals) needing urgent investigation to rapidly identify multiple unknown or suspected antecedent exposures. Compares exposure history in cases vs disease-free matched controls; calculates Odds Ratio (OR). Advantages: quick, inexpensive, ideal for rare conditions with long latency. Disadvantages: cannot directly calculate incidence or relative risk, highly vulnerable to recall bias and selection bias.",
+          "Cohort vs Case-Control Rules: Cohort starts with EXPOSURE status and looks forward for DISEASE; Case-Control starts with DISEASE status and looks backward for EXPOSURE."
+        ],
+        studyReferences: [
+          "Park's Textbook of Preventive and Social Medicine — Principles of Epidemiology and Epidemiologic Methods",
+          "Gordis Epidemiology — Study Designs: Cohort and Case-Control Studies"
+        ],
+        priority: "CRITICAL HIGH YIELD — LAQ 1 on October 2026 Community Medicine Mock examination paper."
+      };
+    }
+
+    if (t.includes("statistical calculation") || (t.includes("chi-square") && t.includes("attributable risk"))) {
+      return {
+        keyConcepts: [
+          "Cohort Study 2x2 Risk Calculations: 1. Incidence in Exposed (Ie) = a / (a + b) = 300 / 500 = 0.60 (60%). 2. Incidence in Unexposed (Iu) = c / (c + d) = 100 / 500 = 0.20 (20%). 3. Relative Risk (RR) = Ie / Iu = 0.60 / 0.20 = 3.0 (Women taking exogenous estrogen have 3 times the risk of developing breast cancer compared to unexposed).",
+          "Statistical Significance via Chi-Square: Expected values E11=200, E12=300, E21=200, E22=300. Chi-Square statistic = Sum of ((O - E)^2 / E) = 50 + 33.33 + 50 + 33.33 = 166.67. With 1 degree of freedom, critical value at p=0.05 is 3.84. Since 166.67 >> 3.84, the association is statistically significant at p < 0.001.",
+          "Attributable Risk (AR / Risk Difference): AR = Ie - Iu = 0.60 - 0.20 = 0.40 (40 excess breast cancer cases per 100 exposed women are directly caused by estrogen therapy).",
+          "Attributable Risk Percent (AR% / Etiologic Fraction): AR% = ((Ie - Iu) / Ie) * 100% = (0.40 / 0.60) * 100% = 66.67% (or [RR - 1] / RR = 2/3 = 66.7%). Interpretation: 66.7% of breast cancer cases among estrogen users could be prevented if estrogen exposure were eliminated."
+        ],
+        studyReferences: [
+          "Park's Textbook of Preventive and Social Medicine — Epidemiology: Association and Causation",
+          "Gordis Epidemiology — Estimating Risk: Relative Risk, Odds Ratio, and Attributable Risk"
+        ],
+        priority: "CRITICAL HIGH YIELD — Direct 20-mark LAQ 2 calculation problem on October 2026 Community Medicine Mock."
+      };
+    }
+
+    if (t.includes("type i") || t.includes("biostatistical definition") || t.includes("type ii error")) {
+      return {
+        keyConcepts: [
+          "Type I Error (Alpha / False Positive): Rejecting the null hypothesis (H0) when it is true (concluding a difference or treatment effect exists when none actually does). Implication: Marketing or prescribing an ineffective, potentially toxic, or expensive drug. Curtailed by: Setting a stricter significance level (e.g., alpha = 0.01 instead of 0.05).",
+          "Type II Error (Beta / False Negative): Failing to reject the null hypothesis (H0) when it is false (concluding no treatment effect exists when the treatment is genuinely beneficial). Implication: Abandoning an effective, lifesaving therapeutic agent. Curtailed by: Increasing study sample size (N), boosting statistical power (Power = 1 - Beta >= 80%), and improving measurement precision.",
+          "Relationship: Alpha and Beta are inversely related for a fixed sample size. The only way to decrease both simultaneously is to increase the total sample size!"
+        ],
+        studyReferences: [
+          "Park's Textbook of Preventive and Social Medicine — Basic Biostatistics: Tests of Significance and Errors",
+          "Bland — An Introduction to Medical Statistics: Hypothesis Testing and Power"
+        ],
+        priority: "HIGH YIELD — Direct 10-mark SAQ 2 on October 2026 Community Medicine Mock."
+      };
+    }
+
+    if (t.includes("community participation") || (t.includes("primary health care") && t.includes("principles"))) {
+      return {
+        keyConcepts: [
+          "Core Principle of PHC (Alma-Ata Declaration 1978): Process by which individuals, families, and communities assume active responsibility for their own health and welfare, participating in decision-making, planning, implementation, and evaluation.",
+          "5 Essential Community Stakeholders: 1. Traditional Rulers / Community Heads (Baale, Emir, Oba). 2. Ward Development Committees (WDC) and Village Development Committees (VDC). 3. Women Leaders / Market Women Associations (Iyaloja). 4. Religious and Faith-Based Leaders. 5. Youth Associations and Community-Based Organizations (CBOs).",
+          "Types of Community Participation: 1. Passive (people are told what will happen). 2. Participation in Information Giving (answering surveys). 3. Participation by Consultation (consulted by external agents who define problems). 4. Participation for Material Incentives (participate in exchange for food/cash). 5. Functional Participation (forming committees to achieve predetermined project goals). 6. Interactive / Self-Mobilization (joint analysis, empowerment, and community initiatives).",
+          "5 Advantages of Community Participation: 1. Promotes community ownership and long-term project sustainability. 2. Ensures health interventions are culturally acceptable and relevant. 3. Mobilizes and leverages local community resources (labor, land, funds). 4. Empowers community members and fosters self-reliance. 5. Improves health service utilization and coverage."
+        ],
+        studyReferences: [
+          "Park's Textbook of Preventive and Social Medicine — Primary Health Care in Nigeria",
+          "National Primary Health Care Development Agency (NPHCDA) — Ward Health System Guidelines"
+        ],
+        priority: "HIGH YIELD — Direct 10-mark SAQ 4 on October 2026 Community Medicine Mock."
+      };
+    }
+
     // Generic Clinical Study Guide
     return {
       keyConcepts: [

@@ -120,6 +120,107 @@ export const pastQuestionsText: { [occurrence: string]: string } = {
   "Q9, October 2026 (Surgery)":
     "Write a short essay on Glaucoma",
 
+  // ==========================================
+  // OCTOBER 2026 (Mock Examination in Community Medicine Paper 2 - Saturday 17th October 2026)
+  // Faculty of Clinical Sciences, Department of Community Medicine
+  // ==========================================
+  "SAQ 1, October 2026 Mock (Comm. Med)":
+    "a. What is Air pollution? (3 marks)\nb. Enumerate 6 effects of Air pollution on Man. (3 marks)\nc. Outline and discuss 4 preventive measures of Air pollution. (4 marks)",
+  "SAQ 1, October 2026 (Comm. Med)":
+    "a. What is Air pollution? (3 marks)\nb. Enumerate 6 effects of Air pollution on Man. (3 marks)\nc. Outline and discuss 4 preventive measures of Air pollution. (4 marks)",
+  "Q1, October 2026 (Comm. Med)":
+    "a. What is Air pollution? (3 marks)\nb. Enumerate 6 effects of Air pollution on Man. (3 marks)\nc. Outline and discuss 4 preventive measures of Air pollution. (4 marks)",
+
+  "SAQ 2, October 2026 Mock (Comm. Med)":
+    "Discuss both type I and type II error, touching on implication of committing them and the methods of curtailing them in medical investigations. (10 marks)",
+  "SAQ 2, October 2026 (Comm. Med)":
+    "Discuss both type I and type II error, touching on implication of committing them and the methods of curtailing them in medical investigations. (10 marks)",
+  "Q2, October 2026 (Comm. Med)":
+    "Discuss both type I and type II error, touching on implication of committing them and the methods of curtailing them in medical investigations. (10 marks)",
+
+  "SAQ 3, October 2026 Mock (Comm. Med)":
+    "International Health Organizations are significant to the health system strengthening of a country.\n\na. Classify the International Health Organizations giving relevant examples for each group. (5 marks)\nb. Briefly discuss some of the health activities of the World Health Organization as an International Health Organization in Nigeria. (5 marks)",
+  "SAQ 3, October 2026 (Comm. Med)":
+    "International Health Organizations are significant to the health system strengthening of a country.\n\na. Classify the International Health Organizations giving relevant examples for each group. (5 marks)\nb. Briefly discuss some of the health activities of the World Health Organization as an International Health Organization in Nigeria. (5 marks)",
+  "Q3, October 2026 (Comm. Med)":
+    "International Health Organizations are significant to the health system strengthening of a country.\n\na. Classify the International Health Organizations giving relevant examples for each group. (5 marks)\nb. Briefly discuss some of the health activities of the World Health Organization as an International Health Organization in Nigeria. (5 marks)",
+
+  "SAQ 4, October 2026 Mock (Comm. Med)":
+    "Community Participation is one of the tenets of Primary Health care. Mention 5 stakeholders in the community essential for effective community participation. Discuss the different types of community participation that you know and list five advantages of community participation. (10 marks)",
+  "SAQ 4, October 2026 (Comm. Med)":
+    "Community Participation is one of the tenets of Primary Health care. Mention 5 stakeholders in the community essential for effective community participation. Discuss the different types of community participation that you know and list five advantages of community participation. (10 marks)",
+  "Q4, October 2026 (Comm. Med)":
+    "Community Participation is one of the tenets of Primary Health care. Mention 5 stakeholders in the community essential for effective community participation. Discuss the different types of community participation that you know and list five advantages of community participation. (10 marks)",
+
+  "SAQ 5, October 2026 Mock (Comm. Med)":
+    "During a community health assessment, you are provided with a population pyramid showing a broad base, a narrow middle, and a progressively narrowing apex.\n\na. Identify the type of population pyramid described. (1 mark)\nb. Give 2 examples of countries with this type of population structure (2 marks)\nc. State 3 demographic characteristics of the population represented. (3 marks)\nd. Mention 2 implications of this population structure for health service planning. (2 marks)\ne. Mention one major health need and one health intervention to address the major health need associated with this population structure (2 marks)",
+  "SAQ 5, October 2026 (Comm. Med)":
+    "During a community health assessment, you are provided with a population pyramid showing a broad base, a narrow middle, and a progressively narrowing apex.\n\na. Identify the type of population pyramid described. (1 mark)\nb. Give 2 examples of countries with this type of population structure (2 marks)\nc. State 3 demographic characteristics of the population represented. (3 marks)\nd. Mention 2 implications of this population structure for health service planning. (2 marks)\ne. Mention one major health need and one health intervention to address the major health need associated with this population structure (2 marks)",
+  "Q5, October 2026 (Comm. Med)":
+    "During a community health assessment, you are provided with a population pyramid showing a broad base, a narrow middle, and a progressively narrowing apex.\n\na. Identify the type of population pyramid described. (1 mark)\nb. Give 2 examples of countries with this type of population structure (2 marks)\nc. State 3 demographic characteristics of the population represented. (3 marks)\nd. Mention 2 implications of this population structure for health service planning. (2 marks)\ne. Mention one major health need and one health intervention to address the major health need associated with this population structure (2 marks)",
+
+  "SAQ 6, October 2026 Mock (Comm. Med)":
+    "a. List the public and private options of healthcare financing in Nigeria. (5 marks)\nb. Highlight the challenges of the Social Health Insurance Scheme in Nigeria. (5 marks)",
+  "SAQ 6, October 2026 (Comm. Med)":
+    "a. List the public and private options of healthcare financing in Nigeria. (5 marks)\nb. Highlight the challenges of the Social Health Insurance Scheme in Nigeria. (5 marks)",
+  "Q6, October 2026 (Comm. Med)":
+    "a. List the public and private options of healthcare financing in Nigeria. (5 marks)\nb. Highlight the challenges of the Social Health Insurance Scheme in Nigeria. (5 marks)",
+
+  "SAQ 7, October 2026 Mock (Comm. Med)":
+    "a. Define medical ethics? (2 marks)\nb. Discuss the four principles of medical ethics with examples. (8 marks)",
+  "SAQ 7, October 2026 (Comm. Med)":
+    "a. Define medical ethics? (2 marks)\nb. Discuss the four principles of medical ethics with examples. (8 marks)",
+  "Q7, October 2026 (Comm. Med)":
+    "a. Define medical ethics? (2 marks)\nb. Discuss the four principles of medical ethics with examples. (8 marks)",
+
+  "SAQ 8, October 2026 Mock (Comm. Med)":
+    "a. Define vulnerable child (5 marks)\nb. Write short note on the options of care for motherless babies (5 marks)",
+  "SAQ 8, October 2026 (Comm. Med)":
+    "a. Define vulnerable child (5 marks)\nb. Write short note on the options of care for motherless babies (5 marks)",
+  "Q8, October 2026 (Comm. Med)":
+    "a. Define vulnerable child (5 marks)\nb. Write short note on the options of care for motherless babies (5 marks)",
+
+  "SAQ 9, October 2026 Mock (Comm. Med)":
+    "Briefly discuss the \"Hierarchy of hazard Control\" in order of effectiveness. Give relevant examples of each. (10 marks)",
+  "SAQ 9, October 2026 (Comm. Med)":
+    "Briefly discuss the \"Hierarchy of hazard Control\" in order of effectiveness. Give relevant examples of each. (10 marks)",
+  "Q9, October 2026 (Comm. Med)":
+    "Briefly discuss the \"Hierarchy of hazard Control\" in order of effectiveness. Give relevant examples of each. (10 marks)",
+
+  "SAQ 10, October 2026 Mock (Comm. Med)":
+    "a. Classify with relevant examples methods of Nutritional assessment. (5 marks)\nb. Briefly describe one method you will use to assess the nutritional status of a group of Under-five children, stating its advantages and disadvantages. (5 marks)",
+  "SAQ 10, October 2026 (Comm. Med)":
+    "a. Classify with relevant examples methods of Nutritional assessment. (5 marks)\nb. Briefly describe one method you will use to assess the nutritional status of a group of Under-five children, stating its advantages and disadvantages. (5 marks)",
+  "Q10, October 2026 (Comm. Med)":
+    "a. Classify with relevant examples methods of Nutritional assessment. (5 marks)\nb. Briefly describe one method you will use to assess the nutritional status of a group of Under-five children, stating its advantages and disadvantages. (5 marks)",
+
+  "LAQ 1, October 2026 Mock (Comm. Med)":
+    "A public health team wants to study the risk factors for two different health problems:\ni. The long-term effect of radiation exposure in 150 radiographers in radiology department.\nii. An outbreak of a rare neurological disorder in the community, where 50 affected individuals have been identified.\n\na) For each scenario, identify the most appropriate study design. (6 marks)\nb) Briefly justify your choice of study design for each scenario. (6 marks)\nc) List advantages and disadvantages of each study design. (8 marks)",
+  "LAQ 1, October 2026 (Comm. Med)":
+    "A public health team wants to study the risk factors for two different health problems:\ni. The long-term effect of radiation exposure in 150 radiographers in radiology department.\nii. An outbreak of a rare neurological disorder in the community, where 50 affected individuals have been identified.\n\na) For each scenario, identify the most appropriate study design. (6 marks)\nb) Briefly justify your choice of study design for each scenario. (6 marks)\nc) List advantages and disadvantages of each study design. (8 marks)",
+  "LAQ 11, October 2026 Mock (Comm. Med)":
+    "A public health team wants to study the risk factors for two different health problems:\ni. The long-term effect of radiation exposure in 150 radiographers in radiology department.\nii. An outbreak of a rare neurological disorder in the community, where 50 affected individuals have been identified.\n\na) For each scenario, identify the most appropriate study design. (6 marks)\nb) Briefly justify your choice of study design for each scenario. (6 marks)\nc) List advantages and disadvantages of each study design. (8 marks)",
+  "Q11, October 2026 (Comm. Med)":
+    "A public health team wants to study the risk factors for two different health problems:\ni. The long-term effect of radiation exposure in 150 radiographers in radiology department.\nii. An outbreak of a rare neurological disorder in the community, where 50 affected individuals have been identified.\n\na) For each scenario, identify the most appropriate study design. (6 marks)\nb) Briefly justify your choice of study design for each scenario. (6 marks)\nc) List advantages and disadvantages of each study design. (8 marks)",
+
+  "LAQ 2, October 2026 Mock (Comm. Med)":
+    "In a cohort study concerning the relationship between the use of exogenous estrogens and the subsequent risk of breast cancer, a sample of 1000 premenopausal women were followed for 8 years. The results are presented in the table below:\n\nEstrogen Therapy | Breast Cancer Present | Breast Cancer Absent | Total\n+ (Exposed)      | 300                   | 200                  | 500\n- (Unexposed)    | 100                   | 400                  | 500\nTotal            | 400                   | 600                  | 1000\n\ni. Is there association between the use of estrogen therapy and the development of breast cancer? (5 marks)\nii. If relationship exists in i above, is it statistically significant? (5 marks)\niii. Determine the attributable risk and attributable risk percent of estrogen therapy. (10 marks)",
+  "LAQ 2, October 2026 (Comm. Med)":
+    "In a cohort study concerning the relationship between the use of exogenous estrogens and the subsequent risk of breast cancer, a sample of 1000 premenopausal women were followed for 8 years. The results are presented in the table below:\n\nEstrogen Therapy | Breast Cancer Present | Breast Cancer Absent | Total\n+ (Exposed)      | 300                   | 200                  | 500\n- (Unexposed)    | 100                   | 400                  | 500\nTotal            | 400                   | 600                  | 1000\n\ni. Is there association between the use of estrogen therapy and the development of breast cancer? (5 marks)\nii. If relationship exists in i above, is it statistically significant? (5 marks)\niii. Determine the attributable risk and attributable risk percent of estrogen therapy. (10 marks)",
+  "LAQ 12, October 2026 Mock (Comm. Med)":
+    "In a cohort study concerning the relationship between the use of exogenous estrogens and the subsequent risk of breast cancer, a sample of 1000 premenopausal women were followed for 8 years. The results are presented in the table below:\n\nEstrogen Therapy | Breast Cancer Present | Breast Cancer Absent | Total\n+ (Exposed)      | 300                   | 200                  | 500\n- (Unexposed)    | 100                   | 400                  | 500\nTotal            | 400                   | 600                  | 1000\n\ni. Is there association between the use of estrogen therapy and the development of breast cancer? (5 marks)\nii. If relationship exists in i above, is it statistically significant? (5 marks)\niii. Determine the attributable risk and attributable risk percent of estrogen therapy. (10 marks)",
+  "Q12, October 2026 (Comm. Med)":
+    "In a cohort study concerning the relationship between the use of exogenous estrogens and the subsequent risk of breast cancer, a sample of 1000 premenopausal women were followed for 8 years. The results are presented in the table below:\n\nEstrogen Therapy | Breast Cancer Present | Breast Cancer Absent | Total\n+ (Exposed)      | 300                   | 200                  | 500\n- (Unexposed)    | 100                   | 400                  | 500\nTotal            | 400                   | 600                  | 1000\n\ni. Is there association between the use of estrogen therapy and the development of breast cancer? (5 marks)\nii. If relationship exists in i above, is it statistically significant? (5 marks)\niii. Determine the attributable risk and attributable risk percent of estrogen therapy. (10 marks)",
+
+  "LAQ 3, October 2026 Mock (Comm. Med)":
+    "a. You are the Monitoring and Evaluation (M & E) officer in your Local Government Area (LGA) and you have just concluded the Worlds AIDS day program to raise awareness and reduce stigmatization of the condition among people living with HIV/AIDS; describe the processes required for the evaluation of the program. (15 marks)\nb. List the tools that could be used in evaluation process. (5 marks)",
+  "LAQ 3, October 2026 (Comm. Med)":
+    "a. You are the Monitoring and Evaluation (M & E) officer in your Local Government Area (LGA) and you have just concluded the Worlds AIDS day program to raise awareness and reduce stigmatization of the condition among people living with HIV/AIDS; describe the processes required for the evaluation of the program. (15 marks)\nb. List the tools that could be used in evaluation process. (5 marks)",
+  "LAQ 13, October 2026 Mock (Comm. Med)":
+    "a. You are the Monitoring and Evaluation (M & E) officer in your Local Government Area (LGA) and you have just concluded the Worlds AIDS day program to raise awareness and reduce stigmatization of the condition among people living with HIV/AIDS; describe the processes required for the evaluation of the program. (15 marks)\nb. List the tools that could be used in evaluation process. (5 marks)",
+  "Q13, October 2026 (Comm. Med)":
+    "a. You are the Monitoring and Evaluation (M & E) officer in your Local Government Area (LGA) and you have just concluded the Worlds AIDS day program to raise awareness and reduce stigmatization of the condition among people living with HIV/AIDS; describe the processes required for the evaluation of the program. (15 marks)\nb. List the tools that could be used in evaluation process. (5 marks)",
+
   // December 2024 (Mock Surgery)
   "LAQ 1, December 2024": 
     "A 65-year-old bricklayer presented to the accident and emergency unit with a history of early satiety, and anorexia of about a month duration. Further direct inquiry revealed a history of progressive weight loss and vomiting of stale food 3 months before presentation. Discuss the management of this patient. (20 marks)",
